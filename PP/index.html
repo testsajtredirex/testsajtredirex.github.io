@@ -1,0 +1,2778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>MultiShop - Online Shop Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/173324f0ea.js" crossorigin="anonymous"></script>
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-dark mb-30">
+        <div class="row px-xl-5">
+            <div class="col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
+                    <a href="" class="text-decoration-none d-block d-lg-none">
+                        <span class="h1 text-uppercase text-dark bg-light px-2">Plišani</span>
+                        <span class="h1 text-uppercase text-light bg-primary px-2 ml-n1">Ugao</span>
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                        <div class="navbar-nav mr-auto py-0">
+                            <a href="index.html" class="nav-item nav-link active">Plišani Ugao</a>
+                            <a data-toggle="modal" data-target="#exampleModal-form" class="nav-item nav-link">Kontakt</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal-form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="flex items-center min-h-screen bg-gray-100 dark:bg-gray-900">
+            <div class="container mx-auto">
+              <div style="display: inline-flex;" class="max-w-md mx-auto my-5 bg-white p-5 rounded-md shadow-sm">
+                <div class="form-telo m-4">
+                    <p style="margin-top: -4em;margin-bottom: 1em;">Imate pitanja, želite dobiti dodatne informacije ili poručiti nešto iz naše ponude? Slobodno nas kontaktirajte putem ovog obrasca. 
+                        Naš tim je tu da vam pruži podršku i odgovori na sve vaše upite. Radujemo se saradnji i unapređenju vašeg kulinarskog iskustva! </p>
+                  <form  action="https://api.web3forms.com/submit" method="POST" id="form">
+                    <input type="hidden" name="access_key" value="519aba1e-343a-4fd1-aed9-0eeb53fd2f64" />
+                    <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+                    <input type="checkbox" name="botcheck" id="" style="display: none;" />
+                    <div style=" display: inline-block;margin: auto;" class="mb-3">
+                      <label style="padding-bottom: 0.5em;border-bottom: 1px solid gray;" for="name" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Ime i Prezime&nbsp;&nbsp;&nbsp;</label>
+                      <input type="text" name="name" id="name" placeholder="Petar Petrović" required class="formaime py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div style="display: block; margin: auto;" class="mb-3">
+                      <label style="padding-bottom: 0.5em;border-bottom: 1px solid gray;" for="email" class="block mb-2 font-medium text-sm text-gray-600 dark:text-gray-400">Email adresa&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                      <input type="text" name="email" id="email" placeholder="email@company.com" required class="formakontakt py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div style="display: block; margin: auto;" class="mb-12">
+                      <textarea rows="5" name="message" id="message" placeholder="Vaša Poruka \nVaša Adresa \nŠifra Proizvoda" class="formatext py-2 placeholder-gray-300 border border-gray-400 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-500 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                      <button style="margin-top: 1em; background-color:#59ab6e; border: 1px solid gray;" type="submit" class="w-full px-5 py-3 text-white focus:outline-none">
+                        Pošalji
+                      </button>
+                    </div>
+                    <p class="text-base text-center text-gray-400" id="result"></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- Carousel Start -->
+            <div class="col-lg-4">
+                <div class="product-offer" style="height: 200px;">
+                    <img class="img-fluid" src="/PP/img/plisani-ugao.png" alt="">    
+                </div>
+                <div class="product-offer mb-30" style="height: 200px;">
+                    <a href="/MalaAutoArena/index.html"><img class="img-fluid" src="/MalaAutoArena/assets/img/mala-auto-arena.png" alt=""></a>
+                </div>
+                <div class="product-offer mb-30" style="height: 200px;">
+                    <a href="/index.html"><img class="img-fluid" src="/assets/img/Kuhinja Snova, Vaša Realnost1-1.png" alt=""></a>    
+                </div>
+                <div class="product-offer mb-30" style="height: 200px;">
+                    </a><img class="img-fluid" src="/PP/img/plisani-ugao.png" alt="">
+                </div>
+            </div>
+    <!-- Carousel End -->
+
+
+<h2 class="obavestenje-naslov-h2">Naša Posvećenost Pristupačnim Cenama i Vašem Strpljenju</h2>
+    
+
+<p class="obavestenje-top">Na "Plišani Ugao" smo posvećeni pružanju visokokvalitetnih proizvoda po najpristupačnijim cenama. 
+Kako bismo zadržali naše cene što je moguće niže, usvojili smo jedinstveni model u kojem proizvode naručujemo direktno od naših dobavljača čim vi napravite kupovinu.</p>
+
+<div class="obavestenje">
+<p class="obavestenje-pasus"><b>Šta Ovo Znači za Vas?</b><br><br>
+Kada napravite narudžbinu, započinjemo proces obezbeđivanja proizvoda za vas. Ovaj način nam omogućava da vam ponudimo neodoljive cene. 
+Međutim, dolazi uz određenu žrtvu - vreme isporuke od 2-3 nedelje.</p>
+
+<p class="obavestenje-pasus"><b>Zašto Duže Vreme Isporuke?</b><br><br>
+Naručivanjem direktno od naših dobavljača i održavanjem malog inventara izbegavamo troškove skladištenja. Ovo direktno rezultira u uštedama koje vam prosleđujemo.</p>
+
+<p class="obavestenje-pasus"><b>Vaše Razumevanje Je Bitno:</b><br><br>
+Shvatamo da čekanje na vašu kupovinu može biti izazovno u današnjem brzom svetu. 
+Međutim, vaše strpljenje nam omogućava da nastavimo da vam pružamo izuzetne ponude na proizvodima koje volite.</p>
+
+
+</div>
+
+<hr class="razdelilac">
+
+<ul class="kategorije">
+        <div class="filter-klasa">
+            <a class="h3 text-decoration-none filter-link" data-filter="all">Sve</a>
+        </div>
+
+        <div class="filter-klasa">
+            <a id="cesmeid" class="h3 text-decoration-none filter-link" data-filter="lutka">
+                Plišane Lutke
+            </a>
+        </div>
+
+        <div class="filter-klasa">
+            <a id="cesmeid" class="h3 text-decoration-none filter-link" data-filter="carapa">
+                Plišane Čarape
+            </a>
+        </div>
+</ul>  
+
+
+    <!-- Products Start -->
+    <div class="container-fluid pt-5 pb-3">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Artikli</span></h2>
+        <div class="row px-xl-5">
+
+<!-- ARTIKAL 1-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P001.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P001" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P001" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P001.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P001" class="h6 text-decoration-none text-truncate" href="">25cm Plišani Zeka (Šargarepa) <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1590RSD</h5><h6 class="text-muted ml-2">Šifra: P001</h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ARTIKAL 2-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P002.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P002" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P002" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P002.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P002" class="h6 text-decoration-none text-truncate" href="">25cm Plišani Zeka (Jagoda) <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1590RSD</h5><h6 class="text-muted ml-2">Šifra: P002</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 3-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P003.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P003" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P003" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P003.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P003" class="h6 text-decoration-none text-truncate" href="">Plišana Igračka za Decu <br>3 Veličine</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>28cm-1990RSD<br>40cm-3990RSD<br>50cm-5490RSD</h5><h6 class="text-muted ml-2">Šifra: P003</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 4-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P004.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P004" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P004" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P004.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P004" class="h6 text-decoration-none text-truncate" href="">20cm Plišana Igračka za Decu <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1690RSD</h5><h6 class="text-muted ml-2">Šifra: P004</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 5-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P005.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P005" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P005" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P005.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P005" class="h6 text-decoration-none text-truncate" href="">20cm Plišana Igračka za Decu <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1690RSD</h5><h6 class="text-muted ml-2">Šifra: P005</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 6-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P006.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P006" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P006" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P006.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P006" class="h6 text-decoration-none text-truncate" href="">20cm Plišana Igračka za Decu <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1690RSD</h5><h6 class="text-muted ml-2">Šifra: P006</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 7-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P007.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P007" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P007" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P007.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P007" class="h6 text-decoration-none text-truncate" href="">20cm Plišana Igračka za Decu <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1690RSD</h5><h6 class="text-muted ml-2">Šifra: P007</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 8-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P008.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P008" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P008" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P008.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P008" class="h6 text-decoration-none text-truncate" href="">20cm Plišana Igračka za Decu <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1690RSD</h5><h6 class="text-muted ml-2">Šifra: P008</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 9-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P009.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P009" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P009" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P009.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P009" class="h6 text-decoration-none text-truncate" href="">20cm Plišana Igračka za Decu <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1690RSD</h5><h6 class="text-muted ml-2">Šifra: P009</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 10-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P010.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P010" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P010" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P010.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P010" class="h6 text-decoration-none text-truncate" href="">20cm Plišana Igračka za Decu <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1690RSD</h5><h6 class="text-muted ml-2">Šifra: P010</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 11-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P011.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P011" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P011" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P011.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P011" class="h6 text-decoration-none text-truncate" href="">20cm Plišana Igračka za Decu <br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1690RSD</h5><h6 class="text-muted ml-2">Šifra: P011</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 12-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P012.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P012" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P012" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P012.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P012" class="h6 text-decoration-none text-truncate" href="">25cm Five Nights at Freddy's Plišane Igračka<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>3290RSD</h5><h6 class="text-muted ml-2">Šifra: P012</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 13-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P013.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P013" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P013" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P013.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P013" class="h6 text-decoration-none text-truncate" href="">25cm Five Nights at Freddy's Plišane Igračka<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>3290RSD</h5><h6 class="text-muted ml-2">Šifra: P013</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 14-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P014.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P014" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P014" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P014.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P014" class="h6 text-decoration-none text-truncate" href="">30cm Plišani Meda sa LED Svetlima<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1490RSD</h5><h6 class="text-muted ml-2">Šifra: P014</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 15-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P015.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P015" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P015" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P015.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P015" class="h6 text-decoration-none text-truncate" href="">30cm Plišani Meda sa LED Svetlima<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1490RSD</h5><h6 class="text-muted ml-2">Šifra: P015</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 16-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P016.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P016" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P016" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P016.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P016" class="h6 text-decoration-none text-truncate" href="">30cm Plišani Meda sa LED Svetlima<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1490RSD</h5><h6 class="text-muted ml-2">Šifra: P016</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 17-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P017.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P017" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P017" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P017.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P017" class="h6 text-decoration-none text-truncate" href="">20cm Squishmallows<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1390RSD</h5><h6 class="text-muted ml-2">Šifra: P017</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 18-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P018.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P018" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P018" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P018.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P018" class="h6 text-decoration-none text-truncate" href="">20cm Squishmallows<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1390RSD</h5><h6 class="text-muted ml-2">Šifra: P018</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 19-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P019.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P019" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P019" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P019.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P019" class="h6 text-decoration-none text-truncate" href="">20cm Squishmallows<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1390RSD</h5><h6 class="text-muted ml-2">Šifra: P019</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 20-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P020.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P020" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P020" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P020.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P020" class="h6 text-decoration-none text-truncate" href="">20cm Squishmallows<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1390RSD</h5><h6 class="text-muted ml-2">Šifra: P020</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 21-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P021.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P021" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P021" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P021.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P021" class="h6 text-decoration-none text-truncate" href="">20cm Squishmallows<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1390RSD</h5><h6 class="text-muted ml-2">Šifra: P021</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 22-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P022.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P022" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P022" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P022.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P022" class="h6 text-decoration-none text-truncate" href="">20cm Squishmallows<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1390RSD</h5><h6 class="text-muted ml-2">Šifra: P022</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 23-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P023.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P023" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P023" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P023.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P023" class="h6 text-decoration-none text-truncate" href="">20cm Squishmallows<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1390RSD</h5><h6 class="text-muted ml-2">Šifra: P023</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 24-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P024.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P024" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P024" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P024.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P024" class="h6 text-decoration-none text-truncate" href="">20cm Squishmallows<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1390RSD</h5><h6 class="text-muted ml-2">Šifra: P024</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 25-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P025.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P025" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P025" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P025.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P025" class="h6 text-decoration-none text-truncate" href="">Ležeća Plišana Igračka Prase<br>Sklopljene ili Otvorene Oči</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>40cm-2490RSD<br>60cm-3490RSD</h5><h6 class="text-muted ml-2">Šifra: P025</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 26-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P026.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P026" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P026" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P026.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P026" class="h6 text-decoration-none text-truncate" href="">20x20cm Dvostrana Plišana Igračka Hobotnica<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P026</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 27-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P027.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P027" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P027" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P027.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P027" class="h6 text-decoration-none text-truncate" href="">20x20cm Dvostrana Plišana Igračka Hobotnica<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P027</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 28-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P028.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P028" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P028" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P028.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P028" class="h6 text-decoration-none text-truncate" href="">20x20cm Dvostrana Plišana Igračka Hobotnica<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P028</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 29-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P029.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P029" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P029" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P029.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P029" class="h6 text-decoration-none text-truncate" href="">20x20cm Dvostrana Plišana Igračka Hobotnica<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P029</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 30-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P030.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P030" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P030" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P030.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P030" class="h6 text-decoration-none text-truncate" href="">20x20cm Dvostrana Plišana Igračka Hobotnica<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P030</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 31-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P031.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P031" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P031" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P031.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P031" class="h6 text-decoration-none text-truncate" href="">20x20cm Dvostrana Plišana Igračka Hobotnica<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P031</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 32-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P032.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P032" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P032" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P032.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P032" class="h6 text-decoration-none text-truncate" href="">20x20cm Dvostrana Plišana Igračka Hobotnica<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P032</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 33-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P033.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P033" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P033" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P033.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P033" class="h6 text-decoration-none text-truncate" href="">20x20cm Dvostrana Plišana Igračka Hobotnica<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P033</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 34-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P034.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P034" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P034" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P034.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P034" class="h6 text-decoration-none text-truncate" href="">20x20cm Dvostrana Plišana Igračka Hobotnica<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P034</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 35-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P035.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P035" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P035" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P035.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P035" class="h6 text-decoration-none text-truncate" href="">20x20cm Dvostrana Plišana Igračka Hobotnica<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P035</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 36-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P036.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P036" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P036" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P036.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P036" class="h6 text-decoration-none text-truncate" href="">20x20cm Dvostrana Plišana Igračka Hobotnica<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P036</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 37-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P037.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P037" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P037" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P037.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P037" class="h6 text-decoration-none text-truncate" href="">Roblox Plišane Igračke</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1990RSD</h5><h6 class="text-muted ml-2">Šifra: P037</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 38-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P038.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P038" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P038" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P038.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P038" class="h6 text-decoration-none text-truncate" href="">Roblox Plišane Igračke</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1990RSD</h5><h6 class="text-muted ml-2">Šifra: P038</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 39-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P039.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P039" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P039" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P039.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P039" class="h6 text-decoration-none text-truncate" href="">Roblox Plišane Igračke</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1990RSD</h5><h6 class="text-muted ml-2">Šifra: P039</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 40-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P040.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P040" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P040" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P040.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P040" class="h6 text-decoration-none text-truncate" href="">Roblox Plišane Igračke</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1990RSD</h5><h6 class="text-muted ml-2">Šifra: P040</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 41-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P041.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P041" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P041" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P041.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P041" class="h6 text-decoration-none text-truncate" href="">Roblox Plišane Igračke</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1990RSD</h5><h6 class="text-muted ml-2">Šifra: P041</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 42-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P042.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P042" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P042" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P042.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P042" class="h6 text-decoration-none text-truncate" href="">Roblox Plišane Igračke</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1990RSD</h5><h6 class="text-muted ml-2">Šifra: P042</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 43-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P043.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P043" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P043" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P043.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P043" class="h6 text-decoration-none text-truncate" href="">Roblox Plišane Igračke</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1990RSD</h5><h6 class="text-muted ml-2">Šifra: P043</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 44-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P044.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P044" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P044" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P044.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P044" class="h6 text-decoration-none text-truncate" href="">30cm Plišana Lopta Zemlje</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2990RSD</h5><h6 class="text-muted ml-2">Šifra: P044</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 45-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P045.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P045" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P045" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P045.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P045" class="h6 text-decoration-none text-truncate" href="">30cm Plišana Lopta Zemlje</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2990RSD</h5><h6 class="text-muted ml-2">Šifra: P045</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 46-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P046.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P046" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P046" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P046.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P046" class="h6 text-decoration-none text-truncate" href="">30cm Plišana Lopta Zemlje</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2990RSD</h5><h6 class="text-muted ml-2">Šifra: P046</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 47-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P047.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P047" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P047" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P047.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P047" class="h6 text-decoration-none text-truncate" href="">30cm Plišana Lopta Zemlje</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2990RSD</h5><h6 class="text-muted ml-2">Šifra: P047</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 48-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P048.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P048" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P048" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P048.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P048" class="h6 text-decoration-none text-truncate" href="">30cm Plišana Lopta Zemlje</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2990RSD</h5><h6 class="text-muted ml-2">Šifra: P048</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 49-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P049.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P049" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P049" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P049.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P049" class="h6 text-decoration-none text-truncate" href="">30cm Plišana Lopta Zemlje</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2990RSD</h5><h6 class="text-muted ml-2">Šifra: P049</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 50-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P050.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P050" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P050" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P050.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P050" class="h6 text-decoration-none text-truncate" href="">30cm Plišana Lopta Zemlje</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2990RSD</h5><h6 class="text-muted ml-2">Šifra: P050</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 51-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P051.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P051" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P051" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P051.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P051" class="h6 text-decoration-none text-truncate" href="">5.5cm Slatka Igračka od PVC Materijala</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>690RSD</h5><h6 class="text-muted ml-2">Šifra: P051</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 52-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P052.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P052" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P052" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P052.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P052" class="h6 text-decoration-none text-truncate" href="">5.5cm Slatka Igračka od PVC Materijala</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>690RSD</h5><h6 class="text-muted ml-2">Šifra: P052</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 53-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P053.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P053" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P053" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P053.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P053" class="h6 text-decoration-none text-truncate" href="">5.5cm Slatka Igračka od PVC Materijala</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>690RSD</h5><h6 class="text-muted ml-2">Šifra: P053</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 54-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P054.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P054" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P054" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P054.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P054" class="h6 text-decoration-none text-truncate" href="">5.5cm Slatka Igračka od PVC Materijala</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>690RSD</h5><h6 class="text-muted ml-2">Šifra: P054</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 55-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P055.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P055" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P055" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P055.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P055" class="h6 text-decoration-none text-truncate" href="">5.5cm Slatka Igračka od PVC Materijala</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>690RSD</h5><h6 class="text-muted ml-2">Šifra: P055</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 56-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P056.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P056" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P056" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P056.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P056" class="h6 text-decoration-none text-truncate" href="">5.5cm Slatka Igračka od PVC Materijala</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>690RSD</h5><h6 class="text-muted ml-2">Šifra: P056</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 57-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P057.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P057" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P057" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P057.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P057" class="h6 text-decoration-none text-truncate" href="">5.5cm Slatka Igračka od PVC Materijala</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>690RSD</h5><h6 class="text-muted ml-2">Šifra: P057</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 58-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P058.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P058" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P058" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P058.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P058" class="h6 text-decoration-none text-truncate" href="">5.5cm Slatka Igračka od PVC Materijala</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>690RSD</h5><h6 class="text-muted ml-2">Šifra: P058</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 59-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P059.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P059" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P059" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P059.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P059" class="h6 text-decoration-none text-truncate" href="">20x20cm Dvostrana Plišana Igračka Hobotnica<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>3290-4490RSD</h5><h6 class="text-muted ml-2">Šifra: P059</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 60-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P060.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P060" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P060" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P060.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P060" class="h6 text-decoration-none text-truncate" href="">40-60cm Plišana lutka Rakun<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>3290-4490RSD</h5><h6 class="text-muted ml-2">Šifra: P060</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 61-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P061.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P061" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P061" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P061.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P061" class="h6 text-decoration-none text-truncate" href="">40-60cm Plišana lutka Rakun<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>3290-4490RSD</h5><h6 class="text-muted ml-2">Šifra: P061</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 62-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P062.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P062" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P062" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P062.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P062" class="h6 text-decoration-none text-truncate" href="">40-60cm Plišana lutka Rakun<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>3290-4490RSD</h5><h6 class="text-muted ml-2">Šifra: P062</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 63-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P063.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P063" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P063" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P063.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P063" class="h6 text-decoration-none text-truncate" href="">40cm Huggy Wuggy<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2490RSD</h5><h6 class="text-muted ml-2">Šifra: P063</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 64-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P064.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P064" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P064" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P064.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P064" class="h6 text-decoration-none text-truncate" href="">40cm Huggy Wuggy<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2490RSD</h5><h6 class="text-muted ml-2">Šifra: P064</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 65-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P065.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P065" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P065" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P065.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P065" class="h6 text-decoration-none text-truncate" href="">40cm Huggy Wuggy<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2490RSD</h5><h6 class="text-muted ml-2">Šifra: P065</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 66-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P066.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P066" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P066" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P066.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P066" class="h6 text-decoration-none text-truncate" href="">40cm Huggy Wuggy<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2490RSD</h5><h6 class="text-muted ml-2">Šifra: P066</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 67-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P067.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P067" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P067" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P067.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P067" class="h6 text-decoration-none text-truncate" href="">30cm Huggy Wuggy Ranac<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2490RSD</h5><h6 class="text-muted ml-2">Šifra: P067</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 68-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P068.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P068" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P068" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P068.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P068" class="h6 text-decoration-none text-truncate" href="">30cm Huggy Wuggy Ranac<br>&nbsp;</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P068</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 69-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P069.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P069" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P069" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P069.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P069" class="h6 text-decoration-none text-truncate" href="">14cm Mačka Ajkula Plišana Lutka</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: P069</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 70-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P070.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P070" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P070" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P070.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P070" class="h6 text-decoration-none text-truncate" href="">14cm Mačka Ajkula Plišana Lutka</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>990RSD</h5><h6 class="text-muted ml-2">Šifra: P070</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 71-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P071.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P071" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P071" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P071.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P071" class="h6 text-decoration-none text-truncate" href="">Plišana Kapa i Šal</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2190RSD</h5><h6 class="text-muted ml-2">Šifra: P071</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 72-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P072.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P072" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P072" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P072.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P072" class="h6 text-decoration-none text-truncate" href="">Plišana Kapa i Šal</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2190RSD</h5><h6 class="text-muted ml-2">Šifra: P072</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 73-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P073.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P073" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P073" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P073.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P073" class="h6 text-decoration-none text-truncate" href="">Plišana Kapa i Šal</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2190RSD</h5><h6 class="text-muted ml-2">Šifra: P073</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 74-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P074.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P074" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P074" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P074.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P074" class="h6 text-decoration-none text-truncate" href="">Plišana Kapa i Šal</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2190RSD</h5><h6 class="text-muted ml-2">Šifra: P074</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 75-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P075.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P075" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P075" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P075.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P075" class="h6 text-decoration-none text-truncate" href="">Plišana Kapa i Šal</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>2190RSD</h5><h6 class="text-muted ml-2">Šifra: P075</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 76-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P076.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P076" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P076" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P076.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P076" class="h6 text-decoration-none text-truncate" href="">23x19cm Plišane Rukavice</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1590RSD</h5><h6 class="text-muted ml-2">Šifra: P076</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 77-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P077.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P077" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P077" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P077.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P077" class="h6 text-decoration-none text-truncate" href="">23x19cm Plišane Rukavice</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1590RSD</h5><h6 class="text-muted ml-2">Šifra: P077</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 78-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P078.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P078" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P078" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P078.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P078" class="h6 text-decoration-none text-truncate" href="">23x19cm Plišane Rukavice</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1590RSD</h5><h6 class="text-muted ml-2">Šifra: P078</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 79-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P079.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P079" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P079" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P079.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P079" class="h6 text-decoration-none text-truncate" href="">23x19cm Plišane Rukavice</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1590RSD</h5><h6 class="text-muted ml-2">Šifra: P079</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 80-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P080.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P080" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P080" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P080.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P080" class="h6 text-decoration-none text-truncate" href="">23x19cm Plišane Rukavice</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1590RSD</h5><h6 class="text-muted ml-2">Šifra: P080</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 81-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P081.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P081" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P081" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P081.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P081" class="h6 text-decoration-none text-truncate" href="">23x19cm Plišane Rukavice</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1590RSD</h5><h6 class="text-muted ml-2">Šifra: P081</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 82-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P082.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P082" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P082" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P082.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P082" class="h6 text-decoration-none text-truncate" href="">23x19cm Plišane Rukavice</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1590RSD</h5><h6 class="text-muted ml-2">Šifra: P082</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 83-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P083.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P083" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P083" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P083.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P083" class="h6 text-decoration-none text-truncate" href="">19,5x10cm Plišana Pernica u Obliku Keksa</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>890RSD</h5><h6 class="text-muted ml-2">Šifra: P083</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 84-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P084.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P084" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P084" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P084.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P084" class="h6 text-decoration-none text-truncate" href="">23x12.5cm Plišana Pernica u Obliku Šape</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P084</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 85-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P085.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P085" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P085" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P085.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P085" class="h6 text-decoration-none text-truncate" href="">23x12.5cm Plišana Pernica u Obliku Šape</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P085</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 86-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P086.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P086" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P086" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P086.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P086" class="h6 text-decoration-none text-truncate" href="">23x12.5cm Plišana Pernica u Obliku Šape</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P086</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 87-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P087.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P087" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P087" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P087.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P087" class="h6 text-decoration-none text-truncate" href="">23x12.5cm Plišana Pernica u Obliku Šape</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>1890RSD</h5><h6 class="text-muted ml-2">Šifra: P087</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 88-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P088.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P088" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P088" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P088.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P088" class="h6 text-decoration-none text-truncate" href="">Plišana Pernica</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>490RSD</h5><h6 class="text-muted ml-2">Šifra: P088</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 89-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P089.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P089" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P089" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P089.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P089" class="h6 text-decoration-none text-truncate" href="">Plišana Pernica</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>490RSD</h5><h6 class="text-muted ml-2">Šifra: P089</h6>
+            </div>
+        </div>
+    </div>
+</div>
+  
+<!-- ARTIKAL 90-->
+<div class="col-lg-3 col-md-4 col-sm-6 pb-1 item lutka">
+    <div class="product-item bg-light mb-4">
+        <div class="product-img position-relative overflow-hidden">
+            <img id="myImg" class="img-fluid w-100" src="img/P090.jpeg" alt="">
+                <div class="product-action">
+                    <a data-toggle="modal" data-target="#exampleModal-form" class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                    <a data-toggle="modal" data-target="#P090" class="btn btn-outline-dark btn-square" href=""><i class="fa-solid fa-expand"></i>
+                    </a>
+<!-- Modal -->
+                        <div class="modal fade" id="P090" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <img src="img/P090.jpeg" style="width:100%">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </div>
+        <div class="text-center py-4">
+                <a data-toggle="modal" data-target="#P090" class="h6 text-decoration-none text-truncate" href="">Plišana Pernica</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5>490RSD</h5><h6 class="text-muted ml-2">Šifra: P090</h6>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+
+
+
+
+      
+        </div>
+    </div>
+    <!-- Products End -->
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-secondary mt-5 pt-5">
+        <div class="row px-xl-5 pt-5">
+            <div class="col-md-6 mb-5 pr-3 pr-xl-5">
+                <h5 class="text-secondary text-uppercase mb-4">Kontaktirajte Nas</h5>
+                <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor. Rebum tempor no vero est magna amet no</p>
+            </div>
+            <div class="col-md-6 mb-4">
+                <p>Duo stet tempor ipsum sit amet magna ipsum tempor est</p>
+                <h6 class="text-secondary text-uppercase mt-4 mb-3">Follow Us</h6>
+                <div class="d-flex">
+                    <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-secondary">
+                    &copy; <a class="text-primary" href="#">Domain</a>. All Rights Reserved. Designed
+                    by
+                    <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        
+        $(document).ready(function() {
+          // Show all items initially
+          $(".item").show();
+        
+          // Add click event to filter links
+          $(".filter-link").click(function() {
+            var filter = $(this).data("filter");
+        
+            // Show/hide items based on selected filter
+            if (filter === "all") {
+              $(".item").show();
+            } else {
+              $(".item").hide();
+              $("." + filter).show();
+            }
+          });
+        });
+
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+var textAreas = document.getElementsByTagName('textarea');
+
+Array.prototype.forEach.call(textAreas, function(elem) {
+    elem.placeholder = elem.placeholder.replace(/\\n/g, '\n');
+});
+    </script>
+</body>
+
+</html>

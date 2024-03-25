@@ -1,0 +1,116 @@
+<!---  Kartica artikla posude--->
+                    <div class="col-md-4 item drvoposuda"> <!-- ID za pretragu -->
+                        <div class="card mb-4 product-wap rounded-0">
+
+                            <div data-toggle="modal" data-target="#myModal1" class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src="assets/artikli/posude/posuda-drvo.jpeg"> <!-- Slika  -->
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                </div>
+                            </div>
+
+  <!-- Pop-up window -->
+  <div class="modal" id="myModal1"> <!-- ID za pop up model, ici po id itema po tabeli -->
+    <div class="modal-dialog custom-modal-dialog">
+      <div style="background-color: #f8f8f8;" class="modal-content">
+
+        
+        <div class="row">
+            <div class="col-lg-5 mt-5">
+                <div style="margin-left: 1em" class="card mb-3"> 
+                    <img class="card-img img-fluid" src="assets/img/slika-solje.jpeg" alt="Card image cap" id="product-detail"> <!-- slika artikla -->
+                </div>
+                <div class="row">
+                    <!--Start Controls-->
+                    <div class="col-1 align-self-center">
+                        <a href="#multi-item-example" role="button" data-bs-slide="prev">
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </div>
+                    <!--End Controls-->
+                    <!--Start Carousel Wrapper-->
+                    <div id="multi-item-example" class="col-10 carousel slide carousel-multi-item" data-bs-ride="carousel">
+                        <!--Start Slides-->
+                        <div class="carousel-inner product-links-wap" role="listbox">
+
+                            <!--First slide-->
+                            <div style="margin-bottom: 1em" class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <a href="#">
+                                            <img class="card-img img-fluid" src="assets/img/Solje test slike/solja1.jpeg" alt="Product Image 1"><!-- slika artikla na dnu -->
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="#">
+                                            <img class="card-img img-fluid" src="assets/img/Solje test slike/solja2.jpeg" alt="Product Image 2"><!-- slika artikla na dnu #2 -->
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a href="#">
+                                            <img class="card-img img-fluid" src="assets/img/Solje test slike/solja3.jpeg" alt="Product Image 3"><!-- Slika artikla na dnu #3 -->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/.First slide-->
+                        </div>
+                        <!--End Slides-->
+                    </div>
+                    <!--End Carousel Wrapper-->
+                    <!--End Controls-->
+                </div>
+            </div>
+            <!-- col end -->
+            <div class="col-lg-7 mt-5" >
+                <p type="button" class="close" data-dismiss="modal"><strong>X</strong></p> <!-- Close button -->
+                <div class="card" style="margin-right: 1em">
+                    <div class="card-body" style="margin-right: 2%;">
+                        <h1 class="h2"><strong>Naziv Artikla</strong></h1>
+                        <p class="h3 py-2">CENA#######</p>
+
+<hr>
+
+                        <h6>Opis:</h6>
+                        <p> Ručno izrađena drvena čaša za piće, prirodni čaj, kafu, pivo, posuđe za piće u pokretu, čajno posuđe za kuću i kuhinju. </p>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <h6></h6>
+                            </li>
+                            <li class="list-inline-item">
+                                <p class="text-muted"><strong></strong></p>
+                            </li>
+                        </ul>
+
+                        <h6>Specification:</h6>
+                        <ul class="list-unstyled pb-3">
+                            <li>Materijal: Drvo </li>
+                            <li>Veličina: 7,6 x 6,8 cm</li>
+                        </ul>
+<hr>
+                        <form action="" method="GET">
+                            <input type="hidden" name="product-title" value="Activewear">
+                            <div class="row pb-3">
+                                
+                        <p class="h3 py-2">Šifra Artikla: #######</p>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+                            <div class="card-body">
+                                <a class="h3 text-decoration-none">Posuda Drvo</a>
+                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                                    <li>*Velicine*</li>
+                                </ul>
+                                <p class="text-center mb-0">$250.00</p>
+                            </div>
+                        </div>
+                    </div>
+<!-- Kraj kartice artikla -->

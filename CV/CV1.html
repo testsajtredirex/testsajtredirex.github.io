@@ -1,0 +1,769 @@
+	<!doctype html>
+	<html>
+	<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta https-equiv="X-UA-Compatible" content="IE=edge">	
+	<!--Import Google Icon Font-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta https-equiv="X-UA-Compatible" content="IE=edge">	
+	<!--Import Google Icon Font-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>	
+	<script data-ad-client="ca-pub-2077196854990037" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!--Import materialize.css-->
+
+	<script src="https://kit.fontawesome.com/3429f72bdb.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:ital,wght@0,700;1,900&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet"> 
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+	</style>	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+
+		 <script src="https://kit.fontawesome.com/3429f72bdb.js" crossorigin="anonymous"></script>
+	<meta charset="utf-8">
+	<title>CV template</title>
+
+	<style>
+		body{
+			scroll-behavior: smooth;
+		}
+		@media(max-width: 768px){
+			.nazadnavrh{
+				border: 3px solid gray;
+				display: block;s
+				width: 80%;
+				margin: auto;
+				margin-bottom: 1em;
+				text-decoration: none;
+				padding: 1em;
+				color: white;
+				background: #2A2A2A;
+				text-align: center;
+			}
+
+		*{
+			font-family: 'Noto Serif', serif;
+		}
+		.Stranica{
+			display: block;
+			background: white;
+		}	
+		.header{
+			width: 100%;
+			background:#2A2A2A;
+			height: 5em;
+			border: 3px 
+		}
+		.slika{
+			position: absolute;
+			margin-left: 1em;
+			margin-top: 2em;
+			border: 7px solid white;
+		}
+		.slika img{
+			width: 6em;
+			height: 7em; 
+		}
+		.ime-prezime{
+			color: white;
+			padding-left:7em;
+			display: block;
+			right: 0;
+			text-align: center;
+			padding-top: 2em;
+			height: 100%;
+			margin: auto;
+			font-size: 1.2em;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.header-bot{
+			height: 2.5em;
+			width: 100%;
+			background: rgba(225,114,1,1.00);
+		}
+			.glavna-struktura{
+				display: flex;
+				flex-wrap: wrap;
+			}	
+		.info{
+			display: block;
+			margin-top: 2em;
+			display: block;
+		}
+		.o-meni{
+			width: 100%;
+			display: block;		
+			}
+		.kontakt{
+			display: block;
+			display: block;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+			padding-top: 1.5em;
+		}
+		.kontakt-informacije{
+			display: block;
+			font-size: ;
+		}
+		.kontakt-informacije i{
+			width: 0.5em;
+			padding: 0.7em;
+			margin-right: 1em;
+		}
+		h1{
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		h3{
+			padding-left: 0.5em;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+			background: #333;
+			color: white;
+			padding: 0.5em;
+			border-bottom: 8px solid rgba(225,114,1,1.00);
+
+		}
+		.vestine ul{
+			display: block;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; padding: 1.5em;
+			font-size: 0.9em;
+		}
+		.zanimanja{
+			display: block;
+			width: 100%;
+			margin-left: em;
+			padding-top: 0.5em;
+			display: block;
+		}
+		.lista-zanimanja{
+			display: block;
+			width: 85%;
+			padding: 0.3em;
+			margin: auto;
+		}
+		.lista-zanimanja li{
+			margin: 1em;
+		}
+		.Obrazovanje{
+			display: block;
+			padding-top: em;
+		}
+		.obrazovanje-lista{
+			display: block;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.obrazovanje-lista li{
+			padding: 0.3em;
+		}
+		.kursevi{
+			padding-top: em;
+		}
+		.kursevi-lista{
+			align-content: center;
+			grid-gap: 0.1em;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.kursevi-lista li{
+			align-content: center;
+			width: 12em;
+			padding: 0.5em;
+		}
+		.jezici{
+			display: block;
+		}
+			.img-fluid{
+				display: block;
+				width: 100%;
+			}
+		.jezici-lista{
+			display: inline-grid;
+			grid-template-columns: repeat(2, [col-start] 10fr);
+			grid-gap: 0.5em;
+			width: 100%;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.jezici-lista img{
+			display: block;
+			width:inherit;
+		}
+		.slika{
+			display: block;
+			height: 8em;
+		}
+		.Radno-iskustvo{
+			padding-left: em;
+			padding-right: em;
+			padding-top: em;
+		}
+			.radno-iskustvo-lista{
+				text-align: center;
+				padding: 1em;
+			}
+			.radno-iskustvo-lista li{
+				list-style-type: none;
+			}
+			.nav-item{
+				width: 50%;
+			}
+		}
+		@media(min-width: 768px){
+			.nazadnavrh{
+				display: none;
+			}
+		*{
+			font-family: 'Noto Serif', serif;
+		}
+			body{
+				background: #212529;
+			}
+		.o-meni{
+				width: 70%;
+				margin-top: 3.5em;
+			}
+		.glavna-struktura{
+				display: flex;
+				width: 100%;
+				padding-bottom: 10em;
+			}	
+		.Stranica{
+			display: block;
+			margin-left: 10%;
+			margin-right: 10%;
+			background: white;
+			border: 5px solid white;
+			padding-bottom: 10em;
+		}	
+		.header{
+			width: 100%;
+			background:#2A2A2A;
+			height: 8em;
+			border: 3px 
+		}
+		.slika{
+			height: 10em;
+			position: absolute;
+			margin-left: 6em;
+			margin-top: 4em;
+			border: 7px solid white;
+		}
+		.slika img{
+			height: 10em; 
+		}
+		.ime-prezime{
+			color: white;
+			width: 100%;
+			padding-top: 1em;
+			padding-left: 1em;
+			height: 100%;
+			margin: auto;
+			text-align: center;
+			font-size: 3em;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.header-bot{
+			height: 2.5em;
+			width: 100%;
+			background: rgba(225,114,1,1.00);
+		}
+		.info{
+			width: 30%;
+			border-right: 5px solid #333;
+			margin-top: 4.5em;
+			display: block;
+		}
+		.kontakt{
+			display: block;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+			padding-top: 1.5em;
+		}
+		.kontakt-informacije{
+			font-size: 0.9em;
+		}
+		.kontakt-informacije i{
+			width: 1em;
+			padding: 0.7em;
+			margin-right: 1em;
+		}
+		h1{
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		h3{
+			padding-left: 0.5em;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+			background: #333;
+			color: white;
+			padding: 0.5em;
+			border-bottom: 8px solid rgba(225,114,1,1.00);
+
+		}
+		.vestine ul{
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif'; padding: 1.5em;
+			font-size: 0.9em;
+		}
+		.zanimanja{
+			display: block;
+			width: 100%;
+			height: 3em;
+			padding-top: 0.5em;
+		}
+		.lista-zanimanja{
+			width: 85%;
+			padding: 0.3em;
+			margin: auto;
+		}
+		.lista-zanimanja li{
+			margin: 1em;
+		}
+		.Obrazovanje{
+			padding-left: 3em;
+			padding-right: 3em;
+			padding-top: em;
+		}
+		.obrazovanje-lista{
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.obrazovanje-lista li{
+			padding: 0.3em;
+		}
+		.kursevi{
+			display: block;
+			padding-left: 3em;
+			padding-right: 3em;
+			padding-top: em;
+		}
+		.kursevi-lista{
+			display: inline-grid;
+			grid-template-columns: repeat(2, [col-start] 10fr);
+			grid-gap: 0.5em;
+			width: 100%;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.kursevi-lista li{
+			padding: 0.5em;
+		}
+		.buduci-kursevi{
+			display: inline-grid;
+			grid-template-columns: repeat(2, [col-start] 10fr);
+			grid-gap: 0.5em;
+			width: 100%;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.buduci-kursevi li{
+			width: 12em;
+			padding: 0.5em;
+		}
+		.jezici{
+			display: block;
+			padding-left: 3em;
+			padding-right: 3em;
+		}
+		.jezici-lista{
+			display: inline-grid;
+			grid-template-columns: repeat(2, [col-start] 10fr);
+			grid-gap: 0.5em;
+			width: 100%;
+			font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.jezici-lista img{
+			display: block;
+			width: 12em;
+			height: 3em;
+		}
+		.slika{
+			display: block;
+			height: 10em;
+		}
+		.Radno-iskustvo{
+			display: block;
+			padding-left: 3em;
+			padding-right: 3em;
+			padding-top: em;
+		}
+			.img-fluid{
+				display: block;
+				width: 80%;
+				margin: auto;
+			}
+			.primeri-stranica{
+				display: block;
+				width: 100%;
+				height: 100%;
+		}
+			.primer-h1{
+				display: block;
+				width: 100%;
+				height: 4em;
+				text-align: center;
+			}
+			.primer{
+				display: block;
+				width: 100%;
+				margin: auto;
+				padding: 1em;
+				border-bottom: 5px solid #212529;
+				background: #868e96
+			}
+			.primer img{
+				margin: auto;
+			}
+			#slika1 img{
+				display: block;
+				width: 80%;
+				margin:auto;
+				border: 3px solid #fff
+			}
+			#slika2 img{
+				display: block;
+				width: 89.5%;
+				margin:auto;
+				border: 3px solid #fff
+			}
+			#slika3 img{
+				display: block;
+				width: 46.8%;
+				margin:auto;
+				border: 3px solid #fff
+			}
+			#slika4 img{
+				display: block;
+				width: 80%;
+				margin:auto;
+				border: 3px solid #fff
+			}
+			#slika5 img{
+				display: block;
+				width: 80%;
+				margin:auto;
+				margin-top: 1em;
+				border: 3px solid #fff
+			}
+		}
+	</style>
+
+
+	</head>
+
+	<body>
+
+
+	<div id="vrh" class="Stranica">	
+
+	<div class="header">
+
+		<div class="slika">
+			<img alt="" src="https://raw.githubusercontent.com/Redirex-rs/RedirexRs/master/banneri/portait.jpg" >
+
+		</div>
+
+		<div class="ime-prezime"><strong>Vladimir Stanković CV</strong></div>	
+
+
+
+	</div>
+
+	<div class="header-bot"></div>
+
+	<div class="glavna-struktura">	
+
+	<!--INFO BAR LEVO-->	
+	<div class="info">	   
+	<!--KONTAKT INFORMACIJE-->		
+	<div id="kontakt" class="kontakt">
+
+
+				<center><p>Vladimir Stanković <br> 20.10.1993. <br> Požarevac</p></center>
+				<h3><strong>Kontakt</strong></h3>
+
+			<div class="kontakt-informacije">
+			  <i class="fas fa-phone"></i>(+381)66/935-8484 <br>
+			  <i class="fas fa-envelope"></i>stankovicv93@gmail.com <br>
+			  <i class="fas fa-home"></i>Slobodarska 16; Požarevac<br>
+			  <i class="fas fa-globe"></i> https://redirex.rs <br>
+			</div>		
+	</div>
+
+	<!--SKILLS
+	<div id="vestine" class="kontakt">
+
+				<h3><strong>Veštine</strong></h3>
+
+		<div class="vestine">
+			  <ul>
+				<li style="padding: 0.3em">Odlično poznavanje rada na računaru</li>
+				<li style="padding: 0.3em">Poznavanje strukture računara</li>   
+				<li style="padding: 0.3em">Održavanje računara hardware i software</li> <li style="padding: 0.3em">Brzo učenje i lako prilagođavanje svakom radnom okruženju</li> 
+				<li style="padding: 0.3em">Web design</li>
+				<li style="padding: 0.3em">Microsoft Office</li>
+				<li style="padding: 0.3em">Apache Open Office</li>
+				<li style="padding: 0.3em">MySQL</li>
+				<li style="padding: 0.3em">AutoCAD</li>
+				<li style="padding: 0.3em">47 reči po minutu (https://www.livechat.com/typing-speed-test/#/)</li>
+			  </ul>
+		</div>	
+	</div>		-->
+
+	<!--OSTALA ZANIMANJA-->
+	<div class="kontakt">
+
+				<h3><strong>Veštine i Interesovanja:</strong></h3>
+
+	<div id="zanimanja" class="zanimanja">
+
+		<ul class="lista-zanimanja">
+				<li><b>Sviranje raznih instrumenata:</b></li>
+				<ul style="list-style-type: disc;">
+				  <li>Električna gitara</li>
+				  <li>Bas gitara</li>
+				  <li>Bubnjevi</li>
+				</ul>
+				<li><b>Aktivan u svetu kriptovaluta od 2013. godine</b></li>
+				<li><b>Imao sam svoj blog o kriptovalutama na steemit.com</b></li>
+				<li><b>Razna trgovina kriptovalutama</b></li>
+				<li><b>U slobodno vreme:</b></li>
+				<ul style="list-style-type: disc;">
+				  <li>Video igre (uglavnom online zbog vežbanja timskog rada i konkurencije)</li>
+				  <li>Tetris!</li>
+				  <li>Sviranje i pisanje muzike</li>
+				  <li>Rešavanje jednostavnih kriptograma (<a href="https://api.razzlepuzzles.com">https://api.razzlepuzzles.com</a>)</li>
+				</ul>
+				<li><b>Interesovanje za cyber i network security</b></li>
+				<li><b>Eksperimentisao sam s Cicada 3301 slagalicama</b></li>
+				<li><b>TOR i Blockchain tehnologija</b></li>
+				<li><b>Kriptografija</b></li>
+				<li><b>Sport i Fizička Aktivnost:</b> Strastven prema sportu i fizičkoj aktivnosti, što mi je usadilo osobine upornosti, postavljanja ciljeva i brige o fizičkom zdravlju.</li>
+				<li><b>Aktivnosti na Otvorenom:</b> Strastven avanturista na otvorenom sa ljubavlju prema istraživanju prirodnih pejzaža, razvijajući veštine navigacije, rešavanja problema i ceneći prirodni svet.</li>
+				<li><b>Tehnologija i Gadžeti:</b> Veliko interesovanje za tehnologiju i gadžete, praćenje najnovijih inovacija u svetu tehnike, ističući snažnu naklonost za rešavanje problema, prilagodljivost i ostajanje korak ispred u digitalnom dobu.</li>
+			  </ul>
+			  
+		
+	</div>	
+
+
+
+
+	</div>		
+
+
+		</div>
+
+
+	<!--PERSBIO DESNO-->	
+	<div class="o-meni" >
+
+
+	<hr style="width: 90%; margin-top: 1em">
+
+	<div id="obrazovanje" class="Obrazovanje">
+		<h3><strong>OBRAZOVANJE</strong></h3>
+
+		<ul class="obrazovanje-lista">
+			<li>Osnovna Škola "Dositej Obradović"</li>
+			<li>Osnovna Muzička Škola "Stevan Mokranjac" u Požarevcu</li>
+			<li>Požarevačka Gimnazija (matematički smer)</li>
+			<li>Rudarsko - Geološki Fakultet Univerziteta u Beogradu (smer geotehnika) <strong>2012 - 2015</strong> (napušteno)</li>
+			<li>Visoka Tehnička Škola Strukovnih Studija (smer elektrotehnika - Računarstvo i Informatika) <strong>2016 - 2018 / 2023 - </strong></li>	
+		  </ul>
+		  
+	</div>	
+
+		<hr style="width: 90%; margin-top: 2em">
+
+	<div id="kursevi" class="kursevi">
+		<h3><strong>VEŠTINE</strong></h3>
+<div class="veštine">
+	<h2 style="font-size: 1.5em;"><u>Razvoj Veb Stranica:</u></h2>
+	<ul>
+		<li style="padding: 0.3em">HTML</li>
+		<li style="padding: 0.3em">CSS</li>
+		<li style="padding: 0.3em">SQL</li>
+		<li style="padding: 0.3em">php</li>
+		<li style="padding: 0.3em">Vue.js (Početnik)</li>
+	</ul>
+	<hr>
+	<h2 style="font-size: 1.5em;"><u>Upravljanje Bazama Podataka:</u></h2>
+	<ul>
+		<li style="padding: 0.3em">SQL</li>
+		<li style="padding: 0.3em">MySQL</li>
+	</ul>
+	<hr>
+	<h2 style="font-size: 1.5em;"><u>Veštine u Korišćenju Softvera:</u></h2>
+	<ul>
+		<li style="padding: 0.3em">Microsoft Office Suite</li>
+		<li style="padding: 0.3em">Apache OpenOffice</li>
+		<li style="padding: 0.3em">AutoCAD</li>
+		<li style="padding: 0.3em">Python (Početnik)</li>
+	</ul>
+	<hr>
+	<h2 style="font-size: 1.5em;"><u>Mreže i IT:</u></h2>
+	<ul>
+		<li style="padding: 0.3em">DHCP (BootP DHCP EtherNet/IP Commissioning Tool)</li>
+		<li style="padding: 0.3em">Odlično poznavanje rada na računaru</li>
+		<li style="padding: 0.3em">Poznavanje strukture računara</li>
+		<li style="padding: 0.3em">Održavanje računara (hardware i software)</li>
+	</ul>
+	<br>
+	<h3 style="font-size: 1.5em;"><u>Druge Veštine:</u></h3>
+	<ul>
+		<li style="padding: 0.3em"><u>Analitičko razmišljanje:</u> Pokazana veština razlaganja kompleksnih problema, procenjivanja opcija i donošenja informisanih odluka radi postizanja optimalnih rezultata.</li>
+		<li style="padding: 0.3em"><u>Saradnja na preseku funkcija:</u> Dokazana sposobnost efikasnog saradnjavanja sa raznolikim timovima i odeljenjima, podsticanje sinergije i promovisanje jedinstvenog pristupa postizanju organizacionih ciljeva.</li>
+		<li style="padding: 0.3em"><u>Kritičko razmišljanje:</u> Vešt u proceni situacija iz više perspektiva, identifikaciji potencijalnih izazova i osmišljavanju strateških rešenja za prevazilaženje prepreka.</li>
+		<li style="padding: 0.3em"><u>Multitasking:</u> Vešt u efikasnom upravljanju više zadataka istovremeno, obezbeđujući produktivnost i visokokvalitetne rezultate na različitim projektima.</li>
+		<li style="padding: 0.3em"><u>Prilagodljiva komunikacija:</u> Izvrsne verbalne i pisane veštine komunikacije, sposobnost prilagođavanja poruka različitim auditorijumima, olakšavanje jasnog razumevanja i izgradnje snažnih profesionalnih odnosa.</li>
+		<li style="padding: 0.3em"><u>Rešavanje konflikata:</u> Iskustvo u adresiranju i rešavanju konflikata diplomatski, promovisanje harmoničnog radnog okruženja i podsticanje pozitivne dinamike tima.</li>
+		<li style="padding: 0.3em"><u>Snalažljivost:</u> Pokazana sposobnost kreativnog rešavanja problema i pronalaženja inovativnih rešenja, efikasno korišćenje dostupnih resursa za prevazilaženje izazova.</li>
+		<li style="padding: 0.3em"><u>Zadovoljstvo korisnika:</u> Dokazan uspeh u pružanju izuzetnog zadovoljstva korisnika kroz odzivnu i empatičku komunikaciju, obezbeđivanje pozitivnih iskustava za klijente ili korisnike.</li>
+		<li style="padding: 0.3em"><u>Koordinacija projekta:</u> Vešt u koordinaciji i upravljanju vremenskim rokovima, resursima i isporukama projekta radi obezbeđivanja uspešnog završetka projekta unutar utvrđenih rokova.</li>
+		<li style="padding: 0.3em"><u>Brzo Učenje:</u> Dokazana sposobnost brzog usvajanja novih veština, prilagođavanja promenljivim okolinama i odličnog izvršenja različitih uloga.</li>
+		<li style="padding: 0.3em"><u>Brza Prilagodba Svakom Radnom Okruženju:</u> Dokazana sposobnost brze adaptacije na različita radna okruženja, industrije i timove, što doprinosi glatkom tranzicijama i efikasnom doprinosu.</li>
+		<li style="padding: 0.3em"><u>Brzina Kucanja:</u> 47 reči u minutu (Test brzine kucanja)</li>
+		<li style="padding: 0.3em"><u>Rešavanje Problema:</u> Stručnost u analizi složenih problema, identifikaciji uzroka i primeni efikasnih rešenja radi postizanja pozitivnih rezultata.</li>
+		<li style="padding: 0.3em"><u>Vremenska Organizacija:</u> Stručnost u organizaciji zadataka, prioritetima i ispunjavanju rokova u dinamičnim okolinama.</li>
+		<li style="padding: 0.3em"><u>Organizacione Veštine:</u> Stručnost u efikasnom organizovanju zadataka, upravljanju prioritetima i osiguravanju poštovanja rokova projekta.</li>
+		<li style="padding: 0.3em"><u>Vodio sam guildu od oko 50 članova u popularnoj MMORPG igri</u>, nadgledajući operacije, planirajući događaje i podstičući pozitivnu i kooperativnu gejming zajednicu (World of Warcraft).</li>
+		<li style="padding: 0.3em"><u>Game Master u World of Warcraft:</u> Iskustvo kao Game Master u World of Warcraft igri unapredilo je moje veštine u oblasti korisničke podrške, rešavanja problema i komunikacije, što me čini spremnim za izuzetnu podršku korisnicima i rešavanje problema u različitim situacijama.</li>
+	</ul>
+</div>
+
+				  
+	<!--		
+		<li><img src="banneri/HTML-compl.png" style="#"  alt=""><br>www.codecademy.com</li>
+		<li><img src="banneri/CSS-compl.png" style="#"  alt=""><br>www.codecademy.com</li>
+		<li><img src="banneri/SQL-compl.png" style="#"  alt=""><br>www.codecademy.com</li>
+
+		</ul>-->
+	</div>	
+
+		<hr style="width: 90%; margin-top: 2em">
+
+	<div id="jezici" class="jezici">
+
+		<h3><strong>STRANI JEZICI</strong></h3>
+		<ul class="jezici-lista">
+		   <li>
+			<strong>Engleski:</strong><br>
+			<p>
+			 <img src="https://www.cambridgeenglish.org/assets/img/CE_Master_Logo_RGB.svg" alt="">
+			</p>
+		   </li>	
+		</ul>
+		<img class="img-fluid" src="eng-skill1.jpg">
+
+	</div>		
+
+		<hr style="width: 90%; margin-top: 2em">
+
+	<div id="radno-iskustvo" class="Radno-iskustvo">
+
+		<h3><strong>RADNO ISKUSTVO</strong></h3>
+
+			<div class="radno-iskustvo-lista">
+				<p><strong>GSM&amp;PC Shop</strong></p>
+				<p>Prodavac</p>
+				<ul style="list-style-type: disc; padding-left: 30px;">
+					<li>Aktivni rad u prodaji</li>
+					<li>Utovar i istovar robe</li>
+					<li>Isporuke robe</li>
+					<li>Najava preuzimanja isporuka</li>
+				</ul>	
+				<p>Održavanje i popravka računara:</p>
+				<ul style="list-style-type: disc; padding-left: 30px;">
+				  <li>Podešavanje nove hardverske opreme i mreža za lokalne kompanije</li>
+				  <li>Održavanje lokalnih servera i baza podataka za lokalne kompanije</li>
+				  <li>Pružanje usluge održavanja računara za korisnike</li>
+				  <li>Konfiguracija novih mreža i hardvera za korisnike (i na daljinu i lično)</li>
+				  <li>Pomoć pri instalaciji nove hardverske i softverske opreme i pružanje uputstava o korišćenju</li>
+				</ul>
+				<p>Avgust 2022 - Septembar 2023</p>
+			  </div>
+			  
+			
+		<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+		<div class="radno-iskustvo-lista">
+			<p><strong>Službenik za sprovođenje javnog izvršitelja (izvršitelj za građanske dugove)</strong></p>
+			<p>Administracioni poslovi;</p>
+			<ul style="list-style-type: disc; padding-left: 30px;">
+				<li>Obrada podataka</li>
+				<li>Slanje pošte</li>
+				<li>Uručivanje pošiljki lično</li>
+				<li>Primanje i slanje dopisa Sudu i javnim firmama</li>
+				<li>Zadužen za invertar i poručivanje kancelarijskog materijala po potrebi</li>
+			  </ul>
+			<p>IT podrška:</p>
+			<ul style="list-style-type: disc; padding-left: 30px;">
+			  <li>Održavanje lokalnog servera i baze podataka</li>
+			  <li>Održavanje hardvera i softvera za računare u kancelariji</li>
+			</ul>
+			<p>Avgust 2021 - Februar 2022</p>
+		  </div>
+		  
+
+		<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+		<div class="radno-iskustvo-lista">
+			<p><strong>Auto perionica SJAJ -</strong></p>
+			<p>Sortiranje, popis i internet prodaja auto delova i guma;</p>
+			<p>Kreairanje i održavanje baze podataka</p>
+			<p>Jul 2021 - Avgust 2021</p>
+		  </div>	
+		
+
+		<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+			<p><strong>Nekolicina freelance poslova izrađivanja web-stranica i uređivanja podataka</strong>
+			</p>	
+			<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">
+		<div class="radno-iskustvo-lista" style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';">
+
+			<p><strong>Izrada i održavanje kućne IT mreže i telefonskih instalacija za više malih i srednjih preduzeća, <br><br>
+		Izrada kućnih telefonskih instalacija, IT i TV mreže za više privatnih korisnika</strong>
+			</p>
+
+	<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">
+
+		<p><strong>Forum moderator/tehnička podrška i in-game korisnička podrška za nekoliko privatnih World of Warcraft servera
+	</strong></p>
+
+	<hr style="color: rgba(195,195,195,0.70);width: 100%; margin-top: 1.5em; margin-bottom: 1.5em;">
+
+		<p><strong>Menadžer kampanja na forumu o kriptovalutama (kampanje od 40-50 ljudi) sto uključuje praćenje broja, kvaliteta, lokacije i učestalosti postova.</strong></p>
+
+	<hr style="color: rgba(195,195,195,0.70); width: 100%; margin-top: 1.5em; margin-bottom: 1.5em;">
+
+		<p><strong>Pisanje artikala za portale o kripto-valutama</strong></p>
+
+	<hr style="color: rgba(195,195,195,0.70);width: 100%; margin-top: 1.5em; margin-bottom: 1.5em;">
+
+		<p><strong>Nekolicina freelance web design i data-management poslova na freelancer.com</strong></p>
+
+	<hr style="color: rgba(195,195,195,0.70);width: 100%; margin-top: 1.5em; margin-bottom: 1.5em;">
+
+		<p><strong>Privatno održavanje i popravljanje računara</strong></p>
+
+		</div>
+	</div>	
+
+		<hr style="width: 90%; margin-top: 2em; margin-bottom: 1.5em">
+	</div>	
+
+
+
+
+	</div>	
+		<a style="scroll-behavior: smooth" class="nazadnavrh" href="#vrh">Povratak na vrh stranice</a>
+	</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+
+	</div>
+
+	</body>
+	</html>

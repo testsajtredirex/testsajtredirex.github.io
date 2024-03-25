@@ -1,0 +1,712 @@
+	<!doctype html>
+	<html>
+	<head>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta https-equiv="X-UA-Compatible" content="IE=edge">	
+	<!--Import Google Icon Font-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta https-equiv="X-UA-Compatible" content="IE=edge">	
+	<!--Import Google Icon Font-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>	
+	<script data-ad-client="ca-pub-2077196854990037" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<!--Import materialize.css-->
+
+	<script src="https://kit.fontawesome.com/3429f72bdb.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:ital,wght@0,700;1,900&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet"> 
+	
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+	</style>	
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+
+		 <script src="https://kit.fontawesome.com/3429f72bdb.js" crossorigin="anonymous"></script>
+	<meta charset="utf-8">
+	<title>CV template</title>
+
+	<style>
+		body {
+			scroll-behavior: smooth;
+		}
+		
+		@media(max-width: 768px) {
+		.nazadnavrh {
+			border: 3px solid gray;
+			display: block;
+			width: 80%;
+			margin: auto;
+			margin-bottom: 1em;
+			text-decoration: none;
+			padding: 1em;
+			color: white;
+			background: #2A2A2A;
+			text-align: center;
+		}
+		* {
+			font-family: 'Noto Serif', serif;
+		}
+		.Stranica {
+			display: block;
+			background: white;
+		}
+		.header {
+			width: 100%;
+			background: #2A2A2A;
+			height: 5em;
+			border: 3px
+		}
+		.slika {
+			position: absolute;
+			margin-left: 1em;
+			margin-top: 2em;
+			border: 7px solid white;
+		}
+		.slika img {
+			width: 6em;
+			height: 7em;
+		}
+		.ime-prezime {
+			color: white;
+			padding-left: 7em;
+			display: block;
+			right: 0;
+			text-align: center;
+			padding-top: 2em;
+			height: 100%;
+			margin: auto;
+			font-size: 1.2em;
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.header-bot {
+			height: 2.5em;
+			width: 100%;
+			background: rgba(225,114,1,1.00);
+		}
+		.glavna-struktura {
+			display: flex;
+			flex-wrap: wrap;
+		}
+		.info {
+			display: block;
+			margin-top: 2em;
+			display: block;
+		}
+		.o-meni {
+			width: 100%;
+			display: block;
+		}
+		.kontakt {
+			display: block;
+			display: block;
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+			padding-top: 1.5em;
+		}
+		.kontakt-informacije {
+			display: block;
+		}
+		.kontakt-informacije i {
+			width: 0.5em;
+			padding: 0.7em;
+			margin-right: 1em;
+		}
+		h1 {
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		h3 {
+			padding-left: 0.5em;
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+			background: #333;
+			color: white;
+			padding: 0.5em;
+			border-bottom: 8px solid rgba(225,114,1,1.00);
+		}
+		.vestine ul {
+			display: block;
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+			padding: 1.5em;
+			font-size: 0.9em;
+		}
+		.zanimanja {
+			display: block;
+			width: 100%;
+			margin-left: em;
+			padding-top: 0.5em;
+			display: block;
+		}
+		.lista-zanimanja {
+			display: block;
+			width: 85%;
+			padding: 0.3em;
+			margin: auto;
+		}
+		.lista-zanimanja li {
+			margin: 1em;
+		}
+		.Obrazovanje {
+			display: block;
+			padding-top: em;
+		}
+		.obrazovanje-lista {
+			display: block;
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.obrazovanje-lista li {
+			padding: 0.3em;
+		}
+		.kursevi {
+			padding-top: em;
+		}
+		.kursevi-lista {
+			align-content: center;
+			grid-gap: 0.1em;
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.kursevi-lista li {
+			align-content: center;
+			width: 12em;
+			padding: 0.5em;
+		}
+		.jezici {
+			display: block;
+		}
+		.img-fluid {
+			display: block;
+			width: 100%;
+		}
+		.jezici-lista {
+			display: inline-grid;
+		 grid-template-columns: repeat(2, [col-start] 10fr);
+			grid-gap: 0.5em;
+			width: 100%;
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.jezici-lista img {
+			display: block;
+			width: inherit;
+		}
+		.slika {
+			display: block;
+			height: 8em;
+		}
+		.Radno-iskustvo {
+			padding-left: em;
+			padding-right: em;
+			padding-top: em;
+		}
+		.radno-iskustvo-lista {
+			text-align: center;
+			padding: 1em;
+		}
+		.radno-iskustvo-lista li {
+			list-style-type: none;
+		}
+		.nav-item {
+			width: 50%;
+		}
+		}
+		
+		@media(min-width: 768px) {
+		.nazadnavrh {
+			display: none;
+		}
+		* {
+			font-family: 'Noto Serif', serif;
+		}
+		body {
+			background: #212529;
+		}
+		.o-meni {
+			width: 90%;
+			margin-top: 3.5em;
+		}
+		.glavna-struktura {
+			display: flex;
+			width: 100%;
+		}
+		.Stranica {
+			display: block;
+			margin-left: 10%;
+			margin-right: 10%;
+			background: white;
+			border: 5px solid white;
+			padding-bottom: 1em;
+		}
+		.header {
+			width: 100%;
+			background: #2A2A2A;
+			height: 8em;
+			border: 3px
+		}
+		.slika {
+			height: 10em;
+			position: absolute;
+			margin-left: 6em;
+			margin-top: 4em;
+			border: 7px solid white;
+		}
+		.slika img {
+			height: 10em;
+		}
+		.ime-prezime {
+			color: white;
+			width: 100%;
+			padding-top: 1em;
+			padding-left: 1em;
+			height: 100%;
+			margin: auto;
+			text-align: center;
+			font-size: 3em;
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.header-bot {
+			height: 2.5em;
+			width: 100%;
+			background: rgba(225,114,1,1.00);
+		}
+		.info {
+			width: 30%;
+			border-right: 5px solid #333;
+			margin-top: 4.5em;
+			display: block;
+		}
+		.kontakt {
+			display: block;
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+			padding-top: 1.5em;
+		}
+		.kontakt-informacije {
+			font-size: 0.9em;
+		}
+		.kontakt-informacije i {
+			width: 1em;
+			padding: 0.7em;
+			margin-right: 1em;
+		}
+		h1 {
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		h3 {
+			padding-left: 0.5em;
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+			background: #333;
+			color: white;
+			padding: 0.5em;
+			border-bottom: 8px solid rgba(225,114,1,1.00);
+		}
+		.vestine ul {
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+			padding: 1.5em;
+			font-size: 0.9em;
+		}
+		.zanimanja {
+			width: 100%;
+			height: 3em;
+			margin-left: em;
+			padding-top: 0.5em;
+			display: block;
+		}
+		.lista-zanimanja {
+			width: 85%;
+			padding: 0.3em;
+			margin: auto;
+			padding-bottom: 5em;
+		}
+		.lista-zanimanja li {
+			margin: 1em;
+		}
+		.Obrazovanje {
+			padding-left: 3em;
+			padding-right: 3em;
+			padding-top: em;
+		}
+		.obrazovanje-lista {
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.obrazovanje-lista li {
+			padding: 0.3em;
+		}
+		.kursevi {
+			padding-left: 3em;
+			padding-right: 3em;
+			padding-top: em;
+		}
+		.kursevi-lista {
+			display: inline-grid;
+			grid-gap: 0.5em;
+			width: 90%;
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.kursevi-lista li {
+			width: 100%;
+			padding: 0.5em;
+			margin-left: 1em;
+		}
+		.jezici {
+			display: block;
+			padding-left: 3em;
+			padding-right: 3em;
+		}
+		.jezici-lista {
+			display: inline-grid;
+		 grid-template-columns: repeat(2, [col-start] 10fr);
+			grid-gap: 0.5em;
+			width: 100%;
+			font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+		}
+		.jezici-lista img {
+			display: block;
+			width: 12em;
+			height: 3em;
+		}
+		.slika {
+			display: block;
+			height: 10em;
+			margin-left: 10em
+		}
+		.Radno-iskustvo {
+			padding-left: 3em;
+			padding-right: 3em;
+			padding-bottom: 5em;
+		}
+		.img-fluid {
+			display: flex;
+			margin: auto;
+		}
+		}
+		</style>
+
+
+	</head>
+
+	<body>
+
+
+	<div id="vrh" class="Stranica">	
+
+	<div class="header">
+
+		<div class="slika">
+			<img alt="" src="https://raw.githubusercontent.com/Redirex-rs/RedirexRs/master/banneri/portait.jpg" >
+
+		</div>
+
+		<div class="ime-prezime"><strong>Vladimir Stanković CV</strong></div>	
+
+
+
+	</div>
+
+	<div class="header-bot"></div>
+
+	<div class="glavna-struktura">	
+
+	<!--INFO BAR LEVO-->	
+	<div class="info">	   
+	<!--KONTAKT INFORMACIJE-->		
+	<div id="kontakt" class="kontakt">
+
+
+				<center><p>Vladimir Stanković <br> 20.10.1993. <br> Požarevac</p></center>
+				<h3><strong>Kontakt</strong></h3>
+
+			<div class="kontakt-informacije">
+			  <i class="fas fa-phone"></i>(+381)66/935-8484 <br>
+			  <i class="fas fa-envelope"></i>stankovicv93@gmail.com <br>
+			  <i class="fas fa-home"></i>Slobodarska 16; Požarevac<br>
+			  <i class="fas fa-globe"></i> https://redirex.rs <br>
+			</div>		
+	</div>
+
+	<!--SKILLS
+	<div id="vestine" class="kontakt">
+
+				<h3><strong>Veštine</strong></h3>
+
+		<div class="vestine">
+			  <ul>
+				<li style="padding: 0.3em">Odlično poznavanje rada na računaru</li>
+				<li style="padding: 0.3em">Poznavanje strukture računara</li>   
+				<li style="padding: 0.3em">Održavanje računara hardware i software</li> <li style="padding: 0.3em">Brzo učenje i lako prilagođavanje svakom radnom okruženju</li> 
+				<li style="padding: 0.3em">Web design</li>
+				<li style="padding: 0.3em">Microsoft Office</li>
+				<li style="padding: 0.3em">Apache Open Office</li>
+				<li style="padding: 0.3em">MySQL</li>
+				<li style="padding: 0.3em">AutoCAD</li>
+				<li style="padding: 0.3em">47 reči po minutu (https://www.livechat.com/typing-speed-test/#/)</li>
+			  </ul>
+		</div>	
+	</div>		-->
+
+	<!--OSTALA ZANIMANJA-->
+	<div class="kontakt">
+
+				<div class="kontakt">
+					<h3><strong>Ostali interesi</strong></h3>
+					<div id="zanimanja" class="zanimanja">
+					  <ul class="lista-zanimanja">
+						<li><b>Sviranje različitih instrumenata:</b></li>
+						<li style="list-style-type:none;">-Električna gitara</li>
+						<li style="list-style-type:none;">-Bas gitara</li>
+						<li style="list-style-type:none;">-Bubnjevi</li>
+						<li><b>Aktivan u svetu kriptovaluta od 2013. godine</b></li>
+						<li><b>Imao sam svoj blog o kripto-valutama na steemit.com</b></li>
+						<li><b>Različito trgovanje kripto-valutama</b></li>
+						<li><b>U slobodno vreme:</b></li>
+						<li style="list-style-type:none;">-Video igre (najčešće online zbog vežbanja timskog rada i takmičarskog duha)</li>
+						<li style="list-style-type:none;">-Tetris!</li>
+						<li style="list-style-type:none;">-Sviranje i pisanje muzike</li>
+						<li style="list-style-type:none;">-Rešavanje jednostavnih kriptograma <br>(https://api.razzlepuzzles.com)</li>
+						<li><b>Interesovanje za sajber i mrežnu bezbednost</b></li>
+						<li><b>Učestvovao u rešavanju zagonetki Cicada 3301</b></li>
+						<li><b>TOR i tehnologija lanca blokova (Blockchain)</b></li>
+						<li><b>Kriptografija</b></li>
+						<li><b>Sport i fitness:</b> Strastven u vezi sporta i fitnessa, što je usadilo osobine upornosti, postavljanja ciljeva i fizičkog blagostanja.</li>
+						<li><b>Aktivnosti na otvorenom:</b> Strastven avanturista na otvorenom sa strašću za istraživanje prirodnih pejzaža, razvijanje veština navigacije, rešavanje problema i cenjenje divljine.</li>
+						<li><b>Tehnologija i uređaji:</b> Veliko interesovanje za tehnologiju i uređaje, praćenje najnovijih inovacija u svetu tehnologije, ističući snažnu sklonost rešavanju problema, prilagodljivost i ostajanje korak ispred u digitalnom dobu.</li>
+					  </ul>
+					</div>
+				  </div>
+				  
+
+
+
+
+	</div>		
+
+
+		</div>
+
+
+	<!--PERSBIO DESNO-->	
+	<div class="o-meni" >
+
+
+	<hr style="width: 90%; margin-top: 1em">
+
+	<div id="obrazovanje" class="Obrazovanje">
+		<h3><strong>OBRAZOVANJE</strong></h3>
+
+		<ul class="obrazovanje-lista">
+		<li>Osnovna Škola "Dositej Obradović"</li>
+		<li>Osnovna Muzicka Škola "Stevan Mokranjac" u Požarevcu</li>
+		<li>Požarevačka Gimnazija (matematički smer)</li>
+		<li>Rudarsko - Geološki Fakultet Univerziteta u Beogradu (smer geotehnika) <strong>2012 - 2015</strong> (napušteno)</li>
+		<li>Visoka Tehnička Škola Strukovnih Studija (smer elektrotehnika - Racunarstvo i Informatika) <strong>2016 - 2018 / 2023 - </strong></li>	
+		</ul>
+	</div>	
+
+		<hr style="width: 90%; margin-top: 2em">
+
+		<div id="kursevi" class="kursevi">
+			<h3><strong>Računarske veštine</strong></h3>
+			<br>
+			<ul class="kursevi-lista">
+			  <div class="tech_skill">
+				<h2 style="font-size: 1.5em;"><u>Razvoj veb stranica:</u></h2>
+				<li style="padding: 0.3em">HTML</li>
+			<li style="padding: 0.3em">CSS</li>
+			<li style="padding: 0.3em">php</li>
+			<li style="padding: 0.3em">Bootstrap</li>
+			<li style="padding: 0.3em">Git</li>
+			<li style="padding: 0.3em">Web Security Basics</li>
+			<li style="padding: 0.3em">Command Line/Shell</li>
+			<li style="padding: 0.3em">Vue.js (Beginner) </li>
+				<hr>
+				<h2 style="font-size: 1.5em;"><u>Upravljanje bazama podataka:</u></h2>
+				<li style="padding: 0.3em">SQL</li>
+			<li style="padding: 0.3em">MySQL </li>
+			<li style="padding: 0.3em">Microsoft Access </li>
+				<hr>
+				<h2 style="font-size: 1.5em;"><u>Automatizacija Dokumentacije:</u></h2>
+			<li style="padding: 0.3em">Microsoft Power Automate</li>
+			<li style="padding: 0.3em">Zapier </li>
+			<li style="padding: 0.3em">Integromat </li>
+			<hr>
+				<h2 style="font-size: 1.5em;"><u>Veštine u radu sa softverom:</u></h2>
+				<li style="padding: 0.3em"> Microsoft Office Suite </li>
+				<li style="padding: 0.3em"> Google Workspace </li>
+				<li style="padding: 0.3em"> Apache OpenOffice </li>
+				<li style="padding: 0.3em"> Data Visualization Tool (Tableau) </li>
+				<li style="padding: 0.3em"> AutoCAD </li>
+				<li style="padding: 0.3em"> Python (Beginner) </li>
+				<hr>
+				<h2 style="font-size: 1.5em;"><u>Mreže i IT:</u></h2>
+				<li style="padding: 0.3em">DHCP (BootP DHCP EtherNet/IP alat za komisiju)</li>
+				<li style="padding: 0.3em">Odlične veštine u radu sa računarima</li>
+				<li style="padding: 0.3em">Poznavanje strukture računara</li>
+				<li style="padding: 0.3em">Održavanje računara (hardver i softver)</li>
+				<br>
+				<h3 style="font-size: 1.5em;"><u>Ostale veštine:</u></h3>
+				<li style="padding: 0.3em"><b>Analitičko razmišljanje:</b> Pokazana veština razlaganja kompleksnih problema, procenjivanja opcija i donošenja informisanih odluka radi postizanja optimalnih rezultata.</li>
+		<li style="padding: 0.3em"><b>Saradnja na preseku funkcija:</b> Dokazana sposobnost efikasnog saradnjavanja sa raznolikim timovima i odeljenjima, podsticanje sinergije i promovisanje jedinstvenog pristupa postizanju organizacionih ciljeva.</li>
+		<li style="padding: 0.3em"><b>Kritičko razmišljanje:</b> Vešt u proceni situacija iz više perspektiva, identifikaciji potencijalnih izazova i osmišljavanju strateških rešenja za prevazilaženje prepreka.</li>
+		<li style="padding: 0.3em"><b>Multitasking:</b> Vešt u efikasnom upravljanju više zadataka istovremeno, obezbeđujući produktivnost i visokokvalitetne rezultate na različitim projektima.</li>
+		<li style="padding: 0.3em"><b>Prilagodljiva komunikacija:</b> Izvrsne verbalne i pisane veštine komunikacije, sposobnost prilagođavanja poruka različitim auditorijumima, olakšavanje jasnog razumevanja i izgradnje snažnih profesionalnih odnosa.</li>
+		<li style="padding: 0.3em"><b>Rešavanje konflikata:</b> Iskustvo u adresiranju i rešavanju konflikata diplomatski, promovisanje harmoničnog radnog okruženja i podsticanje pozitivne dinamike tima.</li>
+		<li style="padding: 0.3em"><b>Snalažljivost:</b> Pokazana sposobnost kreativnog rešavanja problema i pronalaženja inovativnih rešenja, efikasno korišćenje dostupnih resursa za prevazilaženje izazova.</li>
+		<li style="padding: 0.3em"><b>Zadovoljstvo korisnika:</b> Dokazan uspeh u pružanju izuzetnog zadovoljstva korisnika kroz odzivnu i empatičku komunikaciju, obezbeđivanje pozitivnih iskustava za klijente ili korisnike.</li>
+		<li style="padding: 0.3em"><b>Koordinacija projekta:</b> Vešt u koordinaciji i upravljanju vremenskim rokovima, resursima i isporukama projekta radi obezbeđivanja uspešnog završetka projekta unutar utvrđenih rokova.</li>
+		<li style="padding: 0.3em"><b>Brzo Učenje:</b> Dokazana sposobnost brzog usvajanja novih veština, prilagođavanja promenljivim okolinama i odličnog izvršenja različitih uloga.</li>
+		<li style="padding: 0.3em"><b>Brza Prilagodba Svakom Radnom Okruženju:</b> Dokazana sposobnost brze adaptacije na različita radna okruženja, industrije i timove, što doprinosi glatkom tranzicijama i efikasnom doprinosu.</li>
+		<li style="padding: 0.3em"><b>Brzina Kucanja:</b> 47 reči u minutu (Test brzine kucanja)</li>
+		<li style="padding: 0.3em"><b>Rešavanje Problema:</b> Stručnost u analizi složenih problema, identifikaciji uzroka i primeni efikasnih rešenja radi postizanja pozitivnih rezultata.</li>
+		<li style="padding: 0.3em"><b>Vremenska Organizacija:</b> Stručnost u organizaciji zadataka, prioritetima i ispunjavanju rokova u dinamičnim okolinama.</li>
+		<li style="padding: 0.3em"><b>Organizacione Veštine:</b> Stručnost u efikasnom organizovanju zadataka, upravljanju prioritetima i osiguravanju poštovanja rokova projekta.</li>
+		<li style="padding: 0.3em"><b>Vodio sam guildu od oko 50 članova u popularnoj MMORPG igri</b>, nadgledajući operacije, planirajući događaje i podstičući pozitivnu i kooperativnu gejming zajednicu (World of Warcraft).</li>
+		<li style="padding: 0.3em"><b>Game Master u World of Warcraft:</b> Iskustvo kao Game Master u World of Warcraft igri unapredilo je moje veštine u oblasti korisničke podrške, rešavanja problema i komunikacije, što me čini spremnim za izuzetnu podršku korisnicima i rešavanje problema u različitim situacijama.</li>
+	
+	</div>			
+			</ul>
+	
+		  </div>
+
+		<hr style="width: 90%; margin-top: 2em">
+
+	<div id="jezici" class="jezici">
+
+		<h3><strong>STRANI JEZICI</strong></h3>
+		<ul class="jezici-lista">
+		   <li>
+			<strong>Engleski:</strong><br>
+		   </li>	
+		</ul>
+		<img class="img-fluid" src="eng-skill1.jpg"> 
+<br>
+	</div>		
+
+		<hr style="width: 90%; margin-top: 2em">
+
+	<div id="radno-iskustvo" class="Radno-iskustvo">
+
+		<h3><strong>RADNO ISKUSTVO</strong></h3>
+
+		<div class="radno-iskustvo-lista" style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';">
+
+		<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+		<p><strong>Prodavnica IT opreme u Požarevcu (GSM & PC Shop)</strong> <br>
+			<strong>Pozicija:</strong> <br><br>	<u>Prodavac:</u> <br>
+			<ul>
+				<li>Prodaja IT opreme</li>
+				<li>Izdavanje faktura, profaktura i otpremnica</li>
+				<li>Redovne provere količinskog stanja robe kao i cene i oznaka</li>
+				<li>Najava preuzimanja i slanje robe</li>
+				<li>Utovar i istovar robe</li>
+				<li>Lične isporuke robe</li>
+			</ul>
+			<u>Održavanje i popravka računara:</u> <br>
+			<ul>
+				<li>Podešavanje nove hardverske opreme i mreža za lokalne firme</li>
+				<li>Popravka i osposobljavanje računara, štampača i ostalih perifernih uređaja za lokalne firme kao i privatne korisnike</li>
+				<li>Održavanje lokalnih servera i baze podataka za lokalne firme</li>
+				<li>Pružanje usluga popravke i održavanja računara za privatne korisnike</li>
+				<li>Pomoć pri instalaciji nove hardverske i softverske opreme i pružanje uputstva o korišćenju</li>
+			</ul>
+
+			<br> <strong>Avgust 2022. - Oktobar 2023.</strong>
+		 </p>
+		 
+			
+		<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+		<p><strong>Javni izvršitelj Zorica Milošević</strong> <br>
+			<strong>Pozicija:</strong><br><br> <u>Administrativni poslovi:</u> <br>
+			<ul>
+				<li>Obrada podataka (MUP zahtevi, Provera osnovnih podataka lica,..)</li>
+				<li>Dnevno primanje i slanje pošte (fizička i pravna lica)</li>
+				<li>Spremanje i uručivanje pošiljki ličnom dostavom (Javna preduzeća, Pravna lica,.. )</li>
+				<li>Primanje i slanje dopisa (Sud, Firme,..)</li>
+				<li>Odgovornost za invertar i poručivanje kancelarijskog materijala po potrebi</li>
+			</ul>
+			<u>IT podrška:</u> <br>
+			<ul>
+				<li>Održavanje lokalnog servera i baze podataka</li>
+				<li>Održavanje hardvera i softvera za računare u kancelariji</li>
+			</ul>
+			<br><strong> Avgust 2021. - Mart 2022.
+			
+			
+			</strong>
+		</p>
+
+<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+
+<div class="work-experience">
+  <p><strong>Auto-perionica "SJAJ"</strong></p>
+  <p>Sortiranje, provera zaliha i održavanje baze podataka zaliha</p>
+  <p>Prikaz delova automobila za prodaju na internetu</p>
+  <p>Jul 2021 - Avgust 2021</p>
+</div>
+
+
+<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+<div class="work-experience">
+  <p><strong>Više Freelance online poslova</strong></p>
+  <p>Dizajn veb stranica i uređivanje podataka</p>
+</div>
+
+
+<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+<div class="work-experience">
+  <p><strong>Razvoj i održavanje kućne IT mreže i telefonskih instalacija</strong></p>
+  <p>Za nekoliko malih i srednjih preduzeća</p>
+  <p>Razvoj telefonskih instalacija, IT i TV mreža za privatne korisnike</p>
+</div>
+
+<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+
+<div class="work-experience">
+  <p>Moderator foruma / Tehnička podrška i podrška korisnicima u igri
+	za nekoliko privatnih World of Warcraft servera</p>
+</div>
+
+<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+
+<div class="work-experience">
+  <p><strong>Upravljanje forumskom kampanjom o kriptovalutama</strong></p>
+  <p>Kampanje od 40-50 ljudi, uključujući praćenje objava</p>
+</div>
+
+
+<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+<div class="work-experience">
+  <p><strong>Pisanje članaka za veb portale o kriptovalutama</strong></p>
+</div>
+
+
+<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+<div class="work-experience">
+  <p><strong>Privatno održavanje i popravka računara</strong></p>
+</div>
+
+</div>
+
+
+		</div>
+	</div>	
+
+	</div>	
+
+
+
+
+	</div>	
+		<a style="scroll-behavior: smooth" class="nazadnavrh" href="#vrh">Povratak na vrh stranice</a>
+	</div>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+
+	</div>
+
+	</body>
+	</html>

@@ -1,0 +1,60 @@
+html
+<!-- Add jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- HTML structure -->
+<ul id="collapseTwo" class="collapse list-unstyled pl-3">
+    <li><a class="text-decoration-none filter-link" data-filter="all">All</a></li>
+    <li><a class="text-decoration-none filter-link" data-filter="sport">Sport</a></li>
+    <li><a class="text-decoration-none filter-link" data-filter="casual">Casual</a></li>
+</ul>
+
+<div class="item sport" data-price="250">Sport Item 1 (Price: $250)</div>
+<div class="item sport" data-price="150">Sport Item 2 (Price: $150)</div>
+<div class="item sport" data-price="200">Sport Item 3 (Price: $200)</div>
+
+<div class="item casual" data-price="100">Casual Item 1 (Price: $100)</div>
+<div class="item casual" data-price="50">Casual Item 2 (Price: $50)</div>
+<div class="item casual" data-price="80">Casual Item 3 (Price: $80)</div>
+
+<script>
+$(document).ready(function() {
+  // Show all items initially
+  $(".item").show();
+
+  // Add click event to filter links
+  $(".filter-link").click(function() {
+    var filter = $(this).data("filter");
+
+    // Show/hide items based on selected filter
+    if (filter === "all") {
+      $(".item").show();
+    } else {
+      $(".item").hide();
+      $("." + filter).show();
+    }
+  });
+
+  // Add click event to sort links
+  $(".sort-link").click(function() {
+    var sortType = $(this).data("sort");
+
+    // Sort items by price or name
+    if (sortType === "price") {
+      $(".item").sort(function(a, b) {
+        var priceA = parseInt($(a).data("price"));
+        var priceB = parseInt($(b).data("price"));
+
+        return priceA - priceB;
+      }).appendTo("#items-container");
+    } else if (sortType === "name") {
+      $(".item").sort(function(a, b) {
+        var nameA = $(a).text();
+        var nameB = $(b).text();
+
+        return nameA.localeCompare(nameB);
+      }).appendTo("#items-container");
+    }
+  });
+});
+</script>

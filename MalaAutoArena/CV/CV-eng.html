@@ -1,0 +1,644 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta https-equiv="X-UA-Compatible" content="IE=edge">
+<!--Import Google Icon Font-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta https-equiv="X-UA-Compatible" content="IE=edge">
+<!--Import Google Icon Font-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script data-ad-client="ca-pub-2077196854990037" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!--Import materialize.css-->
+
+<script src="https://kit.fontawesome.com/3429f72bdb.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Roboto:ital,wght@0,700;1,900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/3429f72bdb.js" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+<title>CV template</title>
+<style>
+body {
+	scroll-behavior: smooth;
+}
+
+@media(max-width: 768px) {
+.nazadnavrh {
+	border: 3px solid gray;
+	display: block;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 1em;
+	text-decoration: none;
+	padding: 1em;
+	color: white;
+	background: #2A2A2A;
+	text-align: center;
+}
+* {
+	font-family: 'Noto Serif', serif;
+}
+.Stranica {
+	display: block;
+	background: white;
+}
+.header {
+	width: 100%;
+	background: #2A2A2A;
+	height: 5em;
+	border: 3px
+}
+.slika {
+	position: absolute;
+	margin-left: 1em;
+	margin-top: 2em;
+	border: 7px solid white;
+}
+.slika img {
+	width: 6em;
+	height: 7em;
+}
+.ime-prezime {
+	color: white;
+	padding-left: 7em;
+	display: block;
+	right: 0;
+	text-align: center;
+	padding-top: 2em;
+	height: 100%;
+	margin: auto;
+	font-size: 1.2em;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+}
+.header-bot {
+	height: 2.5em;
+	width: 100%;
+	background: rgba(225,114,1,1.00);
+}
+.glavna-struktura {
+	display: flex;
+	flex-wrap: wrap;
+}
+.info {
+	display: block;
+	margin-top: 2em;
+	display: block;
+}
+.o-meni {
+	width: 100%;
+	display: block;
+}
+.kontakt {
+	display: block;
+ border-bottom:;
+	display: block;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+	padding-top: 1.5em;
+}
+.kontakt-informacije {
+	display: block;
+ font-size:;
+}
+.kontakt-informacije i {
+	width: 0.5em;
+	padding: 0.7em;
+	margin-right: 1em;
+}
+h1 {
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+}
+h3 {
+	padding-left: 0.5em;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+	background: #333;
+	color: white;
+	padding: 0.5em;
+	border-bottom: 8px solid rgba(225,114,1,1.00);
+}
+.vestine ul {
+	display: block;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+	padding: 1.5em;
+	font-size: 0.9em;
+}
+.zanimanja {
+	display: block;
+	width: 100%;
+	margin-left: em;
+	padding-top: 0.5em;
+ margin:;
+	display: block;
+}
+.lista-zanimanja {
+	display: block;
+	width: 85%;
+	padding: 0.3em;
+	margin: auto;
+}
+.lista-zanimanja li {
+	margin: 1em;
+}
+.Obrazovanje {
+	display: block;
+	padding-top: em;
+}
+.obrazovanje-lista {
+	display: block;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+}
+.obrazovanje-lista li {
+	padding: 0.3em;
+}
+.kursevi {
+	padding-top: em;
+}
+.kursevi-lista {
+	align-content: center;
+	grid-gap: 0.1em;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+}
+.kursevi-lista li {
+	align-content: center;
+	width: 12em;
+	padding: 0.5em;
+}
+.jezici {
+	display: block;
+}
+.img-fluid {
+	display: block;
+	width: 100%;
+}
+.jezici-lista {
+	display: inline-grid;
+ grid-template-columns: repeat(2, [col-start] 10fr);
+	grid-gap: 0.5em;
+	width: 100%;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+}
+.jezici-lista img {
+	display: block;
+	width: inherit;
+}
+.slika {
+	display: block;
+	height: 8em;
+}
+.Radno-iskustvo {
+	padding-left: em;
+	padding-right: em;
+	padding-top: em;
+}
+.radno-iskustvo-lista {
+	text-align: center;
+	padding: 1em;
+}
+.radno-iskustvo-lista li {
+	list-style-type: none;
+}
+.nav-item {
+	width: 50%;
+}
+}
+
+@media(min-width: 768px) {
+.nazadnavrh {
+	display: none;
+}
+* {
+	font-family: 'Noto Serif', serif;
+}
+body {
+	background: #212529;
+}
+.o-meni {
+	width: 70%;
+	margin-top: 3.5em;
+}
+.glavna-struktura {
+	display: flex;
+	width: 100%;
+}
+.Stranica {
+	display: block;
+	margin-left: 10%;
+	margin-right: 10%;
+	background: white;
+	border: 5px solid white;
+	padding-bottom: 1em;
+}
+.header {
+	width: 100%;
+	background: #2A2A2A;
+	height: 8em;
+	border: 3px
+}
+.slika {
+	height: 10em;
+	position: absolute;
+	margin-left: 6em;
+	margin-top: 4em;
+	border: 7px solid white;
+}
+.slika img {
+	height: 10em;
+}
+.ime-prezime {
+	color: white;
+	width: 100%;
+	padding-top: 1em;
+	padding-left: 1em;
+	height: 100%;
+	margin: auto;
+	text-align: center;
+	font-size: 3em;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+}
+.header-bot {
+	height: 2.5em;
+	width: 100%;
+	background: rgba(225,114,1,1.00);
+}
+.info {
+	width: 30%;
+	border-right: 5px solid #333;
+	margin-top: 4.5em;
+	display: block;
+}
+.kontakt {
+ border-bottom:;
+	display: block;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+	padding-top: 1.5em;
+}
+.kontakt-informacije {
+	font-size: 0.9em;
+}
+.kontakt-informacije i {
+	width: 1em;
+	padding: 0.7em;
+	margin-right: 1em;
+}
+h1 {
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+}
+h3 {
+	padding-left: 0.5em;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+	background: #333;
+	color: white;
+	padding: 0.5em;
+	border-bottom: 8px solid rgba(225,114,1,1.00);
+}
+.vestine ul {
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+	padding: 1.5em;
+	font-size: 0.9em;
+}
+.zanimanja {
+	width: 100%;
+	height: 3em;
+	margin-left: em;
+	padding-top: 0.5em;
+ margin:;
+	display: block;
+}
+.lista-zanimanja {
+	width: 85%;
+	padding: 0.3em;
+	margin: auto;
+	padding-bottom: 5em;
+}
+.lista-zanimanja li {
+	margin: 1em;
+}
+.Obrazovanje {
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-top: em;
+}
+.obrazovanje-lista {
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+}
+.obrazovanje-lista li {
+	padding: 0.3em;
+}
+.kursevi {
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-top: em;
+}
+.kursevi-lista {
+	display: inline-grid;
+	grid-gap: 0.5em;
+	width: 90%;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+}
+.kursevi-lista li {
+	width: 100%;
+	padding: 0.5em;
+	margin-left: 1em;
+}
+.jezici {
+	display: block;
+	padding-left: 3em;
+	padding-right: 3em;
+}
+.jezici-lista {
+	display: inline-grid;
+ grid-template-columns: repeat(2, [col-start] 10fr);
+	grid-gap: 0.5em;
+	width: 100%;
+	font-family: Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';
+}
+.jezici-lista img {
+	display: block;
+	width: 12em;
+	height: 3em;
+}
+.slika {
+	display: block;
+	height: 10em;
+	margin-left: 10em
+}
+.Radno-iskustvo {
+	padding-left: 3em;
+	padding-right: 3em;
+	padding-bottom: 5em;
+}
+.img-fluid {
+	display: flex;
+	margin: auto;
+}
+}
+</style>
+</head>
+
+<body>
+<div id="vrh" class="Stranica">
+  <div class="header">
+    <div class="slika" style="border:1px solid gray;"> <img alt="" src="https://raw.githubusercontent.com/Redirex-rs/RedirexRs/master/banneri/portait.jpg" > </div> 
+    <div class="ime-prezime"><strong>Vladimir Stanković CV</strong></div>
+  </div>
+  <div class="header-bot"></div>
+  <div class="glavna-struktura"> 
+    
+    <!--INFO BAR LEVO-->
+    <div class="info"> 
+      <!--KONTAKT INFORMACIJE-->
+      <div id="kontakt" class="kontakt">
+        <center>
+          <p>Vladimir Stanković <br>
+            20.10.1993.<br> 
+            12000 Požarevac</p>
+        </center>
+        <h3><strong>Contact</strong></h3> <br>
+        <div class="kontakt-informacije"> <i class="fas fa-phone"></i>(+381)66/935-8484 <br>
+          <i class="fas fa-envelope"></i>stankovicv93@gmail.com <br>
+          <i class="fas fa-home"></i>Slobodarska 16; Požarevac - Serbia<br> <br>
+        </div>
+      </div>
+      
+      <!--OSTALA ZANIMANJA-->
+      <div class="kontakt">
+        <h3><strong>Other interests</strong></h3>
+        <div id="zanimanja" class="zanimanja">
+          <ul class="lista-zanimanja">
+            <li><b>Playing of various instruments:</b></li>
+            <li style=" list-style-type:none;">-Electric guitar</li>
+            <li style=" list-style-type:none;">-Bass guitar</li>
+            <li style=" list-style-type:none;">-Drums</li>
+            <li><b>Active in the world of cryptocurrencies since 2013</b></li>
+            <li><b>Had my own blog about crypto-currencies on steemit.com</b></li>
+            <li><b>Various crypto trading</b></li>
+            <li><b>In the free time:</b></li>
+            <li style=" list-style-type:none;">-Video games (most usually online because of the teamwork exercise and competitiveness)</li>
+            <li style=" list-style-type:none;">-Tetris!</li>
+            <li style=" list-style-type:none;">-Playing and writing music</li>
+            <li style=" list-style-type:none;">-Solving of simple cryptograms <br>
+              (https://api.razzlepuzzles.com)</li>
+            <li><b>Interest in cyber and network security</b></li>
+            <li><b>Dabbled in Cicada 3301 puzzles</b></li>
+            <li><b>TOR and Blockchain technology</b></li>
+            <li><b>Cryptography</b></li>
+			<li><b>Sports and Fitness:</b> Passionate about sports and fitness, which has instilled qualities of perseverance, goal-setting, and physical well-being.</li>
+			<li><b>Outdoor Activities:</b>Avid outdoor adventurer with a passion for exploring natural landscapes, fostering skills in navigation, problem-solving, and an appreciation for the great outdoors</li>
+            <li><b>Tech and Gadgets:</b>Keen interest in technology and gadgets, staying updated with the latest innovations in the tech world, highlighting a strong affinity for problem-solving, adaptability, and staying ahead in the digital age.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!--PERSBIO DESNO-->
+    <div class="o-meni" >
+      <hr style="width: 90%; margin-top: 1em">
+      <div id="obrazovanje" class="Obrazovanje">
+        <h3><strong>EDUCATION</strong></h3>
+        <ul class="obrazovanje-lista">
+          <li>Elementary School "Dositej Obradović" <strong>2000 - 2008</strong></li>
+          <li>Elementary Music School "Stevan Mokranjac" in Požarevac <strong>2002 - 2008</strong></li>
+          <li>Požarevačka Gimnazija (High school for natural sciences and mathematics) <strong>2008 - 2012</strong></li>
+          <li>University of Belgrade
+            Faculty of Mining and Geology (geo-technology) <strong>2012 - 2015</strong> (dropped out)</li>
+          <li>School of Technical Studies in Požarevac (IT and Programming course of study) <br>
+            <strong>2016 - 2018</strong> (paused due to personal problems); <br> <strong>2024</strong> - <br> (planning on going back next year and getting my masters in the next 4 years)</li>
+        </ul>
+      </div>
+      <hr style="width: 90%; margin-top: 2em">
+      <div id="kursevi" class="kursevi">
+        <h3><strong>Computer
+          <h4>skills</h4>
+          </strong></h3>
+        <br>
+		<ul class="kursevi-lista">
+<div class="tech_skill">
+
+		<h2 style="font-size: 1.5em;"><u>Web Development:</u></h2>
+			<li style="padding: 0.3em">HTML</li>
+			<li style="padding: 0.3em">CSS</li>
+			<li style="padding: 0.3em">php</li>
+			<li style="padding: 0.3em">Bootstrap</li>
+			<li style="padding: 0.3em">Git</li>
+			<li style="padding: 0.3em">Web Security Basics</li>
+			<li style="padding: 0.3em">Command Line/Shell</li>
+			<li style="padding: 0.3em">Vue.js (Beginner) </li>
+			<hr>
+		<h2 style="font-size: 1.5em;"><u>Database Management:</u></h2>
+			<li style="padding: 0.3em">SQL</li>
+			<li style="padding: 0.3em">MySQL </li>
+			<li style="padding: 0.3em">Microsoft Access </li>
+			<hr>
+		<h2 style="font-size: 1.5em;"><u>Document Automation:</u></h2>
+			<li style="padding: 0.3em">Microsoft Power Automate</li>
+			<li style="padding: 0.3em">Zapier </li>
+			<li style="padding: 0.3em">Integromat </li>
+			<hr>
+		<h2 style="font-size: 1.5em;"><u>Software Proficiency:</u></h2>
+			<li style="padding: 0.3em"> Microsoft Office Suite </li>
+			<li style="padding: 0.3em"> Google Workspace </li>
+			<li style="padding: 0.3em"> Apache OpenOffice </li>
+			<li style="padding: 0.3em"> Data Visualization Tool (Tableau) </li>
+			<li style="padding: 0.3em"> AutoCAD </li>
+			<li style="padding: 0.3em"> Python (Beginner) </li>
+			<hr>
+		<h2 style="font-size: 1.5em;"><u>Networking and IT:</u></h2>
+			<li style="padding: 0.3em"> DHCP (BootP DHCP EtherNet/IP Commissioning Tool) </li>
+			<li style="padding: 0.3em"> Excellent Computer Skills </li>
+			<li style="padding: 0.3em"> Knowledge of Computer Structure </li>
+			<li style="padding: 0.3em"> Computer Maintenance (Hardware and Software) </li>
+			<br>
+		<h2 style="font-size: 1.5em;"><u>Other Skills:</u></h2>
+		    <li style="padding: 0.3em"> <strong>Analytical Thinking:</strong> Demonstrated proficiency in breaking down complex problems, evaluating options, and making informed decisions to achieve optimal outcomes. </li>
+		    <li style="padding: 0.3em"> <strong>Cross-Functional Collaboration:</strong> Proven ability to collaborate effectively with diverse teams and departments, fostering synergy and promoting a unified approach to achieving organizational goals. </li>
+		    <li style="padding: 0.3em"> <strong>Critical Thinking:</strong> Adept at evaluating situations from multiple perspectives, identifying potential challenges, and devising strategic solutions to overcome obstacles.</li>
+		    <li style="padding: 0.3em"> <strong>Multitasking:</strong> Skilled in efficiently managing multiple tasks simultaneously, ensuring productivity and high-quality results across various projects. </li>
+		    <li style="padding: 0.3em"> <strong>Adaptive Communication:</strong> Excellent verbal and written communication skills, capable of tailoring messages to different audiences, facilitating clear understanding, and building strong professional relationships.</li>
+		    <li style="padding: 0.3em"> <strong>Conflict Resolution:</strong> Experience in addressing and resolving conflicts diplomatically, promoting a harmonious work environment and fostering positive team dynamics</li>
+		    <li style="padding: 0.3em"> <strong>Resourcefulness:</strong> Demonstrated ability to creatively problem-solve and find innovative solutions, utilizing available resources effectively to overcome challenges.</li>
+		    <li style="padding: 0.3em"> <strong>Customer Satisfaction:</strong> Proven track record of delivering exceptional customer satisfaction through responsive and empathetic communication, ensuring positive experiences for clients or users.</li>
+		    <li style="padding: 0.3em"> <strong>Project Coordination:</strong> Proficient in coordinating and managing project timelines, resources, and deliverables to ensure successful project completion within established deadlines.</li>
+			<li style="padding: 0.3em"> <strong>Quick Learner:</strong> Proven ability to rapidly acquire new skills, adapt to changing environments, and excel in diverse roles </li>	
+			<li style="padding: 0.3em"> <strong>Quick Adaptation to Any Work Environment:</strong> Proven ability to rapidly acclimate to diverse work environments, industries, and teams, fostering seamless transitions and effective contributions. </li>	
+			<li style="padding: 0.3em"> <strong>Typing Speed:</strong> 47 words per minute (Typing Speed Test) </li>
+			<li style="padding: 0.3em"> <strong>Problem-Solving:</strong> Proficient in analyzing complex issues, identifying root causes, and implementing effective solutions to drive positive outcomes. </li>
+			<li style="padding: 0.3em"> <strong>Time Management:</strong> Proficient in organizing tasks, prioritizing responsibilities, and meeting deadlines in fast-paced environments. </li>
+			<li style="padding: 0.3em"> <strong>Organizational Skills:</strong> Proficient in efficiently organizing tasks, managing priorities, and ensuring project timelines are met. </li>
+			<li style="padding: 0.3em"> <strong>Led a guild of ~50 members in a popular MMORPG</strong>, overseeing guild operations, scheduling events, and fostering a positive and cooperative gaming community. (World of Warcraft)</li>
+			<li style="padding: 0.3em"> <strong>World of Warcraft Game Master:</strong> My experience as a World of Warcraft Game Master has honed my customer service, problem-solving, and communication skills, making me well-equipped to excel in roles that require exceptional customer support and issue resolution. </li>
+			
+</div>			
+        </ul>
+
+      </div>
+      <hr style="width: 90%; margin-top: 2em">
+      <div id="jezici" class="jezici">
+        <h3><strong>LANGUAGES</strong></h3>
+        <ul class="jezici-lista">
+          <li> <strong>English:</strong><br>
+            <p> <img src="https://www.cambridgeenglish.org/assets/img/CE_Master_Logo_RGB.svg" style=" " alt=""> </p>
+          </li>
+        </ul>
+        <img class="img-fluid" src="eng-skill-eng-version.jpg"> </div>
+      <hr style="width: 90%; margin-top: 2em">
+      <div id="radno-iskustvo" class="Radno-iskustvo">
+        <h3><strong>WORK EXPERIENCE</strong></h3>
+        <div class="radno-iskustvo-lista" style="font-family:Gotham, 'Helvetica Neue', Helvetica, Arial, 'sans-serif';"> <br>
+			</ul>
+		
+		<hr style="color: rgba(195,195,195,0.70); width:100%; margin-top: 1.5em; margin-bottom: 1.5em;">	
+		<div class="work-experience">
+			<p><strong>IT Equipment Store in Požarevac (GSM & PC Shop)</strong></p>
+			<p>Salesman:</p>
+			<ul>
+				<li>Selling IT equipment</li>
+				<li>Issuing invoices, pro forma invoices, and shipping documents</li>
+				<li>Regular checks of inventory levels, as well as prices and labels</li>
+				<li>In charge of scheduling and coordinating with the post office for package pick-ups.</li>
+				<li>Loading and unloading of goods</li>
+				<li>Personal delivery of goods</li>
+			  </ul>
+			<p>Position: Computer Maintenance and Repair</p>
+			<ul>
+				<li>Configuration of new hardware and networks for local businesses</li>
+				<li>Repair and maintenance of computers, printers, and other peripheral devices for local businesses and private users</li>
+				<li>Maintenance of local servers and databases for local businesses</li>
+				<li>Provision of computer repair and maintenance services for private users</li>
+				<li>Assistance in the installation of new hardware and software, and provision of usage instructions</li>
+			  </ul>
+			<p>Period:</strong> August 2022 - October 2023</p>
+		  </div>
+		  
+		  <hr class="section-divider">
+		  
+		  <div class="work-experience">
+			<p><strong>Public Enforcement Officer/Agent (Civil Debt Enforcement)</strong></p>
+			<p>Administration:</p>
+			<ul>
+				<li>Data processing (Police requests, verification of basic personal data, etc.)</li>
+				<li>Daily receipt and dispatch of mail (physical and legal entities)</li>
+				<li>Sorting and delivering shipments by personal delivery (public enterprises, legal entities, etc.)</li>
+				<li>Receipt and dispatch of correspondence (Court, Companies, etc.)</li>
+				<li>Responsibility for inventory and ordering office supplies as needed</li>
+			  </ul>
+			<p>IT Support:</p>
+			<ul style="list-style-type: disc; padding-left: 30px;">
+				<li>Maintenance of the local server and database</li>
+				<li>Hardware and software maintenance for the office computers</li>
+			</ul>
+			<p>Period:</strong> August 2021 - March 2022</p>
+		  </div>
+		  
+		  <hr class="section-divider">
+		  
+		  <div class="work-experience">
+			<p><strong>Car Wash "SJAJ"</strong></p>
+			<p>Sorting, Stock Checkup</p>
+			<p>Stock Database Maintenance</p>
+			<p>IT support</p>
+			<p>Listing Car Parts for Sale Online</p>
+			<p>July 2021 - August 2021</p>
+		  </div>
+		  
+		  <hr class="section-divider">
+		  
+		  <div class="work-experience">
+			<p><strong>Several Freelance Jobs</strong></p>
+			<p>Web Design and Data Editing</p>
+		  </div>
+		  
+		  <hr class="section-divider">
+		  
+		  <div class="work-experience">
+			<p><strong>Development and Maintenance of Home IT Network and Telephone Installations</strong></p>
+			<p>For Several Small and Medium Enterprises</p>
+			<p>Development of Home Telephone Installations, IT, and TV Networks for Private Users</p>
+		  </div>
+		  
+		  <hr class="section-divider">
+		  
+		  <div class="work-experience">
+			<p><strong>Forum Moderator / Technical Support and In-Game Customer Support</strong></p>
+			<p>For Several Private World of Warcraft Servers</p>
+		  </div>
+		  
+		  <hr class="section-divider">
+		  
+		  <div class="work-experience">
+			<p><strong>Campaign Forum Manager on Cryptocurrencies</strong></p>
+			<p>Campaigns of 40-50 People, Including Monitoring Posts</p>
+		  </div>
+		  
+		  <hr class="section-divider">
+		  
+		  <div class="work-experience">
+			<p><strong>Writing Articles for Cryptocurrency Web Portals</strong></p>
+		  </div>
+		  
+		  <hr class="section-divider">
+		  
+		  <div class="work-experience">
+			<p><strong>Private Computer Maintenance and Repair</strong></p>
+		  </div>
+		  
+        </div>
+        <hr style="width: 90%; margin-top: 2em; margin-bottom: 1.5em">
+      </div>
+    </div>
+    <a style="scroll-behavior: smooth" class="nazadnavrh" href="#vrh">Back to top of page</a> </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script> 
+</div>
+</body>
+</html>
