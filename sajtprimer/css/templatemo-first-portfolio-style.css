@@ -435,7 +435,7 @@ strong {
 
 .is-sticky .navbar .custom-btn:hover {
   background: #0c356a;
-  color: var(--white-color);
+  color: green;
 }
 
 .navbar {
@@ -1161,7 +1161,7 @@ strong {
 
   .navbar-icon {
     background: #0c356a;
-    color: var(--white-color);
+    color: #0c356a;
     width: 44px;
     height: 44px;
     line-height: 44px;
