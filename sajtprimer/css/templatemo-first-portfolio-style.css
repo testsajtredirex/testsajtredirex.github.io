@@ -49,12 +49,21 @@ https://templatemo.com/tm-578-first-portfolio
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+.modal-dialog {
+  max-width: 800px; /* Set your desired maximum width */
+}
+
+/* Optionally, you can adjust the modal content's padding */
+.modal-content {
+  padding: 20px; /* Set your desired padding */
+}
+
 /* Modal Content (Image) */
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 1000em;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
