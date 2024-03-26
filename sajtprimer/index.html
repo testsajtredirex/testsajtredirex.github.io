@@ -398,10 +398,6 @@ https://templatemo.com/tm-578-first-portfolio
             </div>
         </footer>
 
-        <!-- JAVASCRIPT FILES -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <script src="js/jquery.min.js"></script>
@@ -425,26 +421,6 @@ https://templatemo.com/tm-578-first-portfolio
     });
   });
 
-  window.onload = function() {
-    var grid = document.querySelector('.gallery-container');
-    if (!grid) {
-      console.error('Gallery container not found.');
-      return;
-    }
-
-    var msnry = new Masonry( grid, {
-      itemSelector: '.gallery-slika-polje',
-      columnWidth: '.gallery-slika-polje',
-      gutter: 10, // Adjust as needed
-      fitWidth: true // Fit items to container width
-    });
-
-    if (msnry) {
-      msnry.layout();
-    } else {
-      console.error('Masonry initialization failed.');
-    }
-  };
         </script>
     </body>
 </html>
