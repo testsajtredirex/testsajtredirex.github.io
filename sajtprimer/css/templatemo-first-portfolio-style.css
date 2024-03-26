@@ -11,10 +11,9 @@ https://templatemo.com/tm-578-first-portfolio
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 .gallery-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: auto; /* Vertically center the image */
+  width: 100%; /* Set your desired width */
+  height: 200px; /* Set your desired height */
+  object-fit: cover; /* Crop the image to cover the container */
 }
 
 /* Optional: Add hover effect */
@@ -22,6 +21,11 @@ https://templatemo.com/tm-578-first-portfolio
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
+
+.img-thumbnail{
+  margin-bottom: 1.5em;
+}
+
 #myImg {
   border-radius: 5px;
   cursor: pointer;
