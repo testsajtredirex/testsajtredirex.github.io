@@ -728,7 +728,7 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(../banner.jpg);
+  background-image: url(/lambada/assets/banner.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
