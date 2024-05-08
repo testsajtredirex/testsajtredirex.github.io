@@ -728,7 +728,7 @@ Banner Style
 */
 
 .main-banner {
-  background-image: url(/assets/images/technology-8280861_1920.jpg);
+  background-image: url(../banner.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
