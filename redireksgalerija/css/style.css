@@ -150,9 +150,7 @@ body {
 }
 }
 @media (max-width:730px) {
-  .product-action{
-    display: none;
-  }
+ 
 .filter-klasa{
   width: 30%;
 }  
