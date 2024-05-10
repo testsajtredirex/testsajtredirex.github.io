@@ -150,7 +150,7 @@ body {
 }
 }
 @media (max-width:730px) {
-  .btn-outline-dark{
+  .product-action{
     display: none;
   }
 .filter-klasa{
