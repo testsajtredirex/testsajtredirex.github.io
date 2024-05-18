@@ -68,14 +68,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     background-color: #f0f0f0;
     margin: 1em;
 }
 
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: 20px;
     margin: auto;
 }
@@ -83,7 +81,7 @@
 .flip-card {
     background-color: transparent;
     width: 100%;
-    height: 20em;
+    height: 16em;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 
@@ -126,10 +124,10 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="/MalaAutoArena/assets/img/VK-Prednja.png" alt="Avatar" style="width:100%;height:20em;">
+                    <img src="/MalaAutoArena/assets/img/VK-Prednja.png" alt="Avatar">
                 </div>
                 <div class="flip-card-back">
-                    <img src="/MalaAutoArena/assets/img/VK-zadnja.png" alt="Avatar" style="width:100%;height:20em;">
+                    <img src="/MalaAutoArena/assets/img/VK-zadnja.png" alt="Avatar">
                 </div>
             </div>
         </div>
