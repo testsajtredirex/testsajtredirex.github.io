@@ -26,7 +26,116 @@ https://templatemo.com/tm-591-villa-agency
 
 -->
   </head>
+<style>
+  
+  .row.properties-box {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
 
+.properties-items {
+    display: block;
+}
+
+.item {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.item:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.category {
+    display: block;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.item h4 {
+    margin: 15px;
+    font-size: 18px;
+}
+
+.item h4 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.item ul {
+    list-style: none;
+    padding: 0 15px;
+    margin: 0;
+}
+
+.item ul li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.item ul li span {
+    font-weight: bold;
+}
+
+.item p {
+    padding: 0 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.main-button {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.main-button a {
+    color: #007bff;
+    margin: 0 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#filter-container {
+    padding: 20px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#filter-container select, #filter-container input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#additional-filters {
+    flex-basis: 100%;
+    margin-top: 10px;
+}
+
+
+</style>
 <body>
 
   <!-- ***** Preloader Start ***** -->
@@ -71,19 +180,18 @@ https://templatemo.com/tm-591-villa-agency
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
                     <a href="index.html" class="logo">
-                        <h1>Villa</h1>
+                        <h1>JEDAN_KLIK</h1>
                     </a>
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="properties.html" class="active">Properties</a></li>
-                      <li><a href="property-details.html">Property Details</a></li>
-                      <li><a href="contact.html">Contact Us</a></li>
-                      <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
+                      <li><a href="index.html">Glavna Stranica</a></li>
+                      <li><a href="properties.html" class="active">Pretraži</a></li>
+                      <li><a href="contact.html">Kontaktirajte Nas</a></li>
+                      <li><a href="#"><i class="fa fa-calendar"></i> Pridružite nam se</a></li>
                   </ul>   
                     <a class='menu-trigger'>
-                        <span>Menu</span>
+                        <span>Više</span>
                     </a>
                     <!-- ***** Menu End ***** -->
                 </nav>
@@ -97,8 +205,7 @@ https://templatemo.com/tm-591-villa-agency
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <span class="breadcrumb"><a href="#">Home</a> / Properties</span>
-          <h3>Properties</h3>
+          <h3>Ponuda Usluga</h3>
         </div>
       </div>
     </div>
@@ -106,203 +213,90 @@ https://templatemo.com/tm-591-villa-agency
 
   <div class="section properties">
     <div class="container">
-      <ul class="properties-filter">
-        <li>
-          <a class="is_active" href="#!" data-filter="*">Show All</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".adv">Apartment</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".str">Villa House</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".rac">Penthouse</a>
-        </li>
-      </ul>
+      <div id="filter-container">
+          <select id="city">
+              <option value="">Svi gradovi</option>
+              <option value="novi-sad">Novi Sad</option>
+              <option value="beograd">Beograd</option>
+              <!-- Dodajte ostale gradove -->
+          </select>
+          
+          <select id="occupation">
+              <option value="">Sva zanimanja</option>
+              <option value="zanatlija">Zanatlija</option>
+              <option value="majstor">Majstor</option>
+              <option value="prodavnica">Prodavnica</option>
+              <!-- Dodajte ostala zanimanja -->
+          </select>
+          
+          <input type="text" id="search" placeholder="Pretraži...">
+          
+          <div id="additional-filters"></div>
+      </div>
+  
       <div class="row properties-box">
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/deal-01.png" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$2.264.000</h6>
-            <h4><a href="property-details.html">18 Old Street Miami, OR 97219</a></h4>
-            <ul>
-              <li>Bedrooms: <span>8</span></li>
-              <li>Bathrooms: <span>8</span></li>
-              <li>Area: <span>545m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>6 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
+          <div class="col-lg-4 col-md-6 properties-items">
+              <div class="item novi-sad majstor moler">
+                  <a href="property-details.html"><img src="assets/images/deal-01.png" alt=""></a>
+                  <span class="category">Uređivanje Zelenih Površina</span>
+                  <h4><a href="property-details.html">Novi Sad Moler</a></h4>
+                  <ul>
+                      <li>Adresa: <span>Grad, Ulica n</span></li>
+                      <li>Kontakt: <span>123/1234-123</span></li>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea cumque ipsam beatae aliquid minima corporis assumenda maiores et illum labore aperiam suscipit, repellendus laborum fuga deleniti nemo placeat corrupti!</p>
+                  </ul>
+                  <div class="main-button">
+                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-02.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.180.000</h6>
-            <h4><a href="property-details.html">54 New Street Florida, OR 27001</a></h4>
-            <ul>
-              <li>Bedrooms: <span>6</span></li>
-              <li>Bathrooms: <span>5</span></li>
-              <li>Area: <span>450m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>8 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
+  
+          <div class="col-lg-4 col-md-6 properties-items">
+              <div class="item novi-sad zanatlija stolar">
+                  <a href="property-details.html"><img src="assets/images/deal-01.png" alt=""></a>
+                  <span class="category">Uređivanje Zelenih Površina</span>
+                  <h4><a href="property-details.html">Novi Sad zanatlija</a></h4>
+                  <ul>
+                      <li>Adresa: <span>Grad, Ulica n</span></li>
+                      <li>Kontakt: <span>123/1234-123</span></li>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea cumque ipsam beatae aliquid minima corporis assumenda maiores et illum labore aperiam suscipit, repellendus laborum fuga deleniti nemo placeat corrupti!</p>
+                  </ul>
+                  <div class="main-button">
+                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv rac">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-03.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.460.000</h6>
-            <h4><a href="property-details.html">26 Mid Street Portland, OR 38540</a></h4>
-            <ul>
-              <li>Bedrooms: <span>5</span></li>
-              <li>Bathrooms: <span>4</span></li>
-              <li>Area: <span>225m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>10 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
+  
+          <div class="col-lg-4 col-md-6 properties-items">
+              <div class="item beograd majstor moler">
+                  <a href="property-details.html"><img src="assets/images/deal-01.png" alt=""></a>
+                  <span class="category">Uređivanje Zelenih Površina</span>
+                  <h4><a href="property-details.html">Beograd</a></h4>
+                  <ul>
+                      <li>Adresa: <span>Grad, Ulica n</span></li>
+                      <li>Kontakt: <span>123/1234-123</span></li>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea cumque ipsam beatae aliquid minima corporis assumenda maiores et illum labore aperiam suscipit, repellendus laborum fuga deleniti nemo placeat corrupti!</p>
+                  </ul>
+                  <div class="main-button">
+                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-04.jpg" alt=""></a>
-            <span class="category">Apartment</span>
-            <h6>$584.500</h6>
-            <h4><a href="property-details.html">12 Hope Street Portland, OR 12650</a></h4>
-            <ul>
-              <li>Bedrooms: <span>4</span></li>
-              <li>Bathrooms: <span>3</span></li>
-              <li>Area: <span>125m2</span></li>
-              <li>Floor: <span>25th</span></li>
-              <li>Parking: <span>2 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac str">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-05.jpg" alt=""></a>
-            <span class="category">Penthouse</span>
-            <h6>$925.600</h6>
-            <h4><a href="property-details.html">34 Hope Street Portland, OR 42680</a></h4>
-            <ul>
-              <li>Bedrooms: <span>4</span></li>
-              <li>Bathrooms: <span>4</span></li>
-              <li>Area: <span>180m2</span></li>
-              <li>Floor: <span>38th</span></li>
-              <li>Parking: <span>2 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-06.jpg" alt=""></a>
-            <span class="category">Modern Condo</span>
-            <h6>$450.000</h6>
-            <h4><a href="property-details.html">22 Hope Street Portland, OR 16540</a></h4>
-            <ul>
-              <li>Bedrooms: <span>3</span></li>
-              <li>Bathrooms: <span>2</span></li>
-              <li>Area: <span>165m2</span></li>
-              <li>Floor: <span>26th</span></li>
-              <li>Parking: <span>3 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac str">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-03.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$980.000</h6>
-            <h4><a href="property-details.html">14 Mid Street Miami, OR 36450</a></h4>
-            <ul>
-              <li>Bedrooms: <span>8</span></li>
-              <li>Bathrooms: <span>8</span></li>
-              <li>Area: <span>550m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>12 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-02.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.520.000</h6>
-            <h4><a href="property-details.html">26 Old Street Miami, OR 12870</a></h4>
-            <ul>
-              <li>Bedrooms: <span>12</span></li>
-              <li>Bathrooms: <span>15</span></li>
-              <li>Area: <span>380m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>14 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-01.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$3.145.000</h6>
-            <h4><a href="property-details.html">34 New Street Miami, OR 24650</a></h4>
-            <ul>
-              <li>Bedrooms: <span>10</span></li>
-              <li>Bathrooms: <span>12</span></li>
-              <li>Area: <span>860m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>10 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
       </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <ul class="pagination">
-            <li><a href="#">1</a></li>
-            <li><a class="is_active" href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">>></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </div>
+  
+    </div>
+    
+    
 
   <footer>
     <div class="container">
       <div class="col-lg-12">
-        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. 
-        
-        Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+        <p>Copyright 
+        </p>
       </div>
     </div>
   </footer>
@@ -315,6 +309,6 @@ https://templatemo.com/tm-591-villa-agency
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
-
+  <script src="/JedanKlik/vendor/filter.js"></script>
   </body>
 </html>
