@@ -1163,24 +1163,17 @@ Properties Style
 }
 
 .properties .item span.category {
-  background-color: #fbd9cf;
+  background-color: #55e613;
   font-weight: 500;
   border-radius: 5px;
   font-size: 14px;
   color: #1e1e1e;
   padding: 5px 12px;
   display: inline-block;
-  margin-top: 25px;
+  margin-top: 2px;
 }
 
-.properties .item h4 {
-  font-size: 19px;
-  margin: 25px 0px;
-}
 
-.properties .item h4 a {
-  color: #1e1e1e;
-}
 
 .properties .item ul li {
   display: inline-block;

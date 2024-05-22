@@ -28,23 +28,22 @@ https://templatemo.com/tm-591-villa-agency
   </head>
 <style>
   
-  .row.properties-box {
+  .properties-box {
     display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 20px; /* Razmak između kartica */
 }
 
 .properties-items {
-    display: block;
+    width: 32%; /* Kartice će zauzimati 1/3 širine kontejnera */
 }
 
 .item {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease;
+    width: 100%; /* Kartice će zauzimati celu širinu svog roditeljskog elementa */
+}
+
+.hidden {
+    display: none !important;
 }
 
 .item:hover {
@@ -67,19 +66,16 @@ https://templatemo.com/tm-591-villa-agency
 }
 
 .item h4 {
-    margin: 15px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     font-size: 18px;
-}
-
-.item h4 a {
-    color: #333;
-    text-decoration: none;
 }
 
 .item ul {
     list-style: none;
     padding: 0 15px;
     margin: 0;
+    display: flexbox;
 }
 
 .item ul li {
@@ -92,7 +88,7 @@ https://templatemo.com/tm-591-villa-agency
 }
 
 .item p {
-    padding: 0 15px;
+    padding: 0 5px;
     font-size: 14px;
     color: #555;
 }
@@ -134,6 +130,15 @@ https://templatemo.com/tm-591-villa-agency
     margin-top: 10px;
 }
 
+@media (max-width: 768px) {
+    .properties-items {
+        width: 100%; /* Kartice će zauzimati punu širinu ekrana */
+    }
+    
+    .item ul {
+        display: block; /* Popravićemo display fleksbox na display block */
+    }
+}
 
 </style>
 <body>
@@ -235,57 +240,58 @@ https://templatemo.com/tm-591-villa-agency
       </div>
   
       <div class="row properties-box">
-          <div class="col-lg-4 col-md-6 properties-items">
-              <div class="item novi-sad majstor moler">
-                  <a href="property-details.html"><img src="assets/images/deal-01.png" alt=""></a>
-                  <span class="category">Uređivanje Zelenih Površina</span>
-                  <h4><a href="property-details.html">Novi Sad Moler</a></h4>
-                  <ul>
-                      <li>Adresa: <span>Grad, Ulica n</span></li>
-                      <li>Kontakt: <span>123/1234-123</span></li>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea cumque ipsam beatae aliquid minima corporis assumenda maiores et illum labore aperiam suscipit, repellendus laborum fuga deleniti nemo placeat corrupti!</p>
-                  </ul>
-                  <div class="main-button">
-                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                  </div>
-              </div>
-          </div>
-  
-          <div class="col-lg-4 col-md-6 properties-items">
-              <div class="item novi-sad zanatlija stolar">
-                  <a href="property-details.html"><img src="assets/images/deal-01.png" alt=""></a>
-                  <span class="category">Uređivanje Zelenih Površina</span>
-                  <h4><a href="property-details.html">Novi Sad zanatlija</a></h4>
-                  <ul>
-                      <li>Adresa: <span>Grad, Ulica n</span></li>
-                      <li>Kontakt: <span>123/1234-123</span></li>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea cumque ipsam beatae aliquid minima corporis assumenda maiores et illum labore aperiam suscipit, repellendus laborum fuga deleniti nemo placeat corrupti!</p>
-                  </ul>
-                  <div class="main-button">
-                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                  </div>
-              </div>
-          </div>
-  
-          <div class="col-lg-4 col-md-6 properties-items">
-              <div class="item beograd majstor moler">
-                  <a href="property-details.html"><img src="assets/images/deal-01.png" alt=""></a>
-                  <span class="category">Uređivanje Zelenih Površina</span>
-                  <h4><a href="property-details.html">Beograd</a></h4>
-                  <ul>
-                      <li>Adresa: <span>Grad, Ulica n</span></li>
-                      <li>Kontakt: <span>123/1234-123</span></li>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea cumque ipsam beatae aliquid minima corporis assumenda maiores et illum labore aperiam suscipit, repellendus laborum fuga deleniti nemo placeat corrupti!</p>
-                  </ul>
-                  <div class="main-button">
-                      <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                  </div>
-              </div>
-          </div>
-      </div>
+    <div class="col-lg-4 col-md-6 properties-items">
+        <div class="item novi-sad majstor moler">
+            <img src="assets/images/deal-01.png" alt="">
+            <span class="category">Uređivanje Zelenih Površina</span>
+            <h4>Novi Sad Moler</h4>
+            <ul>
+                <li>Adresa: <span>Grad, Ulica n</span></li>
+                <li>Kontakt: <span>123/1234-123</span></li>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea cumque ipsam beatae aliquid minima corporis assumenda maiores et illum labore aperiam suscipit, repellendus laborum fuga deleniti nemo placeat corrupti!</p>
+            </ul>
+            <div class="main-button">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 properties-items">
+        <div class="item novi-sad zanatlija stolar">
+            <a href="property-details.html"><img src="assets/images/deal-01.png" alt=""></a>
+            <span class="category">Uređivanje Zelenih Površina</span>
+            <h4><a href="property-details.html">Novi Sad zanatlija</a></h4>
+            <ul>
+                <li>Adresa: <span>Grad, Ulica n</span></li>
+                <li>Kontakt: <span>123/1234-123</span></li>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea cumque ipsam beatae aliquid minima corporis assumenda maiores et illum labore aperiam suscipit, repellendus laborum fuga deleniti nemo placeat corrupti!</p>
+            </ul>
+            <div class="main-button">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 properties-items">
+        <div class="item beograd majstor moler">
+            <a href="property-details.html"><img src="assets/images/deal-01.png" alt=""></a>
+            <span class="category">Uređivanje Zelenih Površina</span>
+            <h4><a href="property-details.html">Beograd</a></h4>
+            <ul>
+                <li>Adresa: <span>Grad, Ulica n</span></li>
+                <li>Kontakt: <span>123/1234-123</span></li>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ea cumque ipsam beatae aliquid minima corporis assumenda maiores et illum labore aperiam suscipit, repellendus laborum fuga deleniti nemo placeat corrupti!</p>
+            </ul>
+            <div class="main-button">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
   </div>
   
     </div>
@@ -300,7 +306,15 @@ https://templatemo.com/tm-591-villa-agency
       </div>
     </div>
   </footer>
+  <script>
 
+if($('.menu-trigger').length){
+		$(".menu-trigger").on('click', function() {	
+			$(this).toggleClass('active');
+			$('.header-area .nav').slideToggle(200);
+		});
+	}
+  </script>
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -308,7 +322,7 @@ https://templatemo.com/tm-591-villa-agency
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="/JedanKlik/assets/js/custom.js"></script>
   <script src="/JedanKlik/vendor/filter.js"></script>
   </body>
 </html>

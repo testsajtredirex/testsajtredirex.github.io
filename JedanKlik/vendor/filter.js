@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchFilter = document.getElementById('search');
     const additionalFilters = document.getElementById('additional-filters');
 
-    // Event listeneri za filtere
+    // Event listeners for filters
     cityFilter.addEventListener('change', filterCards);
     occupationFilter.addEventListener('change', function() {
         showOccupationFilters();
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     searchFilter.addEventListener('input', filterCards);
 
-    // Event listeneri za dodatne filtere
+    // Event listeners for additional filters
     additionalFilters.addEventListener('change', filterCards);
     
     function showOccupationFilters() {
@@ -77,14 +77,14 @@ document.addEventListener('DOMContentLoaded', function() {
             const searchMatch = !search || cardText.includes(search);
     
             if (cityMatch && occupationMatch && searchMatch && additionalMatch) {
-                card.style.display = 'block';
+                card.classList.remove('hidden');
                 visibleCards.push(card);
             } else {
-                card.style.display = 'none';
+                card.classList.add('hidden');
             }
         });
 
-        // Reorder cards
+        // Reorder cards to ensure they fill the grid correctly
         const propertiesBox = document.querySelector('.row.properties-box');
         visibleCards.forEach(card => {
             propertiesBox.appendChild(card);
