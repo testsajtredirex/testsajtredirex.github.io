@@ -42,7 +42,11 @@ https://templatemo.com/tm-591-villa-agency
   transform: translate(50%, -50%);
 }
 
-
+  /* Dodajte ovaj CSS stil u vaš stilski list */
+  .image-click:hover {
+    transform: scale(1.15); /* Povećajte sliku za 10% kada korisnik pređe mišem preko nje */
+    transition: transform 0.3s ease; /* Dodajte prelazni efekat */
+  }
 
  
 .properties-box {
@@ -242,9 +246,9 @@ https://templatemo.com/tm-591-villa-agency
 
         <div class="col-lg-4 col-md-6 properties-items">
           <div class="item valjevo zanatlija zelenilo">
-            <p>VALJEVO</p>
+            <p><strong>VALJEVO</strong></p>
             <div class="image-container">
-              <img src="assets/images/deal-01.png" alt="" class="image-click">
+              <img style="cursor: pointer;" src="/JedanKlik/assets/images/deal-01.png" alt="" class="image-click" data-modal="modal1" data-image="/JedanKlik/assets/images/featured1-1.png">
               <div class="recommendation-badge">
                 <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
               </div>
@@ -263,21 +267,25 @@ https://templatemo.com/tm-591-villa-agency
           </div>
         </div>
         
-<!-- Modal Structure -->
-<div id="imageModal" class="modal">
+<!-- Modal 1 -->
+<div id="modal1" class="modal">
   <span class="close">&times;</span>
-  <img class="modal-content" id="imgModal">
-  <div id="caption"></div>
+  <img class="modal-content" id="modalImage1">
 </div>
-        
-        
+
+
 
 <div class="col-lg-4 col-md-6 properties-items">
   <div class="item pozarevac majstor elektricar">
-    <p>POŽAREVAC</p>
-      <img src="assets/images/oglas-01.png" alt="">
-      <span class="category">Električarski Radovi</span>
-      <h4>Električar</h4>
+    <p><strong>POŽAREVAC</strong></p>
+    <div class="image-container">
+      <img style="cursor: pointer;" src="assets/images/oglas-01.png" alt="" class="image-click" data-modal="modal1" data-image="/JedanKlik/assets/images/featured2.png">
+      <div class="recommendation-badge">
+        <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+      </div>
+    </div>
+    <span class="category">Električarski Radovi</span>
+    <h4>Električar</h4>
       <ul>
          <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
           <li>Kontakt: <span>064/9696-625 </span></li>
@@ -291,14 +299,11 @@ https://templatemo.com/tm-591-villa-agency
       </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
+<!-- Modal 2 -->
+<div id="modal2" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage2">
+</div>
 
 
 
@@ -416,34 +421,86 @@ https://templatemo.com/tm-591-villa-agency
   </footer>
   <script>
 
-// Get the modal
-var modal = document.getElementById("imageModal");
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.querySelector(".image-click");
-var modalImg = document.getElementById("imgModal");
-var captionText = document.getElementById("caption");
-img.onclick = function() {
+// Function to open modal
+function openModal(modalId) {
+  var modal = document.getElementById(modalId);
   modal.style.display = "block";
-  modalImg.src = this.src;
-  captionText.innerHTML = this.alt;
+  modal.addEventListener("scroll", handleModalScroll); // Add scroll event listener to the modal
+  document.body.style.overflow = "hidden"; // Prevent scrolling of the main page
 }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
+// Function to close modal
+function closeModal(modalId) {
+  var modal = document.getElementById(modalId);
   modal.style.display = "none";
+  modal.removeEventListener("scroll", handleModalScroll); // Remove scroll event listener from the modal
+  document.body.style.overflow = ""; // Allow scrolling of the main page
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+// Function to handle modal scroll
+function handleModalScroll(event) {
+  var modal = event.currentTarget;
+  var scrollHeight = modal.scrollHeight;
+  var scrollTop = modal.scrollTop;
+  var clientHeight = modal.clientHeight;
+  
+  // If the user has scrolled to the bottom of the modal
+  if (scrollTop + clientHeight >= scrollHeight) {
+    // Prevent scrolling of the main page
+    document.body.style.overflow = "hidden";
+  } else {
+    // Allow scrolling of the main page
+    document.body.style.overflow = "";
   }
 }
 
+// Get all images with class "image-click"
+var images = document.querySelectorAll(".image-click");
+
+// Loop through each image and add a click event listener
+images.forEach(function(image) {
+  image.addEventListener("click", function() {
+    // Get the data-modal attribute value
+    var modalId = this.getAttribute("data-modal");
+    
+    // Get the modal by its ID
+    var modal = document.getElementById(modalId);
+    
+    // Get the image source from the data-image attribute
+    var modalImage = modal.querySelector(".modal-content");
+    var imageSource = this.getAttribute("data-image");
+    
+    // Set the image source in the modal
+    modalImage.src = imageSource;
+    
+    // Show the modal
+    modal.style.display = "block";
+  });
+});
+
+// Get all close buttons for modals
+var closeButtons = document.querySelectorAll(".modal .close");
+
+// Loop through each close button and add a click event listener
+closeButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    // Get the modal that contains this close button
+    var modal = this.parentElement;
+    
+    // Hide the modal
+    modal.style.display = "none";
+  });
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener("click", function(event) {
+  var modals = document.querySelectorAll(".modal");
+  modals.forEach(function(modal) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
 
   
   </script>
