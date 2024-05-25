@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/JedanKlik/assets/css/modal.css">
 <!--
 
 TemplateMo 591 villa agency
@@ -243,7 +244,7 @@ https://templatemo.com/tm-591-villa-agency
           <div class="item valjevo zanatlija zelenilo">
             <p>VALJEVO</p>
             <div class="image-container">
-              <img src="assets/images/deal-01.png" alt="">
+              <img src="assets/images/deal-01.png" alt="" class="image-click">
               <div class="recommendation-badge">
                 <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
               </div>
@@ -261,6 +262,14 @@ https://templatemo.com/tm-591-villa-agency
             </div>
           </div>
         </div>
+        
+<!-- Modal Structure -->
+<div id="imageModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="imgModal">
+  <div id="caption"></div>
+</div>
+        
         
 
 <div class="col-lg-4 col-md-6 properties-items">
@@ -406,6 +415,34 @@ https://templatemo.com/tm-591-villa-agency
       </div> -->
   </footer>
   <script>
+
+// Get the modal
+var modal = document.getElementById("imageModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.querySelector(".image-click");
+var modalImg = document.getElementById("imgModal");
+var captionText = document.getElementById("caption");
+img.onclick = function() {
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 
   
