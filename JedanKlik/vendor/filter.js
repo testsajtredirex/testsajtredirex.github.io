@@ -27,9 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <label for="zanatlija-type">Tip Zanatlije:</label>
                 <select id="zanatlija-type" class="filter">
                     <option value="">Svi tipovi</option>
-                    <option value=".stolar">Stolar</option>
-                    <option value=".vodoinstalater">Vodoinstalater</option>
-                    <option value=".elektricar">Električar</option>
+                    <option value=".zelenilo">Održavanje Zelenih Površina</option>
                 </select>
             `;
         } else if (occupation === 'majstor') {
@@ -37,9 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <label for="majstor-type">Tip Majstora:</label>
                 <select id="majstor-type" class="filter">
                     <option value="">Svi tipovi</option>
-                    <option value=".automehanicar">Automehaničar</option>
-                    <option value=".moler">Moler</option>
                     <option value=".krovopokrivac">Krovopokrivač</option>
+                    <option value=".elektricar">Električarski Radovi</option>
                 </select>
             `;
         } else if (occupation === 'prodavnica') {
