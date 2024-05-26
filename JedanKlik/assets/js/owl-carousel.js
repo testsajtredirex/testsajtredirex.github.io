@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const cityFilter = document.getElementById('city');
-    const occupationFilter = document.getElementById('occupation'); // Ažurirano
+    const occupationFilter = document.getElementById('occupation');
     const searchFilter = document.getElementById('search');
     const additionalFilters = document.getElementById('additional-filters');
 
@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     searchFilter.addEventListener('input', filterCards);
 
+    // Event listeners for additional filters
+    additionalFilters.addEventListener('change', filterCards);
+    
     function showOccupationFilters() {
         const occupation = occupationFilter.value;
 
@@ -91,6 +94,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 <option value=".likovni-umetnik">Likovni Umetnik</option>
               </select>
             `;
+        } else if (occupation === 'majstor') {
+            filterHTML = `
+                <label for="majstor-type">Tip Majstora:</label>
+                <select id="majstor-type" class="filter">
+                    <option value="">Svi tipovi</option>
+                    <option value=".automehanicar">Automehaničar</option>
+                    <option value=".moler">Moler</option>
+                    <option value=".krovopokrivac">Krovopokrivač</option>
+                </select>
+            `;
+        } else if (occupation === 'prodavnica') {
+            filterHTML = `
+                <label for="prodavnica-type">Tip Prodavnice:</label>
+                <select id="prodavnica-type" class="filter">
+                    <option value="">Svi tipovi</option>
+                    <option value=".prehrana">Prehrana</option>
+                    <option value=".tehnika">Tehnika</option>
+                    <option value=".odeca">Odeća</option>
+                </select>
+            `;
         }
 
         // Add the filter HTML to the page and set up event listener
@@ -121,6 +144,44 @@ document.addEventListener('DOMContentLoaded', function() {
             const occupationMatch = !occupation || cardOccupation;
             const searchMatch = !search || cardText.includes(search);
 
+            if (cityMatch && occupationMatch && searchMatch && additionalMatch) {
+                card.classList.remove('hidden');
+                visibleCards.push(card);
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+
+        // Reorder cards to ensure they fill the grid correctly
+        const propertiesBox = document.querySelector('.row.properties-box');
+        visibleCards.forEach(card => {
+            propertiesBox.appendChild(card);
+        });
+    }
+});
+
+
+    function filterCards() {
+        const city = cityFilter.value.toLowerCase();
+        const occupation = occupationFilter.value.toLowerCase();
+        const search = searchFilter.value.toLowerCase();
+        
+        const cards = document.querySelectorAll('.properties-items');
+        const additionalFilter = additionalFilters.querySelector('.filter') ? additionalFilters.querySelector('.filter').value.toLowerCase() : '';
+    
+        let visibleCards = [];
+
+        cards.forEach(card => {
+            const cardItem = card.querySelector('.item');
+            const cardCity = cardItem.classList.contains(city);
+            const cardOccupation = cardItem.classList.contains(occupation);
+            const cardText = cardItem.textContent.toLowerCase();
+            const additionalMatch = !additionalFilter || cardItem.classList.contains(additionalFilter.replace('.', ''));
+    
+            const cityMatch = !city || cardCity;
+            const occupationMatch = !occupation || cardOccupation;
+            const searchMatch = !search || cardText.includes(search);
+    
             if (cityMatch && occupationMatch && searchMatch && additionalMatch) {
                 card.classList.remove('hidden');
                 visibleCards.push(card);
