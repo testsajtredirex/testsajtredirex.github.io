@@ -1163,14 +1163,15 @@ Properties Style
 }
 
 .properties .item span.category {
-  background-color: #55e613;
+  background: linear-gradient(45deg, #2196F3,#004aad,#004aad,#2196F3);
   font-weight: 500;
   border-radius: 5px;
   font-size: 14px;
-  color: #1e1e1e;
+  color: whitesmoke;
   padding: 5px 12px;
   display: inline-block;
   margin-top: 2px;
+  width: 100%;
 }
 
 
