@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Jedan Klik</title>
+    <link rel="icon" type="image/x-icon" href="/JedanKlik/assets/images/android-chrome-192x192.png">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/JedanKlik/assets/css/modal.css">
+<!--
+
+TemplateMo 591 villa agency
+
+https://templatemo.com/tm-591-villa-agency
+
+-->
+  </head>
+<style>
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+@media (min-width: 768px) {
+.recommendation-badge {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+}
+  /* Dodajte ovaj CSS stil u vaš stilski list */
+  .image-click:hover {
+    transform: scale(1.15); /* Povećajte sliku za 10% kada korisnik pređe mišem preko nje */
+    transition: transform 0.3s ease; /* Dodajte prelazni efekat */
+  }
+
+ 
+.properties-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Razmak između kartica */
+}
+
+.properties-items {
+    width: 32%; /* Kartice će zauzimati 1/3 širine kontejnera */
+}
+
+.item {
+    width: 100%; /* Kartice će zauzimati celu širinu svog roditeljskog elementa */
+}
+
+.hidden {
+    display: none !important;
+}
+
+.item:hover {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.category {
+    display: block;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.item h4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.item ul {
+    list-style: none;
+    padding: 0 15px;
+    margin: 0;
+    display: flexbox;
+}
+
+.item ul li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.item ul li span {
+    font-weight: bold;
+}
+
+.item p {
+    padding: 0 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.main-button {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+}
+
+.main-button a {
+    color: #007bff;
+    margin: 0 5px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#filter-container {
+    padding: 20px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#filter-container select, #filter-container input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#additional-filters {
+    flex-basis: 100%;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .properties-items {
+        width: 100%; /* Kartice će zauzimati punu širinu ekrana */
+    }
+    
+    .recommendation-badge {
+  position: absolute;
+  bottom: 30%;
+  right: 10%;
+  transform: translate(50%, -50%);
+}
+
+    .item ul {
+        display: block; /* Popravićemo display fleksbox na display block */
+    }
+}
+
+</style>
+<body>
+
+  <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                      <img src="/JedanKlik/assets/images/JEDAN KLIK.png" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                      <li><a href="index.html">Glavna Stranica</a></li>
+                      <li><a href="properties.html" class="active">Pretraži</a></li>
+                      <li><a href="contact.html">Kontaktirajte Nas</a></li>
+                      <li><a href="contact.html"><i class="fa fa-calendar"></i> Pridružite nam se</a></li>
+                  </ul>   
+                    <a class='menu-trigger'>
+                        <span>Više</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Ponuda Usluga</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section properties">
+    <div class="container">
+      <div id="filter-container">
+          <select id="city">
+              <option value="">Svi gradovi</option>
+              <option value="ada">Ada</option>
+              <option value="alibunar">Alibunar</option>
+              <option value="apatin">Apatin</option>
+              <option value="arandjelovac">Aranđelovac</option>
+              <option value="arilje">Arilje</option>
+              <option value="babusnica">Babušnica</option>
+              <option value="bac">Bač</option>
+              <option value="backa-palanka">Bačka Palanka</option>
+              <option value="backa-topola">Bačka Topola</option>
+              <option value="backi-petrovac">Bački Petrovac</option>
+              <option value="bajina-basta">Bajina Bašta</option>
+              <option value="batocina">Batočina</option>
+              <option value="becej">Bečej</option>
+              <option value="bela-crkva">Bela Crkva</option>
+              <option value="bela-palanka">Bela Palanka</option>
+              <option value="beocin">Beočin</option>
+              <option value="beograd">Beograd</option>
+              <option value="blace">Blace</option>
+              <option value="bogatic">Bogatić</option>
+              <option value="bojnik">Bojnik</option>
+              <option value="boljevac">Boljevac</option>
+              <option value="bor">Bor</option>
+              <option value="bosilegrad">Bosilegrad</option>
+              <option value="brus">Brus</option>
+              <option value="bujanovac">Bujanovac</option>
+              <option value="crna-trava">Crna Trava</option>
+              <option value="cacak">Čačak</option>
+              <option value="cajetina">Čajetina</option>
+              <option value="coka">Čoka</option>
+              <option value="cicevac">Ćićevac</option>
+              <option value="despotovac">Despotovac</option>
+              <option value="dimitrovgrad">Dimitrovgrad</option>
+              <option value="doljevac">Doljevac</option>
+              <option value="gadzin-han">Gadžin Han</option>
+              <option value="golubac">Golubac</option>
+              <option value="gornji-milanovac">Gornji Milanovac</option>
+              <option value="grocka">Grocka</option>
+              <option value="indjija">Inđija</option>
+              <option value="irig">Irig</option>
+              <option value="ivanjica">Ivanjica</option>
+              <option value="jagodina">Jagodina</option>
+              <option value="kanjiza">Kanjiža</option>
+              <option value="kladovo">Kladovo</option>
+              <option value="knic">Knić</option>
+              <option value="knjazevac">Knjaževac</option>
+              <option value="koceljeva">Koceljeva</option>
+              <option value="kosjeric">Kosjerić</option>
+              <option value="kovacica">Kovačica</option>
+              <option value="kovin">Kovin</option>
+              <option value="kragujevac">Kragujevac</option>
+              <option value="kraljevo">Kraljevo</option>
+              <option value="krupanj">Krupanj</option>
+              <option value="krusevac">Kruševac</option>
+              <option value="kucevo">Kučevo</option>
+              <option value="kula">Kula</option>
+              <option value="kursumlija">Kuršumlija</option>
+              <option value="lajkovac">Lajkovac</option>
+              <option value="lapovo">Lapovo</option>
+              <option value="lebane">Lebane</option>
+              <option value="leskovac">Leskovac</option>
+              <option value="ljig">Ljig</option>
+              <option value="ljubovija">Ljubovija</option>
+              <option value="lucani">Lučani</option>
+              <option value="majdanpek">Majdanpek</option>
+              <option value="mali-idjos">Mali Iđoš</option>
+              <option value="mali-zvornik">Mali Zvornik</option>
+              <option value="malo-crnice">Malo Crniće</option>
+              <option value="medvedja">Medveđa</option>
+              <option value="merosina">Merošina</option>
+              <option value="mionica">Mionica</option>
+              <option value="negotin">Negotin</option>
+              <option value="niska-banja">Niška Banja</option>
+              <option value="nova-crnja">Nova Crnja</option>
+              <option value="nova-varos">Nova Varoš</option>
+              <option value="novi-becej">Novi Bečej</option>
+              <option value="novi-knezevac">Novi Kneževac</option>
+              <option value="novi-pazar">Novi Pazar</option>
+              <option value="novi-sad">Novi Sad</option>
+              <option value="novi-sip">Novi Sip</option>
+              <option value="odzaci">Odžaci</option>
+              <option value="opovo">Opovo</option>
+              <option value="osecina">Osečina</option>
+              <option value="pancevo">Pančevo</option>
+              <option value="paracin">Paraćin</option>
+              <option value="pecinci">Pećinci</option>
+              <option value="petrovac-na-mlavi">Petrovac na Mlavi</option>
+              <option value="petrovaradin">Petrovaradin</option>
+              <option value="pirot">Pirot</option>
+              <option value="plandiste">Plandište</option>
+              <option value="pozarevac">Požarevac</option>
+              <option value="pozega">Požega</option>
+              <option value="presevo">Preševo</option>
+              <option value="priboj">Priboj</option>
+              <option value="prijepolje">Prijepolje</option>
+              <option value="pristina">Priština</option>
+              <option value="prizren">Prizren</option>
+              <option value="prokuplje">Prokuplje</option>
+              <option value="raca">Rača</option>
+              <option value="raska">Raška</option>
+              <option value="razanj">Ražanj</option>
+              <option value="rekovac">Rekovac</option>
+              <option value="ruma">Ruma</option>
+              <option value="secanj">Sečanj</option>
+              <option value="senta">Senta</option>
+              <option value="sjenica">Sjenica</option>
+              <option value="smederevo">Smederevo</option>
+              <option value="smederevska-palanka">Smederevska Palanka</option>
+              <option value="sokobanja">Sokobanja</option>
+              <option value="sombor">Sombor</option>
+              <option value="sopot">Sopot</option>
+              <option value="srbobran">Srbobran</option>
+              <option value="sremska-mitrovica">Sremska Mitrovica</option>
+              <option value="sremski-karlovci">Sremski Karlovci</option>
+              <option value="stara-pazova">Stara Pazova</option>
+              <option value="surcin">Surčin</option>
+              <option value="surdulica">Surdulica</option>
+              <option value="svilajnac">Svilajnac</option>
+              <option value="svrljig">Svrljig</option>
+              <option value="temerin">Temerin</option>
+              <option value="titel">Titel</option>
+              <option value="topola">Topola</option>
+              <option value="trgoviste">Trgovište</option>
+              <option value="trstenik">Trstenik</option>
+              <option value="tutin">Tutin</option>
+              <option value="ub">Ub</option>
+              <option value="uzice">Užice</option>
+              <option value="valjevo">Valjevo</option>
+              <option value="varvarin">Varvarin</option>
+              <option value="velika-plana">Velika Plana</option>
+              <option value="veliko-gradiste">Veliko Gradište</option>
+              <option value="vladimirci">Vladimirci</option>
+              <option value="vlasotince">Vlasotince</option>
+              <option value="vrbas">Vrbas</option>
+              <option value="vranje">Vranje</option>
+              <option value="vrnjacka-banja">Vrnjačka Banja</option>
+              <option value="vrsac">Vršac</option>
+              <option value="zabalj">Žabalj</option>
+              <option value="zabari">Žabari</option>
+              <option value="zagubica">Žagubica</option>
+              <option value="zitiste">Žitište</option>
+              <option value="zitoradja">Žitorađa</option>
+              
+              <!-- Dodajte ostale gradove -->
+          </select>
+          
+          <select id="occupation">
+            <option value="">Sva zanimanja</option>
+            <option value="auto">Automobilizam</option>
+            <option value="zanatlija">Zanatlija</option>
+            <option value="online-prodaja">Online Prodaja</option>
+            <option value="gradjevinski-radovi">Građevinski radovi</option>
+            <option value="usluzna-delatnost">Uslužna delatnost</option>
+            <option value="it-tehnologija">IT i Tehnologija</option>
+            <option value="poljoprivreda">Poljoprivreda</option>
+            <option value="zdravstvo">Zdravstvo</option>
+            <option value="umetnost-zabava">Umetnost i Zabava</option>
+            <option value="majstor">Majstor</option>
+            <option value="prodavnica">Prodavnica</option>
+        </select>
+
+        <input type="text" id="search" placeholder="Pretraga...">
+    </div>
+
+    <div class="row properties-box">
+        <!-- Oglasne kartice -->
+
+        <div class="col-lg-4 col-md-6 properties-items">
+            <div class="item valjevo zanatlija">
+                <p><strong>VALJEVO -</strong> Uređivanje Zelenih Površina</p>
+                <div class="image-container">
+                    <img style="cursor: pointer;" src="/JedanKlik/assets/images/deal-01.png" alt="" class="image-click" data-modal="modal1" data-image="/JedanKlik/assets/images/featured1-1.png">
+                    <div class="recommendation-badge">
+                        <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+                    </div>
+                </div>
+              <!--  <span class="category">POSETITE WEB STRANICU</span> -->
+                <h4>Zelena Bajka</h4>
+                <ul>
+                    <li>Kontakt: <span>060/1632-364 ; 061/3002-627 </span></li>
+                    <p>Vaše dvorište će uvek izgledati besprekorno uz naše usluge skupljanja trave i lišća, uklanjanja smeća, sadnje i održavanja cveća, postavljanja ukrasnog kamenja, malča i još mnogo toga!</p>
+                </ul>
+                <div class="main-button">
+                    <a style="color: white;" href="https://www.facebook.com/Dusan.Vlajkovic98" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a style="color: white;" href="https://www.instagram.com/zelena_bajka_valjevo" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- Modal 1 -->
+        <div id="modal1" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage1">
+        </div>
+      
+
+
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item pozarevac majstor">
+            <p><strong>POŽAREVAC - </strong>Električarski Radovi</p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/oglas-01.png" alt="" class="image-click" data-modal="modal2" data-image="/JedanKlik/assets/images/featured2.png">
+              <div class="recommendation-badge">
+                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+              </div>
+            </div>
+           <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Električar</h4>
+              <ul>
+                 <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+                  <li>Kontakt: <span>064/9696-625 </span></li>
+                  <li>email: <span>bogic.elektro@gmail.com </span></li>
+                  <p>Električne instalacije, rasveta, led svetla, popravke instalacija, 
+                    izvođenje novih instalacija u kucama, stanovima, radionicama, fabrikama, poslovnim prostorima.</p>
+              </ul>
+              <div class="main-button">
+                  <a style="color: white;" href="https://www.facebook.com/elektricar012/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                  
+              </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal2" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item cacak gradjevinski-radovi majstor">
+            <p><strong>Čačak - </strong>Građevinski Radovi</p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-001.png" alt="" class="image-click" data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-001.png">
+              <div class="recommendation-badge">
+                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+              </div>
+            </div>
+           <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Građevinski Radovi Čačak</h4>
+              <ul>
+                 <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+                  <li>Kontakt: <span>065/9577-821 </span></li>
+                  <p>Pružamo građevinske usluge u Čačku, uključujući betonažu, šolovanje, zidanje, i lepljenje pločica, 
+                    sa posebnim akcentom na kvalitet i poverenje.</p>
+              </ul>
+              <div class="main-button">
+                  <a style="color: white;" href="https://www.facebook.com/gradjevinski.radovi.cacak" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                  
+              </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item kovacica gradjevinski-radovi majstor">
+            <p><strong>Kovačica - </strong>Građevinski Radovi</p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-002.png" alt="" class="image-click" data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-002.png">
+              <div class="recommendation-badge">
+                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+              </div>
+            </div>
+           <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>PVC i ALU stolarija Kovačica</h4>
+              <ul>
+                 <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+                  <li>Kontakt: <span>064/6713-899 </span></li>
+                  <li>Email: <span>stolarijapavel@gmail.com </span></li>
+                  <p>
+                    -Ugradnja PVC i Al stolarije <br>
+                    -Ugradnja PVC i Al roletni<br>
+                    -Ugradnja rolo, fiksnih i plisa komarnika<br>
+                    -Ugradnja zebra, rolo i trakastih zavesa<br>
+                    -Ugradnja rolo garažnih vrata</p>
+              </ul>
+              <div class="main-button">
+                  <a style="color: white;" href="https://www.facebook.com/pvcalstolarijapavel/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                  <a style="color: white;" href="https://www.stolarijapavel.rs/" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                  
+              </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item backa-palanka auto zanatlija">
+            <p><strong>Bačka Palanka - </strong>Automobilizam</p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-003.png" alt="" class="image-click" data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-003.png">
+              <div class="recommendation-badge">
+                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+              </div>
+            </div>
+           <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Auto enterijer Brkic BP</h4>
+              <ul>
+                 <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+                  <li>Kontakt: <span>060/4233-080 ; <br> 060/4233-088 ; <br> 063/1618-450</span></li>
+                  <p>
+                    U našoj autoperionici, svaki automobil prolazi kroz pažljiv proces čišćenja koji ne samo da uklanja svaku mrlju, 
+                    već i vraća sjaj vašem vozilu, pružajući vam osjećaj svežine i ponosa svaki put kada sednete za volan</p>
+              </ul>
+              <div class="main-button">
+                  <a style="color: white;" href="https://www.facebook.com/dejan.brkic.334" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <!--  <a style="color: white;" href="https://www.stolarijapavel.rs/"><i class="fa-solid fa-globe"></i></a> -->
+                  
+              </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item beograd online-prodaja prodavnica">
+            <p><strong>Beograd - </strong>Online Prodaja</p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-004.png" alt="" class="image-click" data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-004.png">
+              <div class="recommendation-badge">
+                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+              </div>
+            </div>
+           <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>House Shop</h4>
+              <ul>
+                 <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+                  <li>Email: <span>houseshop093@gmail.com</span></li>
+                  <p>
+                    Obezbedite udobnost i praktičnost za svaki deo vašeg doma uz našu online prodavnicu raznih proizvoda za kuću. <br>
+                    Pronađite sve što vam je potrebno da učinite svoj život lakšim i vaš dom udobnijim.
+                    Poručite kvalitetne proizvode uz brzu dostavu!</p>
+              </ul>
+              <div class="main-button">
+                  <a style="color: white;" href="https://www.facebook.com/profile.php?id=61550908141131" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <!--  <a style="color: white;" href="https://www.stolarijapavel.rs/"><i class="fa-solid fa-globe"></i></a> -->
+                  
+              </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item beograd online-prodaja prodavnica">
+            <p><strong>Vršac- </strong>IT i Tehnologija</p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-005.png" alt="" class="image-click" data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-005.png">
+              <div class="recommendation-badge">
+                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+              </div>
+            </div>
+           <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>BZ Computers</h4>
+              <ul>
+                 <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+                  <li>Kontakt: <span>063/8114-459</span></li>
+                  <li>Email: <span>bzcomputers@gmail.com</span></li>
+                  <p>
+                    Potrebna vam je brza popravka računara ili želite da nabavite novi uređaj? 
+                    Ne tražite dalje! Nudimo vrhunski servis i širok asortiman računara po pristupačnim cenama. 
+                    Obezbedite sebi kvalitetnu računarsku podršku već danas - kontaktirajte nas!</p>
+              </ul>
+              <div class="main-button">
+                  <a style="color: white;" href="https://www.facebook.com/profile.php?id=61556268548579" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <!--  <a style="color: white;" href="https://www.stolarijapavel.rs/"><i class="fa-solid fa-globe"></i></a> -->
+                  
+              </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+  </div>
+  
+    </div>
+    
+    
+
+    <footer style="margin-top: 4em;" class="footer-section">
+      <div class="container">
+          <div class="footer-cta pt-5 pb-5">
+              <div class="row">
+                  <div class="col-xl-4 col-md-4 mb-30">
+                      <div class="single-cta">
+                          <i class="fas fa-phone"></i>
+                          <div class="cta-text">
+                              <h4>Kontakt</h4>
+                              <span>(+381)66/935-8484</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-4 col-md-4 mb-30">
+                      <div class="single-cta">
+                          <i class="far fa-envelope-open"></i>
+                          <div class="cta-text">
+                              <h4>Email</h4>
+                              <span>mail@info.com</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-content pt-5 pb-5">
+              <div class="row">
+                  <div class="col-xl-4 col-lg-4 mb-50">
+                      <div class="footer-widget">
+                          <div class="footer-logo">
+                              <img src="/JedanKlik/assets/images/JEDAN KLIK-1.png" class="img-fluid" alt="logo">
+                          </div>
+                          <div class="footer-text">
+                              <p>Istaknite se pred širom publikom i budite vidljivi svakome u svakom trenutku.</p>
+                          </div>
+                          <div class="footer-social-icon">
+                              <span>Zapratite Nas</span>
+                              <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                              <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+                      <div class="footer-widget">
+                          <div class="footer-widget-heading">
+                              <h3>Korisne Veze</h3>
+                          </div>
+                          <ul>
+                              <li><a href="/JedanKlik/index.html">Glavna Strana</a></li>
+                              <li><a href="/JedanKlik/properties.html">Pretraga</a></li>
+                              <li><a href="/JedanKlik/contact.html">Kontaktirajte Nas</a></li>
+                            <!-- <li><a href="#">portfolio</a></li>
+                              <li><a href="#">Contact</a></li>
+                              <li><a href="#">About us</a></li>
+                              <li><a href="#">Our Services</a></li>
+                              <li><a href="#">Expert Team</a></li>
+                              <li><a href="#">Contact us</a></li>
+                              <li><a href="#">Latest News</a></li> --> 
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <img src="/JedanKlik/assets/images/footer-img2.png" alt="">
+                    <!--  <div class="footer-widget">
+                          <div class="footer-widget-heading">
+                              <h3>Subscribe</h3>
+                          </div>
+                          <div class="footer-text mb-25">
+                              <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                          </div>
+                          <div class="subscribe-form">
+                              <form action="#">
+                                  <input type="text" placeholder="Email Address">
+                                  <button><i class="fab fa-telegram-plane"></i></button>
+                              </form>
+                          </div>
+                      </div> --> 
+                  </div>
+              </div>
+          </div>
+      </div>
+    <!--  <div class="copyright-area">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                      <div class="copyright-text">
+                          <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
+                      </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                      <div class="footer-menu">
+                          <ul>
+                              <li><a href="#">Home</a></li>
+                              <li><a href="#">Terms</a></li>
+                              <li><a href="#">Privacy</a></li>
+                              <li><a href="#">Policy</a></li>
+                              <li><a href="#">Contact</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> -->
+  </footer>
+  <script>
+
+// Function to open modal
+function openModal(modalId) {
+  var modal = document.getElementById(modalId);
+  modal.style.display = "block";
+  modal.addEventListener("scroll", handleModalScroll); // Add scroll event listener to the modal
+  document.body.style.overflow = "hidden"; // Prevent scrolling of the main page
+}
+
+// Function to close modal
+function closeModal(modalId) {
+  var modal = document.getElementById(modalId);
+  modal.style.display = "none";
+  modal.removeEventListener("scroll", handleModalScroll); // Remove scroll event listener from the modal
+  document.body.style.overflow = ""; // Allow scrolling of the main page
+}
+
+// Function to handle modal scroll
+function handleModalScroll(event) {
+  var modal = event.currentTarget;
+  var scrollHeight = modal.scrollHeight;
+  var scrollTop = modal.scrollTop;
+  var clientHeight = modal.clientHeight;
+  
+  // If the user has scrolled to the bottom of the modal
+  if (scrollTop + clientHeight >= scrollHeight) {
+    // Prevent scrolling of the main page
+    document.body.style.overflow = "hidden";
+  } else {
+    // Allow scrolling of the main page
+    document.body.style.overflow = "";
+  }
+}
+
+// Get all images with class "image-click"
+var images = document.querySelectorAll(".image-click");
+
+// Loop through each image and add a click event listener
+images.forEach(function(image) {
+  image.addEventListener("click", function() {
+    // Get the data-modal attribute value
+    var modalId = this.getAttribute("data-modal");
+    
+    // Get the modal by its ID
+    var modal = document.getElementById(modalId);
+    
+    // Get the image source from the data-image attribute
+    var modalImage = modal.querySelector(".modal-content");
+    var imageSource = this.getAttribute("data-image");
+    
+    // Set the image source in the modal
+    modalImage.src = imageSource;
+    
+    // Show the modal
+    modal.style.display = "block";
+  });
+});
+
+// Get all close buttons for modals
+var closeButtons = document.querySelectorAll(".modal .close");
+
+// Loop through each close button and add a click event listener
+closeButtons.forEach(function(button) {
+  button.addEventListener("click", function() {
+    // Get the modal that contains this close button
+    var modal = this.parentElement;
+    
+    // Hide the modal
+    modal.style.display = "none";
+  });
+});
+
+// When the user clicks anywhere outside of the modal, close it
+window.addEventListener("click", function(event) {
+  var modals = document.querySelectorAll(".modal");
+  modals.forEach(function(modal) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+});
+
+  
+  </script>
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="/JedanKlik/assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="/JedanKlik/assets/js/custom.js"></script>
+  <script src="/JedanKlik/vendor/filter.js"></script>
+
+  </body>
+</html>
