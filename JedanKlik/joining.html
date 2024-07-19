@@ -83,7 +83,11 @@
 <body>
     <div class="form-container">
         <h1>Pridružite Nam Se!</h1>
-        <form class="forma-sub" action="https://api.web3forms.com/submit" method="post">
+        <form action="https://api.web3forms.com/submit" method="post">
+
+    <!-- Replace with your Access Key -->
+    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
             <label for="city">Grad:</label>
             <input type="text" id="city" name="city" required>
             
@@ -121,8 +125,9 @@
             <label for="graphic_pack">Grafički Paket - 1.990RSD</label><br>
             <input type="checkbox" id="webpage" name="services[]" value="webpage">
             <label for="webpage">Lična Stranica - 3.990RSD</label><br>
-            <!-- Set the redirect URL to your custom confirmation page -->
-            <input type="hidden" name="redirect" value="https://testsajtredirex.github.io/JedanKlik/confirmation.html">
+            
+          <!-- Set the redirect URL to your custom confirmation page -->
+          <input type="hidden" name="redirect" value="https://yourwebsite.com/confirmation.html">
             <input type="submit" value="Pošalji" class="submit-button">
         </form>
     </div>
