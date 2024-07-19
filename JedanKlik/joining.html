@@ -84,22 +84,21 @@
     <div class="form-container">
         <h1>Pridružite Nam Se!</h1>
         <form action="https://api.web3forms.com/submit" method="post">
-
-    <!-- Replace with your Access Key -->
-    <input type="hidden" name="access_key" value="4af4aaac-14ce-43dc-a980-c81e80e0e8bd">
-
+            <!-- Replace with your Access Key -->
+            <input type="hidden" name="access_key" value="4af4aaac-14ce-43dc-a980-c81e80e0e8bd">
+    
             <label for="city">Grad:</label>
             <input type="text" id="city" name="city" required>
-            
+    
             <label for="name">Naziv:</label>
             <input type="text" id="name" name="name" required>
-            
+    
             <label for="contact">Kontakt Informacije:</label>
             <input type="text" id="contact" name="contact" required>
-            
+    
             <label for="description">Kratak opis:</label>
             <textarea id="description" name="description" required></textarea>
-            
+    
             <label for="category">Offer Category:</label>
             <select id="category" name="category" required>
                 <option value="auto">Automobilizam</option>
@@ -114,20 +113,20 @@
                 <option value="majstor">Majstor</option>
                 <option value="prodavnica">Prodavnica</option>
             </select>
-            
+    
             <label for="social_links">Social Network Links:</label>
             <input type="text" id="social_link1" name="social_links[]" placeholder="Link 1"><br>
             <input type="text" id="social_link2" name="social_links[]" placeholder="Link 2"><br>
             <input type="text" id="social_link3" name="social_links[]" placeholder="Link 3"><br>
-            <br><br>
-            <label for="services" class="services-label">Dodatne Usluge:</label> <br>
+    
+            <label for="services" class="services-label">Dodatne Usluge:</label><br>
             <input type="checkbox" id="graphic_pack" name="services[]" value="graphic_pack">
             <label for="graphic_pack">Grafički Paket - 1.990RSD</label><br>
             <input type="checkbox" id="webpage" name="services[]" value="webpage">
             <label for="webpage">Lična Stranica - 3.990RSD</label><br>
-            
-          <!-- Set the redirect URL to your custom confirmation page -->
-          <input type="hidden" name="redirect" value="https://testsajtredirex.github.io/JedanKlik/confirmation.html">
+    
+            <!-- Set the redirect URL to your custom confirmation page -->
+            <input type="hidden" name="redirect" value="https://testsajtredirex.github.io/JedanKlik/confirmation.html">
             <input type="submit" value="Pošalji" class="submit-button">
         </form>
     </div>
