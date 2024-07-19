@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jedan Klik</title>
+    <link rel="icon" type="image/x-icon" href="/JedanKlik/assets/images/android-chrome-192x192.png">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #111111;
+            background-image: url(assets/images/architecture-4978522.jpg);
+            background-size: cover;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 70em;
+            margin: 20px;
+        }
+        .form-container h1 {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-container input[type="text"], 
+        .form-container textarea, 
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease-in-out;
+        }
+        .form-container input[type="text"]:focus,
+        .form-container textarea:focus,
+        .form-container select:focus {
+            border-color: #007bff;
+        }
+        .form-container textarea {
+            resize: vertical;
+        }
+        .form-container input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .form-container .services-label {
+            margin-top: -10px;
+        }
+        .form-container .submit-button {
+            display: block;
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .form-container .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Pridružite Nam Se!</h1>
+        <form class="forma-sub" action="submit_business.php" method="post">
+            <label for="city">Grad:</label>
+            <input type="text" id="city" name="city" required>
+            
+            <label for="name">Naziv:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="contact">Kontakt Informacije:</label>
+            <input type="text" id="contact" name="contact" required>
+            
+            <label for="description">Kratak opis:</label>
+            <textarea id="description" name="description" required></textarea>
+            
+            <label for="category">Offer Category:</label>
+            <select id="category" name="category" required>
+                <option value="auto">Automobilizam</option>
+                <option value="zanatlija">Zanatlija</option>
+                <option value="online-prodaja">Online Prodaja</option>
+                <option value="gradjevinski-radovi">Građevinski radovi</option>
+                <option value="usluzna-delatnost">Uslužna delatnost</option>
+                <option value="it-tehnologija">IT i Tehnologija</option>
+                <option value="poljoprivreda">Poljoprivreda</option>
+                <option value="zdravstvo">Zdravstvo</option>
+                <option value="umetnost-zabava">Umetnost i Zabava</option>
+                <option value="majstor">Majstor</option>
+                <option value="prodavnica">Prodavnica</option>
+            </select>
+            
+            <label for="social_links">Social Network Links:</label>
+            <input type="text" id="social_link1" name="social_links[]" placeholder="Link 1"><br>
+            <input type="text" id="social_link2" name="social_links[]" placeholder="Link 2"><br>
+            <input type="text" id="social_link3" name="social_links[]" placeholder="Link 3"><br>
+            <br><br>
+            <label for="services" class="services-label">Dodatne Usluge:</label> <br>
+            <input type="checkbox" id="graphic_pack" name="services[]" value="graphic_pack">
+            <label for="graphic_pack">Grafički Paket - 1.990RSD</label><br>
+            <input type="checkbox" id="webpage" name="services[]" value="webpage">
+            <label for="webpage">Lična Stranica - 3.990RSD</label><br>
+            
+            <input type="submit" value="Pošalji" class="submit-button">
+        </form>
+    </div>
+</body>
+</html>

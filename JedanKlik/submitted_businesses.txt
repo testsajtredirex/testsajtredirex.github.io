@@ -1,0 +1,72 @@
+City: asd
+Name: asdasd
+Contact: asdasd
+Description: asdasd
+Category: IT
+Social Links: asd
+Services: graphic_pack
+
+City: kurac
+Name: kurcina
+Contact: 99999999
+Description: muda lele brale
+Category: handywork
+Social Links: da bre oce 
+Services: graphic_pack, webpage
+
+City: asdf
+Name: asdf
+Contact: asdf
+Description: asdf
+Category: IT
+Social Links: asdf
+Services: graphic_pack
+
+Grad: asdf
+Name: asdf
+Contact: adsf
+Description: asdf
+Category: IT
+Social Links: asdf
+Services: None9:07 AM 7/10/2024
+
+Grad: asd
+Name: asd
+Contact: asd
+Description: asd
+Category: gradjevinski-radovi
+Social Links: asd
+Services: graphic_pack
+
+Grad: asdasd
+Name: asdasd
+Contact: asd
+Description: asd
+Category: zdravstvo
+Social Links: asd
+Services: graphic_pack
+
+Grad: asdasd
+Name: asdasd
+Contact: asd
+Description: asd
+Category: zdravstvo
+Social Links: 
+Social Links: 9:07 AM 7/10/2024
+Social Links: 9:07 AM 7/10/2029:07 AM 7/10/20244
+Social Links: 
+Social Links: 9:07 AM 7/10/2024
+Services: graphic_pack
+
+Grad: asdasd
+Name: asdasd
+Contact: asd
+Description: asd
+Category: zdravstvo
+Social Links: asd3
+Social Links: 
+Social Links: 
+Social Links: 
+Social Links: 
+Services: graphic_pack
+

@@ -1440,6 +1440,39 @@ Slanje bex kurirskom službom, 490 ptt</p>
 
 
   </script>
+
+<script>
+  // Učitavanje podataka iz JSON fajla
+  fetch('businesses.json')
+      .then(response => response.json())
+      .then(data => {
+          let businessList = document.getElementById('business-list');
+          data.forEach(business => {
+              let businessCard = document.createElement('div');
+              businessCard.className = 'col-lg-4 col-md-6 properties-items';
+              businessCard.innerHTML = `
+                  <div class="item ${business.city.toLowerCase()} ${business.category.toLowerCase().replace(/\s+/g, '-')}">
+                      <p><strong>${business.city}</strong></p>
+                      <div class="image-container">
+                          <img style="cursor: pointer;" src="assets/images/slikekartica/default.png" alt="" class="image-click" data-modal="modal${data.indexOf(business) + 1}" data-image="assets/images/slikekartica/default.png">
+                          <div class="recommendation-badge">
+                              <!-- <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                          </div>
+                      </div>
+                      <h4>${business.name}</h4>
+                      <ul>
+                          <li>Kontakt: <span>${business.contact}</span></li>
+                          <p>${business.description}</p>
+                      </ul>
+                      <div class="main-button">
+                          <a style="color: white;" href="${business.social_links}" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                      </div>
+                  </div>
+              `;
+              businessList.appendChild(businessCard);
+          });
+      });
+</script>
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
