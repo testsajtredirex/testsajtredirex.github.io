@@ -3,6 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const occupationFilter = document.getElementById('occupation');
     const searchFilter = document.getElementById('search');
     const additionalFilters = document.getElementById('additional-filters');
+    const resetButton = document.getElementById('reset-filters');
+
+    // Check if elements are correctly selected
+    console.log('City Filter:', cityFilter);
+    console.log('Occupation Filter:', occupationFilter);
+    console.log('Search Filter:', searchFilter);
+    console.log('Additional Filters:', additionalFilters);
+    console.log('Reset Button:', resetButton);
 
     // Event listeners for filters
     cityFilter.addEventListener('change', filterCards);
@@ -14,7 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listeners for additional filters
     additionalFilters.addEventListener('change', filterCards);
-    
+
+    // Event listener for reset button
+    resetButton.addEventListener('click', resetFilters);
+
     function showOccupationFilters() {
         const occupation = occupationFilter.value;
 
@@ -59,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const cards = document.querySelectorAll('.properties-items');
         const additionalFilter = additionalFilters.querySelector('.filter') ? additionalFilters.querySelector('.filter').value.toLowerCase() : '';
-    
+
         let visibleCards = [];
 
         cards.forEach(card => {
@@ -68,11 +79,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const cardOccupation = cardItem.classList.contains(occupation);
             const cardText = cardItem.textContent.toLowerCase();
             const additionalMatch = !additionalFilter || cardItem.classList.contains(additionalFilter.replace('.', ''));
-    
+
             const cityMatch = !city || cardCity;
             const occupationMatch = !occupation || cardOccupation;
             const searchMatch = !search || cardText.includes(search);
-    
+
             if (cityMatch && occupationMatch && searchMatch && additionalMatch) {
                 card.classList.remove('hidden');
                 visibleCards.push(card);
@@ -87,8 +98,28 @@ document.addEventListener('DOMContentLoaded', function() {
             propertiesBox.appendChild(card);
         });
     }
-});
 
+    function resetFilters() {
+        console.log('Reset Filters Button Clicked');
+
+        // Reset filter values
+        cityFilter.value = '';
+        occupationFilter.value = '';
+        searchFilter.value = '';
+        additionalFilters.innerHTML = '';
+        
+        // Reset the occupation filters
+        showOccupationFilters();
+
+        // Show all cards
+        const cards = document.querySelectorAll('.properties-items');
+        cards.forEach(card => {
+            card.classList.remove('hidden');
+        });
+
+        console.log('Filters reset and all cards shown');
+    }
+});
 
 if($('.menu-trigger').length){
     $(".menu-trigger").on('click', function() {	

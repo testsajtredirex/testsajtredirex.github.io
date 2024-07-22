@@ -2,11 +2,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const cityFilter = document.getElementById('city');
     const occupationFilter = document.getElementById('occupation');
     const searchFilter = document.getElementById('search');
+    const resetButton = document.getElementById('reset-filters');
 
     // Event listeners for filters
     cityFilter.addEventListener('change', filterCards);
     occupationFilter.addEventListener('change', filterCards);
     searchFilter.addEventListener('input', filterCards);
+    resetButton.addEventListener('click', resetFilters);
 
     function filterCards() {
         const city = cityFilter.value.toLowerCase();
@@ -31,6 +33,19 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 card.style.display = 'none';
             }
+        });
+    }
+
+    function resetFilters() {
+        // Reset filter values
+        cityFilter.value = '';
+        occupationFilter.value = '';
+        searchFilter.value = '';
+
+        // Show all cards
+        const cards = document.querySelectorAll('.properties-items');
+        cards.forEach(card => {
+            card.style.display = 'block';
         });
     }
 });

@@ -9,7 +9,7 @@
     rel="stylesheet">
 
   <title>Jedan Klik</title>
-  <link rel="icon" type="image/x-icon" href="/JedanKlik/assets/images/android-chrome-192x192.png">
+  <link rel="icon" type="image/x-icon" href="assets/images/android-chrome-192x192.png">
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/JedanKlik/assets/css/modal.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
   <!--
 
 TemplateMo 591 villa agency
@@ -31,6 +31,55 @@ https://templatemo.com/tm-591-villa-agency
 -->
 </head>
 <style>
+
+/* CSS */
+.button-6 {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
   .image-container {
     position: relative;
     display: inline-block;
@@ -182,7 +231,7 @@ https://templatemo.com/tm-591-villa-agency
 
 <body>
 
-  <!-- ***** Preloader Start ***** -->
+  <!-- ***** Preloader Start ***** 
   <div id="js-preloader" class="js-preloader">
     <div class="preloader-inner">
       <span class="dot"></span>
@@ -193,7 +242,7 @@ https://templatemo.com/tm-591-villa-agency
       </div>
     </div>
   </div>
-  <!-- ***** Preloader End ***** -->
+  ***** Preloader End ***** -->
 
 
   <!-- ***** Header Area Start ***** -->
@@ -204,7 +253,7 @@ https://templatemo.com/tm-591-villa-agency
           <nav class="main-nav">
             <!-- ***** Logo Start ***** -->
             <a href="index.html" class="logo">
-              <img src="/JedanKlik/assets/images/JEDAN KLIK.png" alt="">
+              <img src="assets/images/JEDAN KLIK.png" alt="">
             </a>
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
@@ -400,9 +449,13 @@ https://templatemo.com/tm-591-villa-agency
           <option value="umetnost-zabava">Umetnost i Zabava</option>
           <option value="majstor">Majstor</option>
           <option value="prodavnica">Prodavnica</option>
+          <option value="namestaj">Nameštaj</option>
         </select>
 
         <input type="text" id="search" placeholder="Pretraga...">
+
+        <button class="button-6" id="reset-filters">Reset Filter</button>
+
       </div>
 
       <div class="row properties-box">
@@ -412,10 +465,10 @@ https://templatemo.com/tm-591-villa-agency
           <div class="item valjevo zanatlija">
             <p><strong>Valjevo</strong></p>
             <div class="image-container">
-              <img style="cursor: pointer;" src="/JedanKlik/assets/images/deal-01.png" alt="" class="image-click"
-                data-modal="modal1" data-image="/JedanKlik/assets/images/featured1-1.png">
+              <img style="cursor: pointer;" src="assets/images/deal-01.png" alt="" class="image-click"
+                data-modal="modal1" data-image="assets/images/featured1-1.png">
               <div class="recommendation-badge">
-                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+                <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">
               </div>
             </div>
             <!--  <span class="category">POSETITE WEB STRANICU</span> -->
@@ -445,9 +498,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong>Požarevac</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/oglas-01.png" alt="" class="image-click"
-                data-modal="modal2" data-image="/JedanKlik/assets/images/featured2.png">
+                data-modal="modal2" data-image="assets/images/featured2.png">
               <div class="recommendation-badge">
-                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+                <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -478,9 +531,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong>Čačak</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-001.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-001.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-001.png">
               <div class="recommendation-badge">
-                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+                <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -510,9 +563,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong>Kovačica</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-002.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-002.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-002.png">
               <div class="recommendation-badge">
-                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+                <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -549,9 +602,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong>Bačka Palanka</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-003.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-003.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-003.png">
               <div class="recommendation-badge">
-                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+                <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -585,9 +638,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong>Beograd</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-004.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-004.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-004.png">
               <div class="recommendation-badge">
-                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+                <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -621,9 +674,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong>Vršac</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-005.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-005.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-005.png">
               <div class="recommendation-badge">
-                <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka">
+                <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -657,9 +710,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong>Niš</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-006.jpg" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/kartica-006.jpg">
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-006.jpg">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -692,9 +745,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong>Vrbas</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-007.jpg" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/kartica-007.jpg">
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-007.jpg">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -730,9 +783,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong>Niš</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-008.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/kartica-008.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-008.png">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -765,9 +818,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong>Kruševac</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-009.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/kartica-009.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-009.png">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -800,9 +853,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong></strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-010.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/kartica-010.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-010.png">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -835,9 +888,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong></strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-011.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/kartica-011.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-011.png">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -870,9 +923,9 @@ https://templatemo.com/tm-591-villa-agency
             <p><strong>Kraljevo</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-012.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/kartica-012.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-012.png">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -916,9 +969,9 @@ Snimite povrsinu, kazemo Vam cenu.✅👌<br>
             <p><strong>Zaječar</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-013.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/kartica-013.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-013.png">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -957,9 +1010,9 @@ Plan i program zastite</p>
             <p><strong>Požega</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-014.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-014.jpg">
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-014.jpg">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -992,9 +1045,9 @@ Plan i program zastite</p>
             <p><strong>Jagodina</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-015.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-015.jpg">
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-015.jpg">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -1027,9 +1080,9 @@ Plan i program zastite</p>
             <p><strong>Kraljevo</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-016.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/kartica-016.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-016.png">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -1065,9 +1118,9 @@ Plan i program zastite</p>
             <p><strong>Novi Sad</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-017.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-017.jpg">
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-017.jpg">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -1100,9 +1153,9 @@ Plan i program zastite</p>
             <p><strong>Kraljevo</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-018.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/modal-018.jpg">
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-018.jpg">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -1135,9 +1188,9 @@ Plan i program zastite</p>
             <p><strong>Srbobran</strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-019.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/kartica-019.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-019.png">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -1170,9 +1223,9 @@ Plan i program zastite</p>
             <p><strong></strong></p>
             <div class="image-container">
               <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-020.png" alt="" class="image-click"
-                data-modal="modal3" data-image="/JedanKlik/assets/images/slikekartica/kartica-020.png">
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-020.png">
               <div class="recommendation-badge">
-                <!--  <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
               </div>
             </div>
             <!-- <span class="category">Električarski Radovi</span> -->
@@ -1194,6 +1247,270 @@ Slanje bex kurirskom službom, 490 ptt</p>
             <div class="main-button">
               <a style="color: white;" href="https://www.facebook.com/profile.php?id=100091307641928" target="_blank"><i
                   class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+        <!------------------------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item vrsac prodavnica">
+            <p><strong>Vršac</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="/assets/images/slikekartica/kartica-21.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="/assets/images/slikekartica/kartica-21.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Prodavnica Nestor Vršac</h4>
+            <ul>
+              <li>Adresa: <span>Nikite Tolstoja 116, Vrsac</span></li>
+              <li>Kontakt: <span>062/8330-655</span></li>
+              <li>Email: <span>nestordoo@gmail.com</span></li>
+              <p>-vodovod <br>
+                -kanalizacija<br>
+                -sanitarija, bojleri, slavine<br>
+                -baštenski program<br>
+                -navodnjavanje kap po kap</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/nestordoo/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+        <!------------------------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item smederevo prodavnica">
+            <p><strong>Smederevo</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="/assets/images/slikekartica/kartica-22.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="/assets/images/slikekartica/kartica-22.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Prodavnica "Kod Ilije"</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+              <li>Kontakt: <span>060/6637-729</span></li>
+              <!-- <li>Email: <span>bridge7802@yahoo.com</span></li> -->
+              <p>Prodavnica sa NAJNIŽIM CENAMA!<br><br>
+
+                Kod Ilije sve milije!</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/kodilijee/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+        <!------------------------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item vrnjacka-banja usluge zanatlija">
+            <p><strong>Vrnjačka Banja</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="/assets/images/slikekartica/kartica-23.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="/assets/images/slikekartica/kartica-23.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Dubinsko pranje Vrnjacka Banja</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+              <li>Kontakt: <span>062/9748-634</span></li>
+              <!-- <li>Email: <span>bridge7802@yahoo.com</span></li> -->
+              <p>Dubinsko pranje tepiha, automobila, nameštaja, pranje svih vrsta podova. <br> Poliranje automobila i farova</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/kumicx5/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+        <!------------------------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item beograd usluge zanatlija">
+            <p><strong>Beograd</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="/assets/images/slikekartica/kartica-24.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="/assets/images/slikekartica/kartica-24.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Dubinsko Pranje Nenad</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+              <li>Kontakt: <span>064/2420-865</span></li>
+              <li>Email: <span>Nenad1981@gmail.com</span></li>
+              <p>Profesionalno dubinsko pranje mebliranog i kožnog nameštaja u Vašem domu!</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100063554051831" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+        <!------------------------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item pozarevac usluge zanatlija">
+            <p><strong>Požarevac - Topolovnik</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="/assets/images/slikekartica/kartica-25.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="/assets/images/slikekartica/kartica-25.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Pranje tepiha "Tepih Sjaj"</h4>
+            <ul>
+              <li>Adresa: <span>Veljka Vlahovića 2, Topolovnik</span></li>
+              <li>Kontakt: <span>069/1747-086</span></li>
+              <!--<li>Email: <span>Nenad1981@gmail.com</span></li> -->
+              <p>Pranje tepiha TEPIH SJAJ, usluga pranja tepiha na najsavremenijim mašinama. <br>
+
+                - Pranje tepiha, staza, etisona<br>
+                - Pranje jorgana i ćebadi<br>
+                - Dubinsko pranje nameštaja i automobila<br>
+                
+                Suv i mirišljav tepih danas za sutra!<br>
+                
+                Pranje tepiha i leti i zimi, mogućnost prevoza.<br>
+                
+                Povoljne cene!</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/tepihsjajpo/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+                  <a style="color: white;" href="https://www.instagram.com/tepihsjaj8479/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+        <!------------------------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item bor usluge zanatlija">
+            <p><strong>Bor</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="/assets/images/slikekartica/kartica-26.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="/assets/images/slikekartica/kartica-26.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Dubinsko pranje Bor</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Veljka Vlahovića 2, Topolovnik</span></li> -->
+              <li>Kontakt: <span>060/0434-495</span></li>
+              <li>Email: <span>licics@yahoo.com</span></li>
+              <p>-DUBINSKO PRANJE. <br>
+                -Pranje namestaja, <br>
+                -pranje automobila. <br><br>
+                
+                USLUZNO PRANJE U ULTRAZVUCNOJ KADI</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100063759354934" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--    <a style="color: white;" href="https://www.instagram.com/tepihsjaj8479/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+
+        <!------------------------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item novi-pazar namestaj">
+            <p><strong>Novi Pazar</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="/assets/images/slikekartica/kartica-27.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="/assets/images/slikekartica/kartica-27.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Namestaj Bruncevic</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Veljka Vlahovića 2, Topolovnik</span></li> -->
+              <li>Kontakt: <span>069/607-022</span></li>
+              <!--<li>Email: <span>licics@yahoo.com</span></li>-->
+              <p>Izrada namestaja po meri i zelji</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100063759354934" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <a style="color: white;" href="https://www.instagram.com/namestaj_bruncevic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
             <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
                   class="fa-solid fa-globe"></i></a> -->
 
@@ -1281,7 +1598,7 @@ Slanje bex kurirskom službom, 490 ptt</p>
           <div class="col-xl-4 col-lg-4 mb-50">
             <div class="footer-widget">
               <div class="footer-logo">
-                <img src="/JedanKlik/assets/images/JEDAN KLIK-1.png" class="img-fluid" alt="logo">
+                <img src="assets/images/JEDAN KLIK-1.png" class="img-fluid" alt="logo">
               </div>
               <div class="footer-text">
                 <p>Istaknite se pred širom publikom i budite vidljivi svakome u svakom trenutku.</p>
@@ -1313,7 +1630,7 @@ Slanje bex kurirskom službom, 490 ptt</p>
             </div>
           </div>
           <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
-            <img src="/JedanKlik/assets/images/footer-img2.png" alt="">
+            <img src="assets/images/footer-img2.png" alt="">
             <!--  <div class="footer-widget">
                           <div class="footer-widget-heading">
                               <h3>Subscribe</h3>
@@ -1456,7 +1773,7 @@ Slanje bex kurirskom službom, 490 ptt</p>
                       <div class="image-container">
                           <img style="cursor: pointer;" src="assets/images/slikekartica/default.png" alt="" class="image-click" data-modal="modal${data.indexOf(business) + 1}" data-image="assets/images/slikekartica/default.png">
                           <div class="recommendation-badge">
-                              <!-- <img style="width: 10em;" src="/JedanKlik/assets/images/preporuka.png" alt="Preporuka"> -->
+                              <!-- <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
                           </div>
                       </div>
                       <h4>${business.name}</h4>
@@ -1478,10 +1795,9 @@ Slanje bex kurirskom službom, 490 ptt</p>
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/isotope.min.js"></script>
-  <script src="/JedanKlik/assets/js/owl-carousel.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
-  <script src="/JedanKlik/assets/js/custom.js"></script>
-  <script src="/JedanKlik/vendor/filter.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 

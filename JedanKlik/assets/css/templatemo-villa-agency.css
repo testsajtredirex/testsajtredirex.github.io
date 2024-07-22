@@ -734,6 +734,9 @@ Header Style
 Banner Style
 --------------------------------------------- 
 */
+.main-banner{
+  background-image: url(/assets/images/banner-04.png);
+}
 
 .main-banner .item {
   background-position: center center;
