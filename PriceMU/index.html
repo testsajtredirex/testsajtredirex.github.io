@@ -79,10 +79,6 @@
         <input type="number" id="overnightCharge" placeholder="Enter overnight charge (if applicable)">
     </div>
     <div class="form-group">
-        <label for="bookedVia">Booked via Call or Email:</label>
-        <input type="checkbox" id="bookedVia"> Add 40%
-    </div>
-    <div class="form-group">
         <label for="garageTime">Garage-to-Garage Time (hours):</label>
         <input type="number" id="garageTime" placeholder="Enter garage-to-garage time in hours">
     </div>
@@ -98,17 +94,14 @@
         let additionalCharges = parseFloat(document.getElementById("additionalCharges").value) || 0;
         let discount = parseFloat(document.getElementById("discount").value) || 0;
         let overnightCharge = parseFloat(document.getElementById("overnightCharge").value) || 0;
-        let bookedVia = document.getElementById("bookedVia").checked;
         let garageTime = parseFloat(document.getElementById("garageTime").value);
 
         // Calculate VAT and apply it to the price
         let vatAmount = usdPrice * (vat / 100);
         let totalPrice = usdPrice + vatAmount + additionalCharges - discount + overnightCharge;
 
-        // Add 40% if booked via call or email
-        if (bookedVia) {
-            totalPrice *= 1.40;
-        }
+        // Automatically add 40% to the final price
+        totalPrice *= 1.40;
 
         // If it's an hourly ride, divide the total price by garage-to-garage time
         let hourlyPrice = totalPrice;
