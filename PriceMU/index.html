@@ -78,10 +78,6 @@
         <label for="overnightCharge">Overnight Charge (USD) if applicable:</label>
         <input type="number" id="overnightCharge" placeholder="Enter overnight charge (if applicable)">
     </div>
-    <div class="form-group">
-        <label for="garageTime">Garage-to-Garage Time (hours):</label>
-        <input type="number" id="garageTime" placeholder="Enter garage-to-garage time in hours">
-    </div>
     <button class="btn" onclick="calculatePrice()">Calculate</button>
     <div class="result" id="result"></div>
 </div>
@@ -111,8 +107,7 @@
 
         // Display the results
         let resultDiv = document.getElementById("result");
-        resultDiv.innerHTML = `<strong>Total Price:</strong> $${totalPrice.toFixed(2)}<br>
-                               <strong>Hourly Price:</strong> $${hourlyPrice.toFixed(2)} per hour`;
+        resultDiv.innerHTML = `<strong>Total Price Marked UP by 40%:</strong> $${totalPrice.toFixed(2)}<br>
     }
 </script>
 
