@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ride Price Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Ride Price Calculator</h2>
+    <div class="form-group">
+        <label for="usdPrice">Price in USD:</label>
+        <input type="number" id="usdPrice" placeholder="Enter price in USD">
+    </div>
+    <div class="form-group">
+        <label>Type of Ride:</label>
+        <select id="rideType">
+            <option value="transfer">Transfer</option>
+            <option value="hourly">Hourly</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="vat">VAT (%):</label>
+        <input type="number" id="vat" placeholder="Enter VAT percentage">
+    </div>
+    <div class="form-group">
+        <label for="additionalCharges">Additional Charges (USD):</label>
+        <input type="number" id="additionalCharges" placeholder="Enter additional charges">
+    </div>
+    <div class="form-group">
+        <label for="discount">Discount (USD):</label>
+        <input type="number" id="discount" placeholder="Enter discount">
+    </div>
+    <div class="form-group">
+        <label for="overnightCharge">Overnight Charge (USD) if applicable:</label>
+        <input type="number" id="overnightCharge" placeholder="Enter overnight charge (if applicable)">
+    </div>
+    <div class="form-group">
+        <label for="bookedVia">Booked via Call or Email:</label>
+        <input type="checkbox" id="bookedVia"> Add 40%
+    </div>
+    <div class="form-group">
+        <label for="garageTime">Garage-to-Garage Time (hours):</label>
+        <input type="number" id="garageTime" placeholder="Enter garage-to-garage time in hours">
+    </div>
+    <button class="btn" onclick="calculatePrice()">Calculate</button>
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    function calculatePrice() {
+        let usdPrice = parseFloat(document.getElementById("usdPrice").value);
+        let rideType = document.getElementById("rideType").value;
+        let vat = parseFloat(document.getElementById("vat").value) || 0;
+        let additionalCharges = parseFloat(document.getElementById("additionalCharges").value) || 0;
+        let discount = parseFloat(document.getElementById("discount").value) || 0;
+        let overnightCharge = parseFloat(document.getElementById("overnightCharge").value) || 0;
+        let bookedVia = document.getElementById("bookedVia").checked;
+        let garageTime = parseFloat(document.getElementById("garageTime").value);
+
+        // Calculate VAT and apply it to the price
+        let vatAmount = usdPrice * (vat / 100);
+        let totalPrice = usdPrice + vatAmount + additionalCharges - discount + overnightCharge;
+
+        // Add 40% if booked via call or email
+        if (bookedVia) {
+            totalPrice *= 1.40;
+        }
+
+        // If it's an hourly ride, divide the total price by garage-to-garage time
+        let hourlyPrice = totalPrice;
+        if (rideType === "hourly" && garageTime > 0) {
+            hourlyPrice = totalPrice / garageTime;
+        }
+
+        // Display the results
+        let resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = `<strong>Total Price:</strong> $${totalPrice.toFixed(2)}<br>
+                               <strong>Hourly Price:</strong> $${hourlyPrice.toFixed(2)} per hour`;
+    }
+</script>
+
+</body>
+</html>
