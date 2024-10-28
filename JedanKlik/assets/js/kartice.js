@@ -55,7 +55,7 @@ modalImgSrc: "assets/images/deal-01.png",  // Image for the modal
 fbLink: "https://www.facebook.com/Dusan.Vlajkovic98",
 instaLink: "https://www.instagram.com/zelena_bajka_valjevo",
 websiteLink: null,
-personalPageLink: "www.google.com",
+personalPageLink: "https://testsajtredirex.github.io/JedanKlik/stranice/zelena_bajka/index.html",
           },
           {
 city: "Požarevac",
