@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <title>Jedan Klik</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/android-chrome-192x192.png">
+  <script src="https://sdk.flowpoint.ai?apiKey=t_89176ea60c3f8173f562af7934af5a78&clientId=zWnlveNn98H61eF5wGHa4tZAypC5hB"></script>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/modal.css">
+  <!--
+
+TemplateMo 591 villa agency
+
+https://templatemo.com/tm-591-villa-agency
+
+-->
+</head>
+<style>
+
+/* CSS */
+.button-6 {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-6:hover,
+.button-6:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+  transform: translateY(-1px);
+}
+
+.button-6:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  @media (min-width: 768px) {
+    .recommendation-badge {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+  }
+
+  /* Dodajte ovaj CSS stil u vaš stilski list */
+  .image-click:hover {
+    transform: scale(1.15);
+    /* Povećajte sliku za 10% kada korisnik pređe mišem preko nje */
+    transition: transform 0.3s ease;
+    /* Dodajte prelazni efekat */
+  }
+
+
+  .properties-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Razmak između kartica */
+  }
+
+  .properties-items {
+    width: 32%;
+    /* Kartice će zauzimati 1/3 širine kontejnera */
+  }
+
+  .item {
+    width: 100%;
+    /* Kartice će zauzimati celu širinu svog roditeljskog elementa */
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .item:hover {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+
+  .category {
+    display: block;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .item h4 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .item ul {
+    list-style: none;
+    padding: 0 15px;
+    margin: 0;
+    display: flexbox;
+  }
+
+  .item ul li {
+    margin: 5px 0;
+    font-size: 14px;
+  }
+
+  .item ul li span {
+    font-weight: bold;
+  }
+
+  .item p {
+    padding: 0 5px;
+    font-size: 14px;
+    color: #555;
+  }
+
+  .main-button {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: #f8f8f8;
+  }
+
+  .main-button a {
+    color: #007bff;
+    margin: 0 5px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  #filter-container {
+    padding: 20px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  #filter-container select,
+  #filter-container input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  #additional-filters {
+    flex-basis: 100%;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 768px) {
+    .properties-items {
+      width: 100%;
+      /* Kartice će zauzimati punu širinu ekrana */
+    }
+
+    .recommendation-badge {
+      position: absolute;
+      bottom: 30%;
+      right: 10%;
+      transform: translate(50%, -50%);
+    }
+
+    .item ul {
+      display: block;
+      /* Popravićemo display fleksbox na display block */
+    }
+  }
+</style>
+
+<body>
+
+  <!-- ***** Preloader Start ***** 
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  ***** Preloader End ***** -->
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/JEDAN KLIK.png" alt="">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="index.html">Glavna Stranica</a></li>
+              <li><a href="properties.html" class="active">Pretraži</a></li>
+              <li><a href="contact.html">Kontaktirajte Nas</a></li>
+              <li><a href="joining.html"><i class="fa fa-calendar"></i> Pridružite nam se</a></li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Više</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Ponuda Usluga</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section properties">
+    <div class="container">
+      <div id="filter-container">
+        <select id="city">
+          <option value="">Svi gradovi</option>
+          <option value="ada">Ada</option>
+          <option value="aleksandrovac">Aleksandrovac</option>
+          <option value="alibunar">Alibunar</option>
+          <option value="apatin">Apatin</option>
+          <option value="aranđelovac">Aranđelovac</option>
+          <option value="arilje">Arilje</option>
+          <option value="babušnica">Babušnica</option>
+          <option value="bač">Bač</option>
+          <option value="bačka-palanka">Bačka Palanka</option>
+          <option value="bačka-topola">Bačka Topola</option>
+          <option value="bački-petrovac">Bački Petrovac</option>
+          <option value="bajina-bašta">Bajina Bašta</option>
+          <option value="batočina">Batočina</option>
+          <option value="bečej">Bečej</option>
+          <option value="bela-crkva">Bela Crkva</option>
+          <option value="bela-palanka">Bela Palanka</option>
+          <option value="beočin">Beočin</option>
+          <option value="beograd">Beograd</option>
+          <option value="blace">Blace</option>
+          <option value="bogatić">Bogatić</option>
+          <option value="bojnik">Bojnik</option>
+          <option value="boljevac">Boljevac</option>
+          <option value="bor">Bor</option>
+          <option value="bosilegrad">Bosilegrad</option>
+          <option value="brus">Brus</option>
+          <option value="bujanovac">Bujanovac</option>
+          <option value="crna-trava">Crna Trava</option>
+          <option value="čačak">Čačak</option>
+          <option value="cajetina">Čajetina</option>
+          <option value="coka">Čoka</option>
+          <option value="ćićevac">Ćićevac</option>
+          <option value="despotovac">Despotovac</option>
+          <option value="dimitrovgrad">Dimitrovgrad</option>
+          <option value="doljevac">Doljevac</option>
+          <option value="gadžin-han">Gadžin Han</option>
+          <option value="golubac">Golubac</option>
+          <option value="gornji-milanovac">Gornji Milanovac</option>
+          <option value="grocka">Grocka</option>
+          <option value="inđija">Inđija</option>
+          <option value="irig">Irig</option>
+          <option value="ivanjica">Ivanjica</option>
+          <option value="jagodina">Jagodina</option>
+          <option value="kanjiža">Kanjiža</option>
+          <option value="kladovo">Kladovo</option>
+          <option value="knić">Knić</option>
+          <option value="knjaževac">Knjaževac</option>
+          <option value="koceljeva">Koceljeva</option>
+          <option value="kosjerić">Kosjerić</option>
+          <option value="kovačica">Kovačica</option>
+          <option value="kovin">Kovin</option>
+          <option value="kragujevac">Kragujevac</option>
+          <option value="kraljevo">Kraljevo</option>
+          <option value="krupanj">Krupanj</option>
+          <option value="kruševac">Kruševac</option>
+          <option value="kučevo">Kučevo</option>
+          <option value="kula">Kula</option>
+          <option value="kuršumlija">Kuršumlija</option>
+          <option value="lajkovac">Lajkovac</option>
+          <option value="lapovo">Lapovo</option>
+          <option value="lebane">Lebane</option>
+          <option value="leskovac">Leskovac</option>
+          <option value="ljig">Ljig</option>
+          <option value="ljubovija">Ljubovija</option>
+          <option value="lučani">Lučani</option>
+          <option value="majdanpek">Majdanpek</option>
+          <option value="mali-iđoš">Mali Iđoš</option>
+          <option value="mali-zvornik">Mali Zvornik</option>
+          <option value="malo-crniće">Malo Crniće</option>
+          <option value="medveđa">Medveđa</option>
+          <option value="merošina">Merošina</option>
+          <option value="mionica">Mionica</option>
+          <option value="negotin">Negotin</option>
+          <option value="niš">Niš</option>
+          <option value="niška-banja">Niška Banja</option>
+          <option value="nova-crnja">Nova Crnja</option>
+          <option value="nova-varoš">Nova Varoš</option>
+          <option value="novi-bečej">Novi Bečej</option>
+          <option value="novi-kneževac">Novi Kneževac</option>
+          <option value="novi-pazar">Novi Pazar</option>
+          <option value="novi-sad">Novi Sad</option>
+          <option value="novi-sip">Novi Sip</option>
+          <option value="odžaci">Odžaci</option>
+          <option value="opovo">Opovo</option>
+          <option value="osečina">Osečina</option>
+          <option value="pančevo">Pančevo</option>
+          <option value="paraćin">Paraćin</option>
+          <option value="pećinci">Pećinci</option>
+          <option value="petrovac-na-mlavi">Petrovac na Mlavi</option>
+          <option value="petrovaradin">Petrovaradin</option>
+          <option value="pirot">Pirot</option>
+          <option value="plandište">Plandište</option>
+          <option value="požarevac">Požarevac</option>
+          <option value="požega">Požega</option>
+          <option value="preševo">Preševo</option>
+          <option value="priboj">Priboj</option>
+          <option value="prijepolje">Prijepolje</option>
+          <option value="priština">Priština</option>
+          <option value="prizren">Prizren</option>
+          <option value="prokuplje">Prokuplje</option>
+          <option value="rača">Rača</option>
+          <option value="raška">Raška</option>
+          <option value="ražanj">Ražanj</option>
+          <option value="rekovac">Rekovac</option>
+          <option value="ruma">Ruma</option>
+          <option value="sečanj">Sečanj</option>
+          <option value="senta">Senta</option>
+          <option value="sjenica">Sjenica</option>
+          <option value="smederevo">Smederevo</option>
+          <option value="smederevska-palanka">Smederevska Palanka</option>
+          <option value="sokobanja">Sokobanja</option>
+          <option value="sombor">Sombor</option>
+          <option value="sopot">Sopot</option>
+          <option value="srbobran">Srbobran</option>
+          <option value="sremska-mitrovica">Sremska Mitrovica</option>
+          <option value="sremski-karlovci">Sremski Karlovci</option>
+          <option value="stara-pazova">Stara Pazova</option>
+          <option value="surčin">Surčin</option>
+          <option value="surdulica">Surdulica</option>
+          <option value="svilajnac">Svilajnac</option>
+          <option value="svrljig">Svrljig</option>
+          <option value="šabac">Šabac</option>
+          <option value="šid">Šid</option>
+          <option value="temerin">Temerin</option>
+          <option value="titel">Titel</option>
+          <option value="topola">Topola</option>
+          <option value="trgovište">Trgovište</option>
+          <option value="trstenik">Trstenik</option>
+          <option value="tutin">Tutin</option>
+          <option value="ub">Ub</option>
+          <option value="užice">Užice</option>
+          <option value="valjevo">Valjevo</option>
+          <option value="varvarin">Varvarin</option>
+          <option value="velika-plana">Velika Plana</option>
+          <option value="veliko-gradište">Veliko Gradište</option>
+          <option value="vladimirci">Vladimirci</option>
+          <option value="vlasotince">Vlasotince</option>
+          <option value="vrbas">Vrbas</option>
+          <option value="vranje">Vranje</option>
+          <option value="vrnjačka-banja">Vrnjačka Banja</option>
+          <option value="vršac">Vršac</option>
+          <option value="zaječar">Zaječar</option>
+          <option value="zemun">Zemun</option>
+          <option value="žabalj">Žabalj</option>
+          <option value="žabari">Žabari</option>
+          <option value="žagubica">Žagubica</option>
+          <option value="žitiste">Žitište</option>
+          <option value="žitoradja">Žitorađa</option>
+
+          <!-- Dodajte ostale gradove -->
+        </select>
+
+        <select id="occupation">
+          <option value="">Sva zanimanja</option>
+          <option value="auto">Automobilizam</option>
+          <option value="zanatlija">Zanatlija</option>
+          <option value="online-prodaja">Online Prodaja</option>
+          <option value="gradjevinski-radovi">Građevinski radovi</option>
+          <option value="usluzna-delatnost">Uslužna delatnost</option>
+          <option value="it-tehnologija">IT i Tehnologija</option>
+          <option value="poljoprivreda">Poljoprivreda</option>
+          <option value="zdravstvo">Zdravstvo</option>
+          <option value="umetnost-zabava">Umetnost i Zabava</option>
+          <option value="majstor">Majstor</option>
+          <option value="prodavnica">Prodavnica</option>
+          <option value="namestaj">Nameštaj</option>
+          <option value="kupatilo">Sve za Kupatilo</option>
+          <option value="kuhinja">Sve za Kuhinju</option>
+        </select>
+
+        <input type="text" id="search" placeholder="Pretraga...">
+
+        <button class="button-6" id="reset-filters">Reset Filter</button>
+
+      </div>
+
+      <div class="row properties-box">
+        <!-- Oglasne kartice -->
+
+
+
+
+
+ 
+
+    
+
+        <!---------------0016---------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item pozega it-tehnologija prodavnica">
+            <p><strong>Požega</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-014.png" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-014.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Relić Računari</h4>
+            <ul>
+              <li>Adresa: <span>Njegoševa 13, Pozega</span></li> 
+              <li>Kontakt: <span>031/811-290 <br>064/6164-414 </span></li>
+              <li>Email: <span>relicracunari@gmail.com</span></li> 
+              <p>
+                Servis i prodaja računara i prateće opreme...</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/ServisPozega/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------0017--------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item jagodina it-tehnologija prodavnica">
+            <p><strong>Jagodina</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-015.png" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-015.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Računari FIM Jagodina</h4>
+            <ul>
+              <li>Adresa: <span>Svetozara Markovića L 5; 35000, Jagodina</span></li> 
+              <li>Kontakt: <span>035/8222-020</span></li>
+              <li>Email: <span>racunari.jagodina@gmail.com</span></li> 
+              <p>
+                Prodaja, servis i održavanje računara i laptopova. 24 godina na istom mestu</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/racunari.jagodina/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <a style="color: white;" href="https://fimteck.rs/"><i
+                  class="fa-solid fa-globe"></i></a> 
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------0018--------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item kraljevo gradjevinski-radovi">
+            <p><strong>Kraljevo</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-016.png" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-016.png">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Sax-Al Kraljevo</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+              <li>Kontakt: <span>060/3116-880 <br> 066/311-688</span></li>
+              <!-- <li>Email: <span>bridge7802@yahoo.com</span></li> -->
+              <p>
+                Aluminijumska i PVC stolarija sa pratecim elementima
+</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/saxal.kraljevo" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <a style="color: white;" href="https://www.instagram.com/sax_al_kraljevo/"><i
+                  class="fa-brands fa-instagram"></i></a> 
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------0019--------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item novi-sad zanatlija">
+            <p><strong>Novi Sad</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-017.png" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-017.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Slep Sluzba Iskop Galians</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+              <li>Kontakt: <span>065/2127-601</span></li>
+               <li>Email: <span>galijans2023@gmail.com</span></li> 
+              <p>
+               </p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100091580266772" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-----------------0020-------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item kraljevo zanatlija">
+            <p><strong>Kraljevo</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-018.png" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-018.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Nsd Bravarska Radionica</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+              <li>Kontakt: <span>064/5115-801</span></li>
+              <!-- <li>Email: <span>bridge7802@yahoo.com</span></li> -->
+              <p>
+                Posetite našu facebook stranicu gde možete videti sve naše radove!</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100079861255768" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!------------------0021------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item srbobran prodavnica it-tehnologija">
+            <p><strong>Srbobran</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-019.png" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-019.png">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Racunari Srbobran </h4>
+            <ul>
+              <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+              <li>Kontakt: <span>Preko Facebooka</span></li>
+              <!-- <li>Email: <span>bridge7802@yahoo.com</span></li> -->
+              <p>
+                Računari s 10-godišnjim iskustvom. Popravke i prodaja. Kvalitetna oprema. Vaš pouzdan partner.</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=61556415501873" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0022------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item online-prodaja">
+            <p><strong></strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-020.png" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-020.png">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Srbija Online Prodaja </h4>
+            <ul>
+              <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+              <li>Kontakt: <span>Preko Facebooka</span></li>
+              <!-- <li>Email: <span>bridge7802@yahoo.com</span></li> -->
+              <p>
+🔥 FENOMENALNA PONUDA🔥 <br>
+✅Veličine od 36 Do 47✅ <br>
+📦BRZA DOSTAVA 24/48h⏳ <br>
+📸SLIKE UŽIVO📸 <br>
+📍Moguća zamena👍 <br>
+🔹Slanje na kućnu adresu🔹 <br>
+💰Plaćanje  pouzećem👌🏼 <br>
+Slanje bex kurirskom službom, 490 ptt</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100091307641928" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!------------------0023------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item vrsac prodavnica">
+            <p><strong>Vršac</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-21.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-21.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Prodavnica Nestor Vršac</h4>
+            <ul>
+              <li>Adresa: <span>Nikite Tolstoja 116, Vrsac</span></li>
+              <li>Kontakt: <span>062/8330-655</span></li>
+              <li>Email: <span>nestordoo@gmail.com</span></li>
+              <p>-vodovod <br>
+                -kanalizacija<br>
+                -sanitarija, bojleri, slavine<br>
+                -baštenski program<br>
+                -navodnjavanje kap po kap</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/nestordoo/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!------------------0024------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item smederevo prodavnica">
+            <p><strong>Smederevo</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-22.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-22.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Prodavnica "Kod Ilije"</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+              <li>Kontakt: <span>060/6637-729</span></li>
+              <!-- <li>Email: <span>bridge7802@yahoo.com</span></li> -->
+              <p>Prodavnica sa NAJNIŽIM CENAMA!<br><br>
+
+                Kod Ilije sve milije!</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/kodilijee/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0025------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item vrnjacka-banja usluge zanatlija">
+            <p><strong>Vrnjačka Banja</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-23.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-23.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Dubinsko pranje Vrnjacka Banja</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+              <li>Kontakt: <span>062/9748-634</span></li>
+              <!-- <li>Email: <span>bridge7802@yahoo.com</span></li> -->
+              <p>Dubinsko pranje tepiha, automobila, nameštaja, pranje svih vrsta podova. <br> Poliranje automobila i farova</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/kumicx5/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0026------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item beograd usluge zanatlija">
+            <p><strong>Beograd</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-24.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-24.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Dubinsko Pranje Nenad</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Grad, Ulica n</span></li> -->
+              <li>Kontakt: <span>064/2420-865</span></li>
+              <li>Email: <span>Nenad1981@gmail.com</span></li>
+              <p>Profesionalno dubinsko pranje mebliranog i kožnog nameštaja u Vašem domu!</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100063554051831" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0027------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item pozarevac usluge zanatlija">
+            <p><strong>Požarevac - Topolovnik</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-25.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-25.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Pranje tepiha "Tepih Sjaj"</h4>
+            <ul>
+              <li>Adresa: <span>Veljka Vlahovića 2, Topolovnik</span></li>
+              <li>Kontakt: <span>069/1747-086</span></li>
+              <!--<li>Email: <span>Nenad1981@gmail.com</span></li> -->
+              <p>Pranje tepiha TEPIH SJAJ, usluga pranja tepiha na najsavremenijim mašinama. <br>
+
+                - Pranje tepiha, staza, etisona<br>
+                - Pranje jorgana i ćebadi<br>
+                - Dubinsko pranje nameštaja i automobila<br>
+                
+                Suv i mirišljav tepih danas za sutra!<br>
+                
+                Pranje tepiha i leti i zimi, mogućnost prevoza.<br>
+                
+                Povoljne cene!</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/tepihsjajpo/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+                  <a style="color: white;" href="https://www.instagram.com/tepihsjaj8479/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0028------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item bor usluge zanatlija">
+            <p><strong>Bor</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-26.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-26.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Dubinsko pranje Bor</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Veljka Vlahovića 2, Topolovnik</span></li> -->
+              <li>Kontakt: <span>060/0434-495</span></li>
+              <li>Email: <span>licics@yahoo.com</span></li>
+              <p>-DUBINSKO PRANJE. <br>
+                -Pranje namestaja, <br>
+                -pranje automobila. <br><br>
+                
+                USLUZNO PRANJE U ULTRAZVUCNOJ KADI</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100063759354934" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--    <a style="color: white;" href="https://www.instagram.com/tepihsjaj8479/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!--------------------0029----------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item novi-pazar namestaj">
+            <p><strong>Novi Pazar</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-27.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-27.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Namestaj Bruncevic</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Veljka Vlahovića 2, Topolovnik</span></li> -->
+              <li>Kontakt: <span>069/607-022</span></li>
+              <!--<li>Email: <span>licics@yahoo.com</span></li>-->
+              <p>Izrada namestaja po meri i zelji</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100063640477545" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <a style="color: white;" href="https://www.instagram.com/namestaj_bruncevic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0030------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item lajkovac usluge zanatlija">
+            <p><strong>Lajkovac</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-28.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-28.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Dubinsko Pranje Dule Miljanić </h4>
+            <ul>
+              <!-- <li>Adresa: <span>Veljka Vlahovića 2, Topolovnik</span></li> -->
+              <li>Kontakt: <span>064/5988-336</span></li>
+              <!--<li>Email: <span>licics@yahoo.com</span></li>-->
+              <p>Dubinsko pranje, mogućnost pranja firminih vozila.</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/dubinskopranjedulemiljanic" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/namestaj_bruncevic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>-->
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0031------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item online-prodaja prodavnica">
+            <p><strong></strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-29.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-29.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Profi alati</h4>
+            <ul>
+              <!-- <li>Adresa: <span>Veljka Vlahovića 2, Topolovnik</span></li> -->
+              <li>Kontakt: <span>061/1938-110</span></li>
+              <!--<li>Email: <span>licics@yahoo.com</span></li>-->
+              <p>Profi alati se bave prodajom profi, hobi i specijalizovanog alata za mehanicare.<br><br> Dostavljamo robu kurirskom sluzbom.<br>
+                Alat se moze poruciti putem poruke ovde, vibera, pozivom ili sms-om.</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100064195354543" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/namestaj_bruncevic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>-->
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0032------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item beograd prodavnica online-prodaja kupatilo">
+            <p><strong>Beograd</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-30.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-30.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>SmartGlass </h4>
+            <ul>
+              <!-- <li>Adresa: <span>Veljka Vlahovića 2, Topolovnik</span></li> -->
+              <li>Kontakt: <span>060/6165-220</span></li>
+              <li>Email: <span>sbojan46@gmail.com</span></li>
+              <p> 
+                IZRADA TUS KABINA PO MERI.<br>
+                STAKLO 8MM KALJENO.<br>
+                INOKS OKOV.<br>
+                UGRADNJA JE URACUNATA U CENU.<br>
+                DOSTAVA JE BESPLATNA ZA BGD I OKOLINU.<br>
+                KRATKI ROKOVI ISPORUKE.<br>
+                POZOVITE NAS.</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/tuskabine101/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/namestaj_bruncevic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>-->
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!------------------0033------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item pancevo majstor gradjevinski-radovi">
+            <p><strong>Pančevo</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-31.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-31.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Parket Kalmar - Debeljača</h4>
+            <ul>
+              <li>Adresa: <span>Svetozara Markovića 058, Pančevo</span></li>
+              <li>Kontakt: <span>066/6654-955</span></li>
+              <!--<li>Email: <span>sbojan46@gmail.com</span></li>-->
+              <p>Vršimo ugradnju svih vrsta Parketa, bambus parket, laminat, brodski pod. Takođe i obradu starih parketa - hoblovanj, fugovanje, bajcovanje i lakiranje</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100045551456298" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/namestaj_bruncevic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>-->
+            <!--  <a style="color: white;" href="https://samba.rs/?_rstr_nocache=rstr99266571aa20bf47"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!------------------0034------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item niska-banja majstor gradjevinski-radovi">
+            <p><strong>Niška Banja</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-32.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-32.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Parket Servis "Kocić"</h4>
+            <ul>
+              <li>Adresa: <span>Gorana Nikolića 40, Niška Banja</span></li>
+              <li>Kontakt: <span>063/335-577</span></li>
+              <li>Email: <span>oliverkocic@hotmail.com</span></li>
+              <p>Parketarske usluge, kao što su: postavljanje, hoblovanje, lakiranje i poliranje parketa je delatnost kojom se parket servis „Kocić“ sa uspehom bavi od 1938-me pa do današnjih dana.</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/parketservis/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="color: white;" href="https://parketparket.com/"><i
+                  class="fa-solid fa-globe"></i></a>
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0035------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item pancevo namestaj">
+            <p><strong>Pančevo</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-33.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-33.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Swiss Design</h4>
+            <ul>
+              <li>Adresa: <span>Zmaj jove jovanovica 10, Pančevo</span></li>
+              <li>Kontakt: <span>069/1010-212; 060/5101-017</span></li>
+              <li>Email: <span>swissdesign1010@gmail.com</span></li>
+              <p>Vaš partner za besprekoran dizajn i vrhunski kvalitet enterijera</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/mister.in/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="color: white;" href="https://parketparket.com/"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!------------------0036------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item novi-pazar auto online-prodaja">
+            <p><strong>Novi Pazar</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-34.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-34.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Sve za vaseg ljubimca na 4 tocka </h4>
+            <ul>
+              <li>Adresa: <span>Dese milovanovic , Novi Pazar</span></li>
+              <!--<li>Kontakt: <span>069/1010-212; 060/5101-017</span></li> -->
+              <li>Email: <span>draganakovac74@gmail.com</span></li>
+              <p>Vaš partner za besprekoran dizajn i vrhunski kvalitet enterijera</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/draganaauto/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="color: white;" href="https://parketparket.com/"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!------------------0037------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item sombor zanatlija usluzna-delatnost">
+            <p><strong>Sombor</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-35.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-35.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Usluzni Radovi Sombor košenje Trave i drugo</h4>
+            <ul>
+              <!---<li>Adresa: <span>Dese milovanovic , Novi Pazar</span></li>-->
+              <li>Kontakt: <span>061/6864-220</span></li>
+              <!---<li>Email: <span>draganakovac74@gmail.com</span></li>-->
+              <p>Košenje trave,obaranje drveća,grana,prskanje i orezivanje voćki,agro zastita(plavo ulje,bakar,itd)oblikovanje tuja,žive ograde,bršljen.prskanje total.korova,sadnja i sve oko holtikulture radimo itd...</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100083416476873" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="color: white;" href="https://parketparket.com/"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!------------------0038------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item online-prodaja kupatilo kuhinja ">
+            <p><strong></strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-36.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-36.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>home decor vanila - sve za dom </h4>
+            <ul>
+              <!--<li>Adresa: <span>Dese milovanovic , Novi Pazar</span></li>-->
+              <!--<li>Kontakt: <span>061/6864-220</span></li>-->
+              <!--<li>Email: <span>draganakovac74@gmail.com</span></li>-->
+              <p>Unesite toplinu i eleganciju u svoj dom uz Home Decor Vanila. Nudimo širok asortiman dekorativnih predmeta i dodataka za savršen ambijent. Posetite nas i na Facebooku za najnovije proizvode i inspiraciju.</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100042521227483" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="color: white;" href="https://parketparket.com/"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!------------------0039------------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item online-prodaja kupatilo kuhinja ">
+            <p><strong></strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-37.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-37.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Sve za dom - Online Shop</h4>
+            <ul>
+              <!--<li>Adresa: <span>Dese milovanovic , Novi Pazar</span></li>-->
+              <!--<li>Kontakt: <span>061/6864-220</span></li>-->
+              <!--<li>Email: <span>draganakovac74@gmail.com</span></li>-->
+              <p>Unesite toplinu i eleganciju u svoj dom uz Home Decor Vanila. Nudimo širok asortiman dekorativnih predmeta i dodataka za savršen ambijent.</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=61556184224106" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="color: white;" href="https://parketparket.com/"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0040------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item sid usluzna-delatnost zanatlija majstor">
+            <p><strong>Šid</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-38.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-38.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Usluzno kosenje i krcenje</h4>
+            <ul>
+              <li>Adresa: <span>BRANKA RADICEVICA 97, Šid</span></li>
+              <li>Kontakt: <span>061/265-33-78; 066/4227-355</span></li>
+              <!--<li>Email: <span>draganakovac74@gmail.com</span></li>-->
+              <p>Usluzno kosenje,krcenje zaraslih povrsina kvalitetnom opremom cene ce biti malo skuplje kome odgovara, odvoz i dovoz prikolicom plus orezivanje zive ograde i prskanje voca atomizerom..<br> <br>
+                Nazvati na broj telefona 066422735 ili 0612653378</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=61556184224106" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="color: white;" href="https://parketparket.com/"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0041------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item sabac usluzna-delatnost zanatlija majstor">
+            <p><strong>Šabac</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-39.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-39.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Košenje - Šabac</h4>
+            <ul>
+              <li>Adresa: <span>Dunavska, Šabac</span></li>
+              <li>Kontakt: <span>060/3705-955 - Milan</span></li>
+              <li>Email: <span>milankrstaric@gmail.com</span></li>
+              <p>odrzavanje i uredjenje travnjaka, vocnjaka, vinograda,..</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100063104715741" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="color: white;" href="https://parketparket.com/"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0042------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item pancevo usluzna-delatnost zanatlija majstor">
+            <p><strong>Pančevo</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-40.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-40.jpg">
+              <div class="recommendation-badge">
+                <!--  <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Košenje travnjaka,šišanje ograde,tuja i orezivanje voća,Pančevo</h4>
+            <ul>
+              <li>Adresa: <span>Pančevo</span></li>
+              <li>Kontakt: <span>069/1303-591 - Igor</span></li>
+              <!--<li>Email: <span>milankrstaric@gmail.com</span></li>-->
+              <p>Košenje trave, šišanje ograda i tuja, Pančevo.</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100064918051556" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="color: white;" href="https://parketparket.com/"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0043------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item novi-sad usluzna-delatnost zanatlija majstor gradjevinski-radovi">
+            <p><strong>Novi Sad</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-41.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-41.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Košenje NS</h4>
+            <ul>
+              <li>Adresa: <span>Trg 23 Oktobra, Novi Sad</span></li>
+              <li>Kontakt: <span>061/2100-811</span></li>
+              <li>Email: <span>kosenjens@gmail.com</span></li>
+              <p>OBARNJE STABALA I KOSENJE, krcenje <br>
+                zaraslih površina, orezivanje žive ograde,tuja,stabala(korpa)<br>
+                Postavljanje tepih travnjaka i pravljenje novih travnjaka<br><br>
+                Nivelacija,kultiviranje,nasipanje a potom i ravnanje bagerom. rusenje starih kuca i objekata</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/kosenjens/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="color: white;" href="https://parketparket.com/"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!--------------------0044----------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item beograd majstor gradjevinski-radovi ">
+            <p><strong>Beograd</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-42.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-42.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Električar Zvezdara </h4>
+            <ul>
+              <li>Adresa: <span>Beograd</span></li>
+              <li>Kontakt: <span>064/4766-561; 065/6127-192</span></li>
+              <!--<li>Email: <span>kosenjens@gmail.com</span></li>-->
+              <p>Električar sa 35 godina iskustva <br>
+                Povoljno a pre svega kvalitetno</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100078502579039" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="color: white;" href="https://parketparket.com/"><i
+                  class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!--------------------0045----------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item beograd majstor gradjevinski-radovi ">
+            <p><strong>Beograd</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-43.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-43.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Gradjevinska Limarija </h4>
+            <ul>
+              <li>Adresa: <span>VOJVODE VLAHOVIĆA 49, 1100 Beograd, Srbija</span></li>
+              <li>Kontakt: <span>065/8016-470; 064/1133-971</span></li>
+              <li>Email: <span>limbg011@gmail.com</span></li>
+              <p>LIM BG PLUS stoji Vam na usluzi za sve vrste limarskih radova - oluci, okapnice, opšivanja dimnjaka i oluka, slivnici, sanacija i hidroizolacija krovova. <br><br>
+                Takođe, ostali limarski radovi su poslovi koje radimo stručno, povoljno i brzo. </p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100078502579039" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <a style="color: white;" href="https://limbgplus.com"><i class="fa-solid fa-globe"></i></a> 
+
+            </div>
+          </div>
+        </div>
+
+        <!-------------------0046------------------------------------------------------------------------>
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item online-prodaja umetnost-zabava">
+            <p><strong></strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-44.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-44.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Ručni radovi Dijana</h4>
+            <ul>
+              <!--<li>Adresa: <span>VOJVODE VLAHOVIĆA 49, 1100 Beograd, Srbija</span></li>
+              <li>Kontakt: <span>065/8016-470; 064/1133-971</span></li>
+              <li>Email: <span>limbg011@gmail.com</span></li>-->
+              <p>Budite originalni! <br><br>Jedinstvene rucno radjene igrackice,kapice,salovi,papice,trakice I jos mnogo toga</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/dihandmade8" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a>
+              <a style="color: white;" href="https://limbgplus.com"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!--------------------0047----------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item zemun beograd umetnost-zabava usluzna-delatnost">
+            <p><strong>Beograd - Zemun</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-45.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-45.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Igraonica Džunglica </h4>
+            <ul>
+              <li>Adresa: <span>Sremskih boraca 2t, Zemun</span></li>
+              <li>Kontakt: <span>065/2280-724</span></li>
+              <li>Email: <span>dzunglica.igraonica@gmail.com</span></li>
+              <p>Igraonica za decu u Zemunu, proslava rođendana i drugih zabava za decu</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/dihandmade8" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <a style="color: white;" href="https://dzunglica.com"><i class="fa-solid fa-globe"></i></a> 
+
+            </div>
+          </div>
+        </div>
+
+        <!--------------------0048----------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item pozarevac umetnost-zabava usluzna-delatnost">
+            <p><strong>Požarevac</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-46.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-46.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Restoran i Decija Igraonica Zamak Pozarevac</h4>
+            <ul>
+              <li>Adresa: <span>Zelengorska 16, Pozarevac</span></li>
+              <li>Kontakt: <span>064/232-88-66</span></li>
+              <!--<li>Email: <span>dzunglica.igraonica@gmail.com</span></li>-->
+              <p>Restoran sa dečijom igraonicom <br>
+                Rodjendani su zatvorenog tipa <br>
+                Igaonica za decu </p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/zamakpozarevac/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/parketservisoliverkocic/" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> 
+              <a style="color: white;" href="https://dzunglica.com"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!--------------------0049----------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item pozarevac umetnost-zabava usluzna-delatnost online-prodaja">
+            <p><strong>Požarevac</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-47.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-47.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Pinjate Pozarevac </h4>
+            <ul>
+              <!--<li>Adresa: <span>Zelengorska 16, Pozarevac</span></li>-->
+              <!--<li>Kontakt: <span>064/232-88-66</span></li>-->
+              <!--<li>Email: <span>dzunglica.igraonica@gmail.com</span></li>-->
+              <p>Sve pinjate su rucni rad i unikat. <br>Potrebno je poruciti ih 5 dana unapred. <br><br>@pinjatepozarevac</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/pinjatepozarevac" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> 
+             <!-- <a style="color: white;" href="https://dzunglica.com"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!---------------------0050---------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item doljevac majstor gradjevinski-radovi ">
+            <p><strong>Doljevac - Pukovac</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-48.png" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-48.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Izgradnja Solarne Elektrane - ProElectric</h4>
+            <ul>
+              <li>Adresa: <span>Knez Mihajlova 35, Pukovac</span></li>
+              <li>Kontakt: <span>065/663-51-72</span></li>
+              <li>Email: <span>proelectricrs@gmail.com</span></li>
+              <p>Ugradnja solarnih panela za proizvodnju struje</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100085168274509" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <a style="color: white;" href="https://www.proelectric.rs"><i class="fa-solid fa-globe"></i></a> 
+
+            </div>
+          </div>
+        </div>
+
+        <!---------------------0051---------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item velika-plana majstor gradjevinski-radovi ">
+            <p><strong>Velika Plana</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-49.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-49.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Alu i PVC stolarija Boda</h4>
+            <ul>
+              <!--<li>Adresa: <span>Knez Mihajlova 35, Pukovac</span></li> -->
+              <li>Kontakt: <span>069/4140-045</span></li>
+              <li>Email: <span>alupvcboda@gmail.com</span></li>
+              <p>Proizvodnja ALU i PVC stolarije. Roletne,komarnici, garazna vrata, zastakljivanje terasa. <br> <br>
+                Sve po zelji</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/AluPVCBoda/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <!--<a style="color: white;" href="https://www.proelectric.rs"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------------0052--------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item smederevo zanatlija majstor gradjevinski-radovi ">
+            <p><strong>Smederevo</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-50.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-50.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Garniture od paleta - Smederevo </h4>
+            <ul>
+              <li>Adresa: <span>Zivote Lukica b.b., Smederevo</span></li>
+              <li>Kontakt: <span>064/9689-418</span></li>
+              <li>Email: <span>zdravkovicnegovan222@gmail.com</span></li>
+              <p>Garniture od paleta za ulepšavanje vaših dvorišta i terasa.</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/Garnitureodpaletasd/" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <!--<a style="color: white;" href="https://www.proelectric.rs"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------------0053--------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item beograd auto zanatlija ">
+            <p><strong>Beograd - Boleč</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-51.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-51.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Pro Detailing - Beograd</h4>
+            <ul>
+             <!-- <li>Adresa: <span>Zivote Lukica b.b., Smederevo</span></li>
+              <li>Kontakt: <span>064/9689-418</span></li>
+              <li>Email: <span>zdravkovicnegovan222@gmail.com</span></li> -->
+              <p>Uživajte u besprekorno čistom vozilu sa našom uslugom detaljnog čišćenja. Od osvežavanja unutrašnjosti do savršenog sjaja spoljašnjosti – brinemo o svakom detalju!</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/Prodetailing0" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <!--<a style="color: white;" href="https://www.proelectric.rs"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------------0054--------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item online-prodaja namestaj">
+            <p><strong></strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-52.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-52.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Delux Nameštaj</h4>
+            <ul>
+             <!-- <li>Adresa: <span>Zivote Lukica b.b., Smederevo</span></li> -->
+              <li>Kontakt: <span>065/8256-698</span></li>
+              <li>Email: <span>dejanmilosevicmp@gmail.com</span></li>
+              <p>Delux Nameštaj – Vaša destinacija za luksuzan i moderan nameštaj!</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/deluxnamestajmalipozarevac" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <!--<a style="color: white;" href="https://www.proelectric.rs"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------------0055--------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item namestaj online-prodaja namestaj">
+            <p><strong>Beograd</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-53.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-53.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Nameštaj M</h4>
+            <ul>
+             <!-- <li>Adresa: <span>Zivote Lukica b.b., Smederevo</span></li> -->
+              <li>Kontakt: <span>061/2489-765</span></li>
+              <li>Email: <span>namestajm.rs@gmail.com</span></li>
+              <p>Nameštaj M – Vaš partner za savršeni tapacirani nameštaj!</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/milicnamestaj" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <!--<a style="color: white;" href="https://www.proelectric.rs"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------------0056--------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item becej namestaj online-prodaja">
+            <p><strong>Bečej</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-54.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-54.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Namestaj Ivan</h4>
+            <ul>
+             <!-- <li>Adresa: <span>Zivote Lukica b.b., Smederevo</span></li> -->
+              <li>Kontakt: <span>062/8400-198</span></li>
+            <!--  <li>Email: <span>namestajm.rs@gmail.com</span></li> -->
+              <p>Postavani kupci! Nudimo vam veliki izbor namestaja, brzu i efikasnu isporuku! 0628400198</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100068032493773" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <!--<a style="color: white;" href="https://www.proelectric.rs"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------------0057--------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item paracin zanatlija gradjevinski-radovi">
+            <p><strong>Paraćin</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-57.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-57.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Parketar Bole </h4>
+            <ul>
+             <!-- <li>Adresa: <span>Zivote Lukica b.b., Smederevo</span></li> -->
+              <li>Kontakt: <span>061/1974-572</span></li>
+            <!--  <li>Email: <span>namestajm.rs@gmail.com</span></li> -->
+              <p>Postavljanje,hoblovanje,lakiranje, reparacija starog i ostecenog parketa,ugradnja laminata,sobnih vrata,kuhinja, itd, <br>
+                NE VERUJTE NA REC, VEĆ SE SAMI UVERITE 
+                BOLE - 061/197-45-72</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/parketarbole" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <!--<a style="color: white;" href="https://www.proelectric.rs"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------------0058--------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item krusevac namestaj online-prodaja">
+            <p><strong>Kruševac</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-58.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-58.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Namestaj home enterijer</h4>
+            <ul>
+             <!-- <li>Adresa: <span>Zivote Lukica b.b., Smederevo</span></li> -->
+              <li>Kontakt: <span>069/1103-030</span></li>
+              <li>Email: <span>Info@homeenterijer.rs</span></li> 
+              <p>✨Savrsen namestaj za vas dom <br>
+                ✨Prevoz i montaza do zeljene adrese <br>
+                ✨Kvalitet,najbolji materijali...</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=61552064458133" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <!--<a style="color: white;" href="https://www.proelectric.rs"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------------0059--------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item pozega majstor zanatlija">
+            <p><strong>Požega</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-59.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-59.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Elektro Sretenović</h4>
+            <ul>
+              <li>Adresa: <span>Kosovskih Junaka 17; Požega</span></li>
+              <li>Kontakt: <span>064/1889-740</span></li>
+              <li>Email: <span>vladimirsretenovics@gmail.com</span></li> 
+              <p>-Sve vrste elektroi i gromobranskih instalacija <br>
+                -Ugradnja i održavanje elektro pumpi <br>
+                -Video nadzor i alarmni sistemi</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/vlade.sretenovic" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <!--<a style="color: white;" href="https://www.proelectric.rs"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------------0060--------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item aleksandrovac zanatlija online-prodaja  ">
+            <p><strong>Aleksandrovac</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-60.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/modal-60.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Jelena Radno Odelo</h4>
+            <ul>
+            <!--  <li>Adresa: <span></span></li>
+              <li>Kontakt: <span>064/1889-740</span></li>
+              <li>Email: <span>vladimirsretenovics@gmail.com</span></li> -->
+              <p>Nudimo radna odela koja kombinuju izdržljivost i stil. Idealna za sve potrebe, od radnih mesta do profesionalnih događaja. Pronađite savršeno odelo za vas.</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=100069071651413" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <!--<a style="color: white;" href="https://www.proelectric.rs"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+        <!----------------------0061--------------------------------------------------------------------->
+        <div class="col-lg-4 col-md-6 properties-items">
+          <div class="item novi-sad zanatlija majstor">
+            <p><strong>Novi Sad</strong></p>
+            <div class="image-container">
+              <img style="cursor: pointer;" src="assets/images/slikekartica/kartica-61.jpg" alt="" class="image-click"
+                data-modal="modal3" data-image="assets/images/slikekartica/kartica-61.jpg">
+              <div class="recommendation-badge">
+                <!--<img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka">-->
+              </div>
+            </div>
+            <!-- <span class="category">Električarski Radovi</span> -->
+            <h4>Montaža i Servis Klima Uređaja</h4>
+            <ul>
+            <!--  <li>Adresa: <span></span></li>-->
+              <li>Kontakt: <span>063/492-686</span></li>
+              <!--<li>Email: <span>vladimirsretenovics@gmail.com</span></li> -->
+              <p>Potrebna vam je instalacija ili servis klima uređaja? Naša stručna ekipa pruža brzu i pouzdanu ugradnju i održavanje klima uređaja. Osigurajte savršenu temperaturu u svom prostoru uz našu pomoć.</p>
+            </ul>
+            <div class="main-button">
+              <a style="color: white;" href="https://www.facebook.com/profile.php?id=61558725333902" target="_blank"><i
+                  class="fa-brands fa-facebook"></i></a>
+              <!--<a style="color: white;" href="https://www.instagram.com/pinjatepozarevac" target="_blank"><i
+                      class="fa-brands fa-instagram"></i></a> -->
+              <!--<a style="color: white;" href="https://www.proelectric.rs"><i class="fa-solid fa-globe"></i></a> -->
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Modal 2 -->
+        <div id="modal3" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="modalImage2">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+
+  </div>
+
+
+
+  <footer style="margin-top: 4em;" class="footer-section">
+    <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-phone"></i>
+              <div class="cta-text">
+                <h4>Kontakt</h4>
+                <span>(+381)66/935-8484</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="far fa-envelope-open"></i>
+              <div class="cta-text">
+                <h4>Email</h4>
+                <span>jedanklikinfo@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <img src="assets/images/JEDAN KLIK-1.png" class="img-fluid" alt="logo">
+              </div>
+              <div class="footer-text">
+                <p>Istaknite se pred širom publikom i budite vidljivi svakome u svakom trenutku.</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Zapratite Nas</span>
+                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Korisne Veze</h3>
+              </div>
+              <ul>
+                <li><a href="index.html">Glavna Strana</a></li>
+                <li><a href="properties.html">Pretraga</a></li>
+                <li><a href="contact.html">Kontaktirajte Nas</a></li>
+                <!-- <li><a href="#">portfolio</a></li>
+                              <li><a href="#">Contact</a></li>
+                              <li><a href="#">About us</a></li>
+                              <li><a href="#">Our Services</a></li>
+                              <li><a href="#">Expert Team</a></li>
+                              <li><a href="#">Contact us</a></li>
+                              <li><a href="#">Latest News</a></li> -->
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <img src="assets/images/footer-img2.png" alt="">
+            <!--  <div class="footer-widget">
+                          <div class="footer-widget-heading">
+                              <h3>Subscribe</h3>
+                          </div>
+                          <div class="footer-text mb-25">
+                              <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                          </div>
+                          <div class="subscribe-form">
+                              <form action="#">
+                                  <input type="text" placeholder="Email Address">
+                                  <button><i class="fab fa-telegram-plane"></i></button>
+                              </form>
+                          </div>
+                      </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  <div class="copyright-area">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                      <div class="copyright-text">
+                          <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
+                      </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                      <div class="footer-menu">
+                          <ul>
+                              <li><a href="#">Home</a></li>
+                              <li><a href="#">Terms</a></li>
+                              <li><a href="#">Privacy</a></li>
+                              <li><a href="#">Policy</a></li>
+                              <li><a href="#">Contact</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> -->
+  </footer>
+  <script>
+
+    // Function to open modal
+    function openModal(modalId) {
+      var modal = document.getElementById(modalId);
+      modal.style.display = "block";
+      modal.addEventListener("scroll", handleModalScroll); // Add scroll event listener to the modal
+      document.body.style.overflow = "hidden"; // Prevent scrolling of the main page
+    }
+
+    // Function to close modal
+    function closeModal(modalId) {
+      var modal = document.getElementById(modalId);
+      modal.style.display = "none";
+      modal.removeEventListener("scroll", handleModalScroll); // Remove scroll event listener from the modal
+      document.body.style.overflow = ""; // Allow scrolling of the main page
+    }
+
+    // Function to handle modal scroll
+    function handleModalScroll(event) {
+      var modal = event.currentTarget;
+      var scrollHeight = modal.scrollHeight;
+      var scrollTop = modal.scrollTop;
+      var clientHeight = modal.clientHeight;
+
+      // If the user has scrolled to the bottom of the modal
+      if (scrollTop + clientHeight >= scrollHeight) {
+        // Prevent scrolling of the main page
+        document.body.style.overflow = "hidden";
+      } else {
+        // Allow scrolling of the main page
+        document.body.style.overflow = "";
+      }
+    }
+
+    // Get all images with class "image-click"
+    var images = document.querySelectorAll(".image-click");
+
+    // Loop through each image and add a click event listener
+    images.forEach(function (image) {
+      image.addEventListener("click", function () {
+        // Get the data-modal attribute value
+        var modalId = this.getAttribute("data-modal");
+
+        // Get the modal by its ID
+        var modal = document.getElementById(modalId);
+
+        // Get the image source from the data-image attribute
+        var modalImage = modal.querySelector(".modal-content");
+        var imageSource = this.getAttribute("data-image");
+
+        // Set the image source in the modal
+        modalImage.src = imageSource;
+
+        // Show the modal
+        modal.style.display = "block";
+      });
+    });
+
+    // Get all close buttons for modals
+    var closeButtons = document.querySelectorAll(".modal .close");
+
+    // Loop through each close button and add a click event listener
+    closeButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        // Get the modal that contains this close button
+        var modal = this.parentElement;
+
+        // Hide the modal
+        modal.style.display = "none";
+      });
+    });
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.addEventListener("click", function (event) {
+      var modals = document.querySelectorAll(".modal");
+      modals.forEach(function (modal) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+
+
+  </script>
+
+<script>
+  // Učitavanje podataka iz JSON fajla
+  fetch('businesses.json')
+      .then(response => response.json())
+      .then(data => {
+          let businessList = document.getElementById('business-list');
+          data.forEach(business => {
+              let businessCard = document.createElement('div');
+              businessCard.className = 'col-lg-4 col-md-6 properties-items';
+              businessCard.innerHTML = `
+                  <div class="item ${business.city.toLowerCase()} ${business.category.toLowerCase().replace(/\s+/g, '-')}">
+                      <p><strong>${business.city}</strong></p>
+                      <div class="image-container">
+                          <img style="cursor: pointer;" src="assets/images/slikekartica/default.png" alt="" class="image-click" data-modal="modal${data.indexOf(business) + 1}" data-image="assets/images/slikekartica/default.png">
+                          <div class="recommendation-badge">
+                              <!-- <img style="width: 10em;" src="assets/images/preporuka.png" alt="Preporuka"> -->
+                          </div>
+                      </div>
+                      <h4>${business.name}</h4>
+                      <ul>
+                          <li>Kontakt: <span>${business.contact}</span></li>
+                          <p>${business.description}</p>
+                      </ul>
+                      <div class="main-button">
+                          <a style="color: white;" href="${business.social_links}" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                      </div>
+                  </div>
+              `;
+              businessList.appendChild(businessCard);
+          });
+      });
+</script>
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+</body>
+
+</html>

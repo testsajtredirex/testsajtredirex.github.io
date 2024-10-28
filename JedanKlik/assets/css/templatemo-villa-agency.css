@@ -192,7 +192,7 @@ body {
 
 .main-button a {
   display: inline-block;
-  background-color: #1e1e1e;
+  background-color: #343a40;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
@@ -1193,7 +1193,7 @@ Properties Style
 
 .properties .item ul {
   border-bottom: 1px solid #eaeaea;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   padding-bottom: 30px;
 }
 
@@ -1210,7 +1210,25 @@ Properties Style
   text-align: center;
 }
 
+.main-button-info{
+  border-radius: 1em;
+  margin: 0 auto;
+  line-height: 40px;
+  height: 40px;
+  width: 90%;
+  display: block;
+  background-color: #343a40;
+}
 
+.main-button-info:hover {
+  border-radius: 1em;
+  margin: 0 auto;
+  line-height: 40px;
+  height: 40px;
+  width: 90%;
+  display: block;
+  background-color: #f35525;
+}
 /* 
 ---------------------------------------------
 Contact Style
