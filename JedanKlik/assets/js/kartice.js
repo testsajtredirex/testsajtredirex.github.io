@@ -947,22 +947,85 @@ websiteLink: "",
                 
           },
           {
-
+                city: "Šid",
+                title: "Bravarija Miščević",
+                occupation: "gradjevina",
+                contact: "+381637688396; 064/5126-007 ; 064/5095-652",
+                email: "",
+                description: "Bravarija Miščević se bavi izradom i montažom hala i opreme za silose. Pružaju usluge montaže objekata u različitim lokalitetima, sa posebnim fokusom na kvalitet i efikasnost.",
+                imgSrc: "assets/images/slikekartica/kartica-70.jpg",
+                modalImgSrc: "assets/images/slikekartica/kartica-70.jpg",
+                instaLink: "",
+                fbLink: "https://www.facebook.com/profile.php?id=100062802594259",
+                websiteLink: ""
           },
           {
-
+                city: "Online",
+                title: "Nameštaj Artisan Wood",
+                occupation: "namestaj prodavnica kuhinja",
+                contact: "062/8548-798",
+                email: "artisanwood54@gmail.com",
+                description: "Nameštaj Artisan Wood nudi širok asortiman nameštaja po meri, uključujući francuske ležajeve, garderobere, i kuhinje od iverice i medijapana, uz besplatnu dostavu na kućnu adresu.",
+                imgSrc: "assets/images/slikekartica/kartica71.jpg",
+                modalImgSrc: "assets/images/slikekartica/kartica71.jpg",
+                instaLink: "https://www.instagram.com/namestaj_artisan_wood",
+                fbLink: "https://www.facebook.com/namestajartisanwood/",
+                websiteLink: ""
           },
           {
-
+                city: "Obrenovac",
+                title: "Videonadzor Obrenovac",
+                occupation: "usluzna gradjevina",
+                contact: "064/386-44-57 ; 064/0909-024",
+                email: "",
+                description: "Videonadzor Obrenovac offers affordable CCTV systems with installation, featuring Dahua cameras and recorders for high-quality surveillance, including night vision capabilities.",
+                imgSrc: "assets/images/slikekartica/kartica72.jpg",
+                modalImgSrc: "assets/images/slikekartica/kartica72.jpg",
+                instaLink: "",
+                fbLink: "https://www.facebook.com/kamobrenovac",
+                websiteLink: ""
           },
           {
-
+                city: "Niš",
+                title: "Izomax Pro NIŠ",
+                occupation: "gradjevina usluzna",
+                contact: "064 3527791",
+                email: "dimitrijestankovic018@gmail.com",
+                description: "Izomax Pro se bavi nabavkom i ugradnjom svih vrsta hidroizolacije koristeći savremene materijale i tehnologije. Poseduju veliko iskustvo i pružaju usluge visokog kvaliteta.",
+                imgSrc: "assets/images/slikekartica/kartica73.jpg",
+                modalImgSrc: "assets/images/slikekartica/kartica73.jpg",
+                instaLink: "",
+                fbLink: "https://www.facebook.com/hidroizolacijaizomax",
+                websiteLink: "http://izomaxpro.rs"
+                
           },
           {
-
+                city: "Šid",
+                title: "Audivw Delovi",
+                occupation: "auto",
+                contact: "064 3527791", // Assuming a contact number if provided
+                email: "dimitrijestankovic018@gmail.com", // Assuming an email from the data provided
+                description: "Kupovina i prodaja delova za Audi A4 B7 i B8. Oprema uključuje motor, menjač, farove, enterijer, elektroniku, senzore, klimatizaciju, dizne, pumpe, limariju, i ostale delove.",
+                imgSrc: "assets/images/slikekartica/kartica74.jpg", // Placeholder image
+                modalImgSrc: "assets/images/slikekartica/kartica74.jpg", // Placeholder image
+                instaLink: "",
+                fbLink: "https://www.facebook.com/profile.php?id=100085194682139", // Assuming a Facebook page link
+                websiteLink: "", // No website link provided
+                kpLink:"https://www.kupujemprodajem.com/delovi-dk/svi-oglasi/3244089/1"
+                      
           },
           {
-
+                city: "Ub",
+                title: "Petrovic Cleaning",
+                occupation: "usluzna gradjevina",  // "Uslužna delatnost" and "Građevinski radovi" are relevant here.
+                contact: "069/4039-640; 064/2712-286 ; 011/7872-293",
+                email: "petroviccleaning@gmail.com",
+                description: "Dubinsko pranje nameštaja uz Vaš Petrovic Cleaning!",
+                imgSrc: "assets/images/slikekartica/kartica75.jpg",
+                modalImgSrc: "assets/images/slikekartica/kartica75.jpg",
+                instaLink: "https://www.instagram.com/petrovic_cleaning",
+                fbLink: "https://www.facebook.com/profile.php?id=61555715803678",
+                websiteLink: "https://www.petroviccleaning.com/?fbclid=IwY2xjawGgfYBleHRuA2FlbQIxMAABHZmM8MMIzPSf-gSh-u6UTDeUiUyuerTGeVcsqmBRL0SuqJOh9bl_PjkUzw_aem_Rsowjbk-11WnFhW4vsERvg",
           },
           {
 
@@ -1225,7 +1288,8 @@ function createCard(cardInfo, index) {
   </div>
   <h4>${cardInfo.title}</h4>
   <ul>
-      <li>Kontakt: <span>${cardInfo.contact}</span></li>
+  ${cardInfo.contact ? `<li>Kontakt: <span>${cardInfo.contact}</span></li>` : ''}
+  ${cardInfo.email ? `<li>Email: <span>${cardInfo.email}</span></li>` : ''}
       <p>${cardInfo.description}</p>
   </ul>
   ${cardInfo.personalPageLink ? `<div class="main-button-info" style="width: 90%; margin: 0 auto;"><a href="${cardInfo.personalPageLink}" style="display: block; text-align: center; color: white;">Detaljnije</a></div>` : ''}
@@ -1233,6 +1297,7 @@ function createCard(cardInfo, index) {
       ${cardInfo.fbLink ? `<a style="color: white;" href="${cardInfo.fbLink}" target="_blank"><i class="fa-brands fa-facebook"></i></a>` : ''}
       ${cardInfo.instaLink ? `<a style="color: white;" href="${cardInfo.instaLink}" target="_blank"><i class="fa-brands fa-instagram"></i></a>` : ''}
       ${cardInfo.websiteLink ? `<a style="color: white;" href="${cardInfo.websiteLink}" target="_blank"><i class="fa-solid fa-globe"></i></a>` : ''}
+      ${cardInfo.kpLink ? `<a style="background-color: white;border:1px solid gray;display: block; text-align: center;" href="${cardInfo.kpLink}" target="_blank"><img src="assets/images/kp-logo.png" alt="" style="width: 50px; "></a>` : ''}
   </div>
 </div>
   `;
