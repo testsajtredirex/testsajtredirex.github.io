@@ -852,9 +852,7 @@ Featured Style
   position: relative;
 }
 
-.featured .left-image img {
-  padding-left: 55px;
-}
+
 
 .featured .left-image a {
   display: inline-block;
@@ -1835,6 +1833,24 @@ Contact Page Style
 .contact-page #contact-form button:hover {
   background-color: #f35525;
 }
+
+@media (min-width: 767px){
+.contact-img{
+width: 30em;
+position: relative;
+}
+.featured .left-image img {
+  padding-left: 55px;
+}
+}
+@media (max-width: 767px){
+  .contact-img{
+    width: 100%;
+    margin: auto;
+    position: relative;
+  }
+}
+
 
 
 /* 

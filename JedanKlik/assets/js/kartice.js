@@ -1137,11 +1137,16 @@ websiteLink: "",
 
 
 
-
-
-
-      
-
+//normalizacija slova
+      function normalizeString(str) {
+        return str
+            .toLowerCase()
+            .replace(/č/g, 'c')
+            .replace(/ć/g, 'c')
+            .replace(/ž/g, 'z')
+            .replace(/š/g, 's')
+            .replace(/đ/g, 'dj');
+    }
 
 // Function to create a single card dynamically based on the card data
 function createCard(cardInfo, index) {
@@ -1152,7 +1157,7 @@ function createCard(cardInfo, index) {
   <div class="item ${cardInfo.city.toLowerCase()} ${cardInfo.occupation.toLowerCase()}">
   <p><strong>${cardInfo.city}</strong></p>
   <div class="image-container">
-      <img style="cursor: pointer;" src="${cardInfo.imgSrc}" alt="" class="image-click"
+      <img loading="lazy" style="cursor: pointer;" src="${cardInfo.imgSrc}" alt="" class="image-click"
       data-modal="modal${index + 1}" data-image="${cardInfo.imgSrc}">
   </div>
   <h4>${cardInfo.title}</h4>

@@ -4,6 +4,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchFilter = document.getElementById('search');
     const resetButton = document.getElementById('reset-filters');
 
+    // Function to normalize special characters
+    function normalizeString(str) {
+        return str
+            .toLowerCase()
+            .replace(/č/g, 'c')
+            .replace(/ć/g, 'c')
+            .replace(/ž/g, 'z')
+            .replace(/š/g, 's')
+            .replace(/đ/g, 'dj');
+    }
+
     // Event listeners for filters
     cityFilter.addEventListener('change', filterCards);
     occupationFilter.addEventListener('change', filterCards);
@@ -13,14 +24,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function filterCards() {
         const city = cityFilter.value.toLowerCase();
         const occupation = occupationFilter.value.toLowerCase();
-        const search = searchFilter.value.toLowerCase();
-        
+        const search = normalizeString(searchFilter.value);  // Normalize search input
+
         const cards = document.querySelectorAll('.properties-items');
 
         cards.forEach(card => {
             const cardCity = card.querySelector('.item').classList.contains(city);
             const cardOccupation = card.querySelector('.item').classList.contains(occupation);
-            const cardText = card.querySelector('.item').textContent.toLowerCase();
+            const cardText = normalizeString(card.querySelector('.item').textContent);  // Normalize card text
 
             const cityMatch = !city || cardCity;
             const occupationMatch = !occupation || cardOccupation;
