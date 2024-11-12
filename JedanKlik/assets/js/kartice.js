@@ -828,7 +828,7 @@ websiteLink: ""
           {
 city: "Novi Sad",
 title: "Montaža i Servis Klima Uređaja",
-occupation: "Majstor za klime",
+occupation: "zanatlija majstor",
 contact: "063/492-686",
 email: "",
 description: "Potrebna vam je instalacija ili servis klima uređaja? Naša stručna ekipa pruža brzu i pouzdanu ugradnju i održavanje klima uređaja. Osigurajte savršenu temperaturu u svom prostoru uz našu pomoć.",
@@ -839,28 +839,112 @@ fbLink: "https://www.facebook.com/profile.php?id=61558725333902",
 websiteLink: "",
           },
           {
-
+city: "Kruševac",
+title: "Namestaj Merkur ",
+occupation: "namestaj",
+contact: "063/620-406",
+email: "namestajmerkur@gmail.com",
+description: "Najveci izbor pločastog i tapaciranog nameštaja. U ponudi imamo: stolove & stolice raznih modela i dezena, ugaone garniture, kuhinje i jos mnogo toga...",
+imgSrc: "assets/images/slikekartica/kartica-62.jpg",
+modalImgSrc: "assets/images/slikekartica/kartica-62.jpg",
+instaLink: "",
+fbLink: "https://www.facebook.com/NamestajMerkurKrusevac",
+websiteLink: "",
           },
           {
-
+                city: "Kruševac Online",
+                title: "R&M lighting",
+                occupation: "online prodaja online-prodaja",
+                contact: "065/9977-566",
+                email: "namestajmerkur@gmail.com",
+                description: "RM Rasveta je nastala sa vizijom da promenimo način na koji se osvetljenje doživljava i koristi. Naš tim čine iskusni profesionalci u oblasti rasvete, dizajna i tehnologije, koji su posvećeni kreiranju proizvoda koji ne samo da osvetljavaju prostor, već mu daju karakter i dušu.",
+                imgSrc: "assets/images/slikekartica/kartica-63.jpg",
+                modalImgSrc: "assets/images/slikekartica/kartica-63.jpg",
+                instaLink: "",
+                fbLink: "https://www.facebook.com/rmlighting123",
+                websiteLink: "rmrasveta.rs",
           },
           {
-
+                city: "Vlaški Do - Požarevac",
+                title: "majstor prodaja prodavnica gradjevina",
+                occupation: "metal production proizvodnja-metala",
+                contact: "012/276-276 ; 063/244-513 ; 063/160-62-64",  // No contact info provided in the given data
+                email: "metallaskido@gmail.com",    // No email provided in the given data
+                description: "",  // Based on available info
+                imgSrc: "assets/images/slikekartica/kartica-64.jpg",  // Placeholder image as no specific image was provided
+                modalImgSrc: "assets/images/slikekartica/kartica-64.jpg",  // Placeholder image for modal
+                instaLink: "",        // No Instagram link provided
+                fbLink: "https://www.facebook.com/profile.php?id=100016167100751",  // Facebook link extracted from the name
+                websiteLink: ""       // No website provided
           },
           {
-
+                city: "Online",  // Nema specifične lokacije navedene
+                title: "Rasadnik Vanilia",
+                occupation: "prodaja online-prodaja zanatlija",
+                contact: "",  // Nema direktnog kontakta u prikazanim informacijama
+                email: "",  // Nema email adrese navedene
+                description: "Rasadnik Vanilia bavi se proizvodnjom i prodajom voćnih, ukrasnih i egzotičnih sadnica. Nudi visokokvalitetne sadnice, uključujući vinovu lozu i druge biljke.",
+                imgSrc: "assets/images/slikekartica/kartica-65.jpg",  // Pretpostavljeni folder za slike, može se dodati konkretna slika ako postoji
+                modalImgSrc: "assets/images/slikekartica/kartica-65.jpg",  // Pretpostavljeni folder za slike, može se dodati konkretna slika ako postoji
+                instaLink: "",  // Instagram link nije naveden
+                fbLink: "https://www.facebook.com/profile.php?id=100090973370694",  // Link ka Facebook stranici
+                websiteLink: ""  // Nema web sajta navedenog
           },
           {
-
+                city: "Beograd Online",
+                title: "Auto Oprema Beograd",
+                occupation: "auto online-prodaja prodavnica",
+                contact: "061/1342-450",
+                email: "",
+                description: "Auto oprema Beograd nudi širok asortiman auto opreme po najpovoljnijim cenama. U ponudi su kućišta ključeva, LED sijalice, paneli podizača stakala i mnogi drugi proizvodi.",
+                imgSrc: "assets/images/slikekartica/kartica-66.jpg",  // Add the appropriate image file path
+                modalImgSrc: "assets/images/slikekartica/kartica-66.jpg",  // Add the appropriate image file path
+                instaLink: "",
+                fbLink: "https://www.facebook.com/profile.php?id=100068433098183",
+                websiteLink: "",
+                
           },
           {
-
+                city: "Online",
+                title: "GetShop Srbija",
+                occupation: "prodaja-online prodavnica",
+                contact: "063/1764-947",
+                email: "getshop.srb@gmail.com",
+                description: "GetShop Srbija nudi visokokvalitetnu elektroniku, uključujući alate poput DEWALT lasera za nivelaciju, sa posebnim ponudama kao što je poklon tronožac uz kupovinu.",
+                imgSrc: "assets/images/slikekartica/kartica-67.jpg",  // Add the appropriate image file path
+                modalImgSrc: "assets/images/slikekartica/kartica-67.jpg",  // Add the appropriate image file path
+                instaLink: "",
+                fbLink: "https://www.facebook.com/GetShop.Srbija",
+                websiteLink: "",
+                
           },
           {
-
+                city: "Online",
+                title: "Rasadnik Kočović",
+                occupation: "online-prodaja prodavnica",
+                contact: "062/8589-109",
+                email: "",
+                description: "Rasadnik Kočović se bavi proizvodnjom i prodajom različitih vrsta sadnica, uključujući maline, kupine, borovnice, nara, tuje, katalpe i javor. U ponudi su i specijalne akcije, poput besplatnih biljaka na kupovinu više komada.",
+                imgSrc: "assets/images/slikekartica/kartica-68.jpg",
+                modalImgSrc: "assets/images/slikekartica/kartica-68.jpg",
+                instaLink: "",
+                fbLink: "https://www.facebook.com/profile.php?id=61567798409716",
+                websiteLink: "",
+                
           },
           {
-
+                city: "Novi Sad Online",
+                title: "gigashop.co.rs - isključivo akcije",
+                occupation: "online-prodaja prodavnica kuhinja",
+                contact: "066/422-422",
+                email: "gigashop.prodavnica@gmail.com",
+                description: "Gigashop.co.rs nudi razne akcije na proizvode kao što su crveno granitno posuđe i druge kuhinjske potrepštine. Ponuda uključuje popuste i besplatnu dostavu za celu Srbiju.",
+                imgSrc: "assets/images/slikekartica/kartica-69.jpg",
+                modalImgSrc: "assets/images/slikekartica/kartica-69.jpg",
+                instaLink: "",
+                fbLink: "https://www.facebook.com/profile.php?id=61556072661290",
+                websiteLink: "https://www.gigashop.co.rs"
+                
           },
           {
 
@@ -1116,27 +1200,6 @@ websiteLink: "",
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //normalizacija slova
       function normalizeString(str) {
         return str
@@ -1174,8 +1237,11 @@ function createCard(cardInfo, index) {
 </div>
   `;
 
+
   propertiesBox.appendChild(card);
+  return card;
 }
+
 
 // Function to load all cards at once
 function loadAllCards() {
