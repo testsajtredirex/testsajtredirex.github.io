@@ -1282,7 +1282,7 @@ function createCard(cardInfo, index) {
   <div class="item ${cardInfo.city.toLowerCase()} ${cardInfo.occupation.toLowerCase()}">
   <p><strong>${cardInfo.city}</strong></p>
   <div class="image-container">
-      <img loading="lazy" style="cursor: pointer;" src="${cardInfo.imgSrc}" alt="" ">
+      <img src="${cardInfo.imgSrc}" alt="" ">
   </div>
   <h4>${cardInfo.title}</h4>
   <ul>
