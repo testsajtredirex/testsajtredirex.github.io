@@ -43,7 +43,7 @@ kuhinja" - Sve za Kuhinju
 */
       // Example card data
       const cardData = [
- /*         {
+          {
 city: "Valjevo",
 title: "Zelena Bajka",
 occupation: "Zanatlija",  // Occupation or service type
@@ -55,7 +55,7 @@ fbLink: "https://www.facebook.com/Dusan.Vlajkovic98",
 instaLink: "https://www.instagram.com/zelena_bajka_valjevo",
 websiteLink: null,
 personalPageLink: "https://testsajtredirex.github.io/JedanKlik/stranice/zelena_bajka/index.html",
-          },*/
+          },
           {
 city: "Požarevac",
 title: "Električar",
