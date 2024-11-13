@@ -50,7 +50,7 @@ occupation: "Zanatlija",  // Occupation or service type
 contact: "060/1632-364 ; 061/3002-627",
 description: "Vaše dvorište će uvek izgledati besprekorno uz naše usluge skupljanja trave i lišća...",
 imgSrc: "assets/images/deal-01.png",  // Image for the card
-modalImgSrc: "assets/images/deal-01.png",  // Image for the modal
+modalImgSrc: "assets/images/deal-01.webp",  // Image for the modal
 fbLink: "https://www.facebook.com/Dusan.Vlajkovic98",
 instaLink: "https://www.instagram.com/zelena_bajka_valjevo",
 websiteLink: null,
