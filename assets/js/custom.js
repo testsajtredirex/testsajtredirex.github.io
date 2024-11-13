@@ -1,47 +1,128 @@
-const slideIndex = Array.from({ length: 200}, () => 1);
-const slideId = Array.from({ length: 200 }, (_, i) => `mySlides${i + 1}`);
+(function ($) {
+	
+	"use strict";
 
-for (let i = 0; i < slideId.length; i++) {
-  showSlides(1, i);
-}
+	// Page loading animation
+	$(window).on('load', function() {
 
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
-}
+        $('#js-preloader').addClass('loaded');
 
-function showSlides(n, no) {
-  const x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length || n < 1) {
-    slideIndex[no] = (n > x.length) ? 1 : x.length;
-  }
-  for (let i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex[no] - 1].style.display = "block";
-}
+    });
 
-//Get the button
-let mybutton = document.getElementById("btn-back-to-top");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-  scrollFunction();
-};
+	$(window).scroll(function() {
+	  var scroll = $(window).scrollTop();
+	  var box = $('.header-text').height();
+	  var header = $('header').height();
 
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-// When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
+	  if (scroll >= box - header) {
+	    $("header").addClass("background-header");
+	  } else {
+	    $("header").removeClass("background-header");
+	  }
+	})
 
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
+	$('.owl-banner').owlCarousel({
+	  center: true,
+      items:1,
+      loop:true,
+      nav: true,
+	  dots:true,
+	  navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+      margin:30,
+      responsive:{
+        992:{
+            items:1
+        },
+		1200:{
+			items:1
+		}
+      }
+	});
+
+	var width = $(window).width();
+		$(window).resize(function() {
+		if (width > 767 && $(window).width() < 767) {
+			location.reload();
+		}
+		else if (width < 767 && $(window).width() > 767) {
+			location.reload();
+		}
+	})
+
+	const elem = document.querySelector('.properties-box');
+	const filtersElem = document.querySelector('.properties-filter');
+	if (elem) {
+		const rdn_events_list = new Isotope(elem, {
+			itemSelector: '.properties-items',
+			layoutMode: 'masonry'
+		});
+		if (filtersElem) {
+			filtersElem.addEventListener('click', function(event) {
+				if (!matchesSelector(event.target, 'a')) {
+					return;
+				}
+				const filterValue = event.target.getAttribute('data-filter');
+				rdn_events_list.arrange({
+					filter: filterValue
+				});
+				filtersElem.querySelector('.is_active').classList.remove('is_active');
+				event.target.classList.add('is_active');
+				event.preventDefault();
+			});
+		}
+	}
+
+
+	// Menu Dropdown Toggle
+	if($('.menu-trigger').length){
+		$(".menu-trigger").on('click', function() {	
+			$(this).toggleClass('active');
+			$('.header-area .nav').slideToggle(200);
+		});
+	}
+
+
+	// Menu elevator animation
+	$('.scroll-to-section a[href*=\\#]:not([href=\\#])').on('click', function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = $(this.hash);
+			target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				var width = $(window).width();
+				if(width < 991) {
+					$('.menu-trigger').removeClass('active');
+					$('.header-area .nav').slideUp(200);	
+				}				
+				$('html,body').animate({
+					scrollTop: (target.offset().top) - 80
+				}, 700);
+				return false;
+			}
+		}
+	});
+
+
+	// Page loading animation
+	$(window).on('load', function() {
+		if($('.cover').length){
+			$('.cover').parallax({
+				imageSrc: $('.cover').data('image'),
+				zIndex: '1'
+			});
+		}
+
+		$("#preloader").animate({
+			'opacity': '0'
+		}, 600, function(){
+			setTimeout(function(){
+				$("#preloader").css("visibility", "hidden").fadeOut();
+			}, 300);
+		});
+	});
+    
+
+
+})(window.jQuery);
+
+

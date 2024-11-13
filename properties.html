@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <title>Jedan Klik</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/android-chrome-192x192.png">
+  <script src="https://sdk.flowpoint.ai?apiKey=t_89176ea60c3f8173f562af7934af5a78&clientId=zWnlveNn98H61eF5wGHa4tZAypC5hB"></script>
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/properties_css.css">
+  <link rel="stylesheet" href="/assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/modal.css">
+
+</head>
+
+<body>
+
+  <!-- ***** Preloader Start ***** 
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  ***** Preloader End ***** -->
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="assets/images/JEDAN KLIK.png" alt="">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="index.html">Glavna Stranica</a></li>
+              <li><a href="properties.html" class="active">Pretraži</a></li>
+              <li><a href="contact.html">Kontaktirajte Nas</a></li>
+              <li><a href="joining.html"><i class="fa fa-calendar"></i> Pridružite nam se</a></li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Više</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="page-heading header-text">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h3>Ponuda Usluga</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section properties">
+    <div class="container">
+      <div id="filter-container">
+        <select id="city">
+          <option value="">Svi gradovi</option>
+          <option value="ada">Ada</option>
+          <option value="aleksandrovac">Aleksandrovac</option>
+          <option value="alibunar">Alibunar</option>
+          <option value="apatin">Apatin</option>
+          <option value="aranđelovac">Aranđelovac</option>
+          <option value="arilje">Arilje</option>
+          <option value="babušnica">Babušnica</option>
+          <option value="bač">Bač</option>
+          <option value="bačka-palanka">Bačka Palanka</option>
+          <option value="bačka-topola">Bačka Topola</option>
+          <option value="bački-petrovac">Bački Petrovac</option>
+          <option value="bajina-bašta">Bajina Bašta</option>
+          <option value="batočina">Batočina</option>
+          <option value="bečej">Bečej</option>
+          <option value="bela-crkva">Bela Crkva</option>
+          <option value="bela-palanka">Bela Palanka</option>
+          <option value="beočin">Beočin</option>
+          <option value="beograd">Beograd</option>
+          <option value="blace">Blace</option>
+          <option value="bogatić">Bogatić</option>
+          <option value="bojnik">Bojnik</option>
+          <option value="boljevac">Boljevac</option>
+          <option value="bor">Bor</option>
+          <option value="bosilegrad">Bosilegrad</option>
+          <option value="brus">Brus</option>
+          <option value="bujanovac">Bujanovac</option>
+          <option value="crna-trava">Crna Trava</option>
+          <option value="čačak">Čačak</option>
+          <option value="cajetina">Čajetina</option>
+          <option value="coka">Čoka</option>
+          <option value="ćićevac">Ćićevac</option>
+          <option value="despotovac">Despotovac</option>
+          <option value="dimitrovgrad">Dimitrovgrad</option>
+          <option value="doljevac">Doljevac</option>
+          <option value="gadžin-han">Gadžin Han</option>
+          <option value="golubac">Golubac</option>
+          <option value="gornji-milanovac">Gornji Milanovac</option>
+          <option value="grocka">Grocka</option>
+          <option value="inđija">Inđija</option>
+          <option value="irig">Irig</option>
+          <option value="ivanjica">Ivanjica</option>
+          <option value="jagodina">Jagodina</option>
+          <option value="kanjiža">Kanjiža</option>
+          <option value="kladovo">Kladovo</option>
+          <option value="knić">Knić</option>
+          <option value="knjaževac">Knjaževac</option>
+          <option value="koceljeva">Koceljeva</option>
+          <option value="kosjerić">Kosjerić</option>
+          <option value="kovačica">Kovačica</option>
+          <option value="kovin">Kovin</option>
+          <option value="kragujevac">Kragujevac</option>
+          <option value="kraljevo">Kraljevo</option>
+          <option value="krupanj">Krupanj</option>
+          <option value="kruševac">Kruševac</option>
+          <option value="kučevo">Kučevo</option>
+          <option value="kula">Kula</option>
+          <option value="kuršumlija">Kuršumlija</option>
+          <option value="lajkovac">Lajkovac</option>
+          <option value="lapovo">Lapovo</option>
+          <option value="lebane">Lebane</option>
+          <option value="leskovac">Leskovac</option>
+          <option value="ljig">Ljig</option>
+          <option value="ljubovija">Ljubovija</option>
+          <option value="lučani">Lučani</option>
+          <option value="majdanpek">Majdanpek</option>
+          <option value="mali-iđoš">Mali Iđoš</option>
+          <option value="mali-zvornik">Mali Zvornik</option>
+          <option value="malo-crniće">Malo Crniće</option>
+          <option value="medveđa">Medveđa</option>
+          <option value="merošina">Merošina</option>
+          <option value="mionica">Mionica</option>
+          <option value="negotin">Negotin</option>
+          <option value="niš">Niš</option>
+          <option value="niška-banja">Niška Banja</option>
+          <option value="nova-crnja">Nova Crnja</option>
+          <option value="nova-varoš">Nova Varoš</option>
+          <option value="novi-bečej">Novi Bečej</option>
+          <option value="novi-kneževac">Novi Kneževac</option>
+          <option value="novi-pazar">Novi Pazar</option>
+          <option value="novi-sad">Novi Sad</option>
+          <option value="novi-sip">Novi Sip</option>
+          <option value="odžaci">Odžaci</option>
+          <option value="opovo">Opovo</option>
+          <option value="osečina">Osečina</option>
+          <option value="pančevo">Pančevo</option>
+          <option value="paraćin">Paraćin</option>
+          <option value="pećinci">Pećinci</option>
+          <option value="petrovac-na-mlavi">Petrovac na Mlavi</option>
+          <option value="petrovaradin">Petrovaradin</option>
+          <option value="pirot">Pirot</option>
+          <option value="plandište">Plandište</option>
+          <option value="požarevac">Požarevac</option>
+          <option value="požega">Požega</option>
+          <option value="preševo">Preševo</option>
+          <option value="priboj">Priboj</option>
+          <option value="prijepolje">Prijepolje</option>
+          <option value="priština">Priština</option>
+          <option value="prizren">Prizren</option>
+          <option value="prokuplje">Prokuplje</option>
+          <option value="rača">Rača</option>
+          <option value="raška">Raška</option>
+          <option value="ražanj">Ražanj</option>
+          <option value="rekovac">Rekovac</option>
+          <option value="ruma">Ruma</option>
+          <option value="sečanj">Sečanj</option>
+          <option value="senta">Senta</option>
+          <option value="sjenica">Sjenica</option>
+          <option value="smederevo">Smederevo</option>
+          <option value="smederevska-palanka">Smederevska Palanka</option>
+          <option value="sokobanja">Sokobanja</option>
+          <option value="sombor">Sombor</option>
+          <option value="sopot">Sopot</option>
+          <option value="srbobran">Srbobran</option>
+          <option value="sremska-mitrovica">Sremska Mitrovica</option>
+          <option value="sremski-karlovci">Sremski Karlovci</option>
+          <option value="stara-pazova">Stara Pazova</option>
+          <option value="surčin">Surčin</option>
+          <option value="surdulica">Surdulica</option>
+          <option value="svilajnac">Svilajnac</option>
+          <option value="svrljig">Svrljig</option>
+          <option value="šabac">Šabac</option>
+          <option value="šid">Šid</option>
+          <option value="temerin">Temerin</option>
+          <option value="titel">Titel</option>
+          <option value="topola">Topola</option>
+          <option value="trgovište">Trgovište</option>
+          <option value="trstenik">Trstenik</option>
+          <option value="tutin">Tutin</option>
+          <option value="ub">Ub</option>
+          <option value="užice">Užice</option>
+          <option value="valjevo">Valjevo</option>
+          <option value="varvarin">Varvarin</option>
+          <option value="velika-plana">Velika Plana</option>
+          <option value="veliko-gradište">Veliko Gradište</option>
+          <option value="vladimirci">Vladimirci</option>
+          <option value="vlasotince">Vlasotince</option>
+          <option value="vrbas">Vrbas</option>
+          <option value="vranje">Vranje</option>
+          <option value="vrnjačka-banja">Vrnjačka Banja</option>
+          <option value="vršac">Vršac</option>
+          <option value="zaječar">Zaječar</option>
+          <option value="zemun">Zemun</option>
+          <option value="žabalj">Žabalj</option>
+          <option value="žabari">Žabari</option>
+          <option value="žagubica">Žagubica</option>
+          <option value="žitiste">Žitište</option>
+          <option value="žitoradja">Žitorađa</option>
+
+          <!-- Dodajte ostale gradove -->
+        </select>
+
+        <select id="occupation">
+          <option value="">Sva zanimanja</option>
+          <option value="auto">Automobilizam</option>
+          <option value="zanatlija">Zanatlija</option>
+          <option value="online-prodaja">Online Prodaja</option>
+          <option value="gradjevina">Građevinski radovi</option>
+          <option value="usluzna">Uslužna delatnost</option>
+          <option value="it-tehnologija">IT i Tehnologija</option>
+          <option value="poljoprivreda">Poljoprivreda</option>
+          <option value="zdravstvo">Zdravstvo</option>
+          <option value="umetnost-zabava">Umetnost i Zabava</option>
+          <option value="majstor">Majstor</option>
+          <option value="prodavnica">Prodavnica</option>
+          <option value="namestaj">Nameštaj</option>
+          <option value="kupatilo">Sve za Kupatilo</option>
+          <option value="kuhinja">Sve za Kuhinju</option>
+        </select>
+
+        <input type="text" id="search" placeholder="Pretraga...">
+        <button class="button-6" id="reset-filters">Reset Filter</button>
+      </div>
+
+      <div class="row properties-box" id="properties-box">
+        <!-- Oglasne kartice -->
+      </div>
+    </div>
+  </div>
+
+  <div id="Modal1" class="modal" onclick="closeModal()">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>  
+
+  <footer style="margin-top: 4em;" class="footer-section">
+    <div class="container">
+      <div class="footer-cta pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="fas fa-phone"></i>
+              <div class="cta-text">
+                <h4>Kontakt</h4>
+                <span>(+381)66/935-8484</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-md-4 mb-30">
+            <div class="single-cta">
+              <i class="far fa-envelope-open"></i>
+              <div class="cta-text">
+                <h4>Email</h4>
+                <span>jedanklikinfo@gmail.com</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-content pt-5 pb-5">
+        <div class="row">
+          <div class="col-xl-4 col-lg-4 mb-50">
+            <div class="footer-widget">
+              <div class="footer-logo">
+                <img src="assets/images/JEDAN KLIK-1.png" class="img-fluid" alt="logo">
+              </div>
+              <div class="footer-text">
+                <p>Istaknite se pred širom publikom i budite vidljivi svakome u svakom trenutku.</p>
+              </div>
+              <div class="footer-social-icon">
+                <span>Zapratite Nas</span>
+                <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                <a href="#"><i class="fab fa-instagram instagram-bg"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+            <div class="footer-widget">
+              <div class="footer-widget-heading">
+                <h3>Korisne Veze</h3>
+              </div>
+              <ul>
+                <li><a href="index.html">Glavna Strana</a></li>
+                <li><a href="properties.html">Pretraga</a></li>
+                <li><a href="contact.html">Kontaktirajte Nas</a></li>
+                <!-- <li><a href="#">portfolio</a></li>
+                              <li><a href="#">Contact</a></li>
+                              <li><a href="#">About us</a></li>
+                              <li><a href="#">Our Services</a></li>
+                              <li><a href="#">Expert Team</a></li>
+                              <li><a href="#">Contact us</a></li>
+                              <li><a href="#">Latest News</a></li> -->
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+            <img src="assets/images/footer-img2.png" alt="">
+            <!--  <div class="footer-widget">
+                          <div class="footer-widget-heading">
+                              <h3>Subscribe</h3>
+                          </div>
+                          <div class="footer-text mb-25">
+                              <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                          </div>
+                          <div class="subscribe-form">
+                              <form action="#">
+                                  <input type="text" placeholder="Email Address">
+                                  <button><i class="fab fa-telegram-plane"></i></button>
+                              </form>
+                          </div>
+                      </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  <div class="copyright-area">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+                      <div class="copyright-text">
+                          <p>Copyright &copy; 2018, All Right Reserved <a href="https://codepen.io/anupkumar92/">Anup</a></p>
+                      </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                      <div class="footer-menu">
+                          <ul>
+                              <li><a href="#">Home</a></li>
+                              <li><a href="#">Terms</a></li>
+                              <li><a href="#">Privacy</a></li>
+                              <li><a href="#">Policy</a></li>
+                              <li><a href="#">Contact</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div> -->
+  </footer>
+  <script>
+
+
+
+    // Function to open modal
+    function openModal(modalId) {
+      var modal = document.getElementById(modalId);
+      modal.style.display = "block";
+      modal.addEventListener("scroll", handleModalScroll); // Add scroll event listener to the modal
+      document.body.style.overflow = "hidden"; // Prevent scrolling of the main page
+    }
+
+    // Function to close modal
+    function closeModal(modalId) {
+      var modal = document.getElementById(modalId);
+      modal.style.display = "none";
+      modal.removeEventListener("scroll", handleModalScroll); // Remove scroll event listener from the modal
+      document.body.style.overflow = ""; // Allow scrolling of the main page
+    }
+
+    // Function to handle modal scroll
+    function handleModalScroll(event) {
+      var modal = event.currentTarget;
+      var scrollHeight = modal.scrollHeight;
+      var scrollTop = modal.scrollTop;
+      var clientHeight = modal.clientHeight;
+
+      // If the user has scrolled to the bottom of the modal
+      if (scrollTop + clientHeight >= scrollHeight) {
+        // Prevent scrolling of the main page
+        document.body.style.overflow = "hidden";
+      } else {
+        // Allow scrolling of the main page
+        document.body.style.overflow = "";
+      }
+    }
+
+    // Get all images with class "image-click"
+    var images = document.querySelectorAll(".image-click");
+
+    // Loop through each image and add a click event listener
+    images.forEach(function (image) {
+      image.addEventListener("click", function () {
+        // Get the data-modal attribute value
+        var modalId = this.getAttribute("data-modal");
+
+        // Get the modal by its ID
+        var modal = document.getElementById(modalId);
+
+        // Get the image source from the data-image attribute
+        var modalImage = modal.querySelector(".modal-content");
+        var imageSource = this.getAttribute("data-image");
+
+        // Set the image source in the modal
+        modalImage.src = imageSource;
+
+        // Show the modal
+        modal.style.display = "block";
+      });
+    });
+
+    // Get all close buttons for modals
+    var closeButtons = document.querySelectorAll(".modal .close");
+
+    // Loop through each close button and add a click event listener
+    closeButtons.forEach(function (button) {
+      button.addEventListener("click", function () {
+        // Get the modal that contains this close button
+        var modal = this.parentElement;
+
+        // Hide the modal
+        modal.style.display = "none";
+      });
+    });
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.addEventListener("click", function (event) {
+      var modals = document.querySelectorAll(".modal");
+      modals.forEach(function (modal) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+
+  </script>
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="assets/js/kartice.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/loadBusinesses.js"></script>
+</body>
+
+</html>
