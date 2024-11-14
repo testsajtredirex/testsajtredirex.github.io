@@ -319,7 +319,7 @@ Header Style
 /*---------------------------------------
   ANIMATED HEADLINE               
 -----------------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 725px) {
 
 .container1 {
   display: block;
@@ -338,7 +338,6 @@ Header Style
 }
 .cd-headline {
   font-family: 'Poppins', sans-serif;
-  color: white;
   background: linear-gradient(90deg, #f34b21, #f8a565);
   -webkit-background-clip: text;
   color: transparent;
@@ -362,6 +361,7 @@ margin-top:3em ;
 
 .cd-words-wrapper b {
   display: none;
+  color: transparent;
   color: linear-gradient(90deg, #f34b21, #f8a565);
   border: 1px solid red;
   animation: fadeInOut 8s infinite; /* Slower animation duration */
