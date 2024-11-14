@@ -324,7 +324,7 @@ Header Style
 .container1 {
   display: flex;
   flex-direction: column;
-  height: 80vh; /* Full height for mobile view */
+  height:80vh; /* Full height for mobile view */
 }
 
 .top, .bottom {
@@ -355,6 +355,7 @@ margin-top:7em ;
 }
 
 .cd-words-wrapper b {
+  display: none;
   animation: fadeInOut 8s infinite; /* Slower animation duration */
 }
 
