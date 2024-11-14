@@ -322,9 +322,10 @@ Header Style
 @media (max-width: 768px) {
 
 .container1 {
-  display: flex;
-  flex-direction: column;
+  display: block;
   height:100vh; /* Full height for mobile view */
+  width: 100%;
+  border: 1px solid red;
 }
 
 .top, .bottom {
@@ -333,7 +334,8 @@ Header Style
   justify-content: center;
   align-items: center;
 }
-
+.container1 .top{
+}
 .cd-headline {
   font-family: 'Poppins', sans-serif;
   color: #333;
@@ -343,14 +345,18 @@ Header Style
 }
 
 .top>h1{
-margin-top:7em ;
+margin-top:3em ;
   font-family: 'Poppins';
+}
+.bottom{
+  height: 33em;
+}
+.bottom>h1{
+  display: block;
 }
 
 .cd-words-wrapper {
   display: block;
-  position: relative;
-  margin-bottom: 12em;
   
 }
 
@@ -984,6 +990,7 @@ Banner Style
 Featured Style
 --------------------------------------------- 
 */
+
 
 .featured .left-image {
   position: relative;
