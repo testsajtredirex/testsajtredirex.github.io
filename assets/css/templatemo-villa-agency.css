@@ -358,26 +358,23 @@ margin-top:3em ;
 }
 .cd-headline {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(90deg, #f34b21, #f8a565);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #f34b21; /* Solid color for text */
 }
 
 .cd-words-wrapper b {
   display: none;
   animation: fadeInOut 8s infinite;
-  will-change: opacity, transform;
 }
 
 .cd-words-wrapper b.is-visible {
   display: inline;
   animation: fadeInOut 8s infinite;
-  color: transparent;
+  color: #f34b21; /* Keep the text color consistent */
 }
 
 @keyframes fadeInOut {
   0%, 100% { opacity: 0; transform: scale(0.95); }
-  25%, 75% { opacity: 1; transform: scale(1); } /* Longer visible duration */
+  25%, 75% { opacity: 1; transform: scale(1); }
 }
 
 .top h1 {
