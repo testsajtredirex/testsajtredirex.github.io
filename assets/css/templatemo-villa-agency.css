@@ -316,6 +316,143 @@ Header Style
 --------------------------------------------- 
 */
 
+/*---------------------------------------
+  ANIMATED HEADLINE               
+-----------------------------------------*/
+@media (max-width: 768px) {
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height for mobile view */
+}
+
+.top, .bottom {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cd-headline {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: linear-gradient(90deg, #f34b21, #f8a565);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.top>h1{
+margin-top:5em ;
+  font-family: 'Poppins';
+}
+
+.cd-words-wrapper {
+  display: block;
+  position: relative;
+  margin-bottom: 12em;
+  
+}
+
+.cd-words-wrapper b {
+  display: none;
+  animation: fadeInOut 8s infinite; /* Slower animation duration */
+}
+
+.cd-words-wrapper b.is-visible {
+  display: inline;
+  animation: fadeInOut 8s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0; transform: scale(0.95); }
+  25%, 75% { opacity: 1; transform: scale(1); } /* Longer visible duration */
+}
+
+.top h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+}
+@media (min-width: 768px) {
+
+  .containe {
+    display: none;
+    flex-direction: column;
+    height: 100vh; /* Full height for mobile view */
+  }
+  
+  .top, .bottom {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cd-headline {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: linear-gradient(90deg, #f34b21, #f8a565);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .top>h1{
+  margin-top:5em ;
+    font-family: 'Poppins';
+  }
+  
+  .cd-words-wrapper {
+    display: block;
+    position: relative;
+    margin-bottom: 15em;
+    
+  }
+  
+  .cd-words-wrapper b {
+    display: none;
+    animation: fadeInOut 8s infinite; /* Slower animation duration */
+  }
+  
+  .cd-words-wrapper b.is-visible {
+    display: inline;
+    animation: fadeInOut 8s infinite;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% { opacity: 0; transform: scale(0.95); }
+    25%, 75% { opacity: 1; transform: scale(1); } /* Longer visible duration */
+  }
+  
+  .top h1 {
+    font-size: 3em;
+    font-weight: bold;
+  }
+  
+  }
+
+
+
+
+
+/* Mobile-specific styles */
+@media screen and (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Stack content vertically */
+  }
+
+  .col-left, .col-right {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .col-left h1, .col-right h2 {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+}
+
+
 .sub-header {
   background-color: #fff;
   padding: 10px 0px;

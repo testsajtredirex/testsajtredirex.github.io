@@ -19,14 +19,10 @@
     <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <link href="stranice/zelena_bajka/css/bootstrap.min.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
 
-TemplateMo 591 villa agency
-
-https://templatemo.com/tm-591-villa-agency
-
--->
   </head>
 
 <body>
@@ -93,9 +89,25 @@ https://templatemo.com/tm-591-villa-agency
   </header>
   <!-- ***** Header Area End ***** -->
 
-  <div class="main-banner">
-    <img src="assets/images/banner-05.png" alt="">
+
+  
+  <div class="containe">
+    <div class="top">
+      <h1 style="text-align: center;"><span style="font-size: 0.5em;">SVE</span><br>NA JEDAN KLIK</h1>
+    </div>
+    <div style="background-color: #000E13;" class="bottom">
+      <h1 class="cd-headline rotate-1">
+        <span class="cd-words-wrapper">
+          <b style="font-size: 1.5em;" class="is-visible">JEDNOSTAVNO</b>
+          <b style="font-size: 1.6em;">EFIKASNO</b>
+          <b style="font-size: 1.6em;">VIDLJIVO</b>
+        </span>
+      </h1>
+    </div>
   </div>
+  
+  
+  
 
   <div class="featured section">
     <div class="container">
@@ -643,6 +655,17 @@ https://templatemo.com/tm-591-villa-agency
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="vendor/filter.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const words = document.querySelectorAll('.cd-words-wrapper b');
+  let index = 0;
 
+  setInterval(() => {
+    words[index].classList.remove('is-visible');
+    index = (index + 1) % words.length;
+    words[index].classList.add('is-visible');
+  }, 4000); // Adjust time as needed for smooth transitions
+});
+  </script>
   </body>
 </html>
