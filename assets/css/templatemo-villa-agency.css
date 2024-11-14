@@ -359,7 +359,6 @@ margin-top:3em ;
 
 .cd-words-wrapper b {
   display: none;
-  border: 1px;
   animation: fadeInOut 8s infinite;
   will-change: opacity, transform; /* Optimize rendering */
 }
