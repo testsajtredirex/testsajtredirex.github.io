@@ -359,6 +359,7 @@ margin-top:3em ;
 .cd-headline {
   font-family: 'Poppins', sans-serif;
   color: #f34b21; /* Solid color for text */
+  margin-bottom: 10em;
 }
 
 .cd-words-wrapper b {
