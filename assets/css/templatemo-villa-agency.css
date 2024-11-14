@@ -338,7 +338,7 @@ Header Style
 }
 .cd-headline {
   font-family: 'Poppins', sans-serif;
-  color: #333;
+  color: white;
   background: linear-gradient(90deg, #f34b21, #f8a565);
   -webkit-background-clip: text;
   color: transparent;
