@@ -356,16 +356,23 @@ margin-top:3em ;
   display: block;
   
 }
+.cd-headline {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #f34b21, #f8a565);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
 .cd-words-wrapper b {
   display: none;
   animation: fadeInOut 8s infinite;
-  will-change: opacity, transform; /* Optimize rendering */
+  will-change: opacity, transform;
 }
 
 .cd-words-wrapper b.is-visible {
   display: inline;
   animation: fadeInOut 8s infinite;
+  color: transparent;
 }
 
 @keyframes fadeInOut {
