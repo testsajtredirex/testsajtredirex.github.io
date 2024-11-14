@@ -362,6 +362,8 @@ margin-top:3em ;
 
 .cd-words-wrapper b {
   display: none;
+  color: linear-gradient(90deg, #f34b21, #f8a565);
+  border: 1px solid red;
   animation: fadeInOut 8s infinite; /* Slower animation duration */
 }
 
