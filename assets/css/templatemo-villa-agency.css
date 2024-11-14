@@ -325,7 +325,6 @@ Header Style
   display: block;
   height:100vh; /* Full height for mobile view */
   width: 100%;
-  border: 1px solid red;
 }
 
 .top, .bottom {
@@ -333,8 +332,6 @@ Header Style
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.container1 .top{
 }
 .cd-headline {
   font-family: 'Poppins', sans-serif;
