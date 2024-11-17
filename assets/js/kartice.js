@@ -47,7 +47,7 @@ kuhinja" - Sve za Kuhinju
 city: "Valjevo",
 title: "Zelena Bajka",
 occupation: "Zanatlija",  // Occupation or service type
-contact: "060/1632-364 ; 061/3002-627",
+contact: "060/1632-364 <br> 061/3002-627",
 description: "Vaše dvorište će uvek izgledati besprekorno uz naše usluge skupljanja trave i lišća...",
 imgSrc: "assets/images/slikekartica/deal-01.webp",  // Image for the card
 modalImgSrc: "",  // Image for the modal
@@ -1259,7 +1259,12 @@ websiteLink: "",
           // Add more card data here...
       ];
 
-
+      document.querySelectorAll('.item').forEach(item => {
+            item.querySelector('.image-container').addEventListener('click', function() {
+              // Toggle 'active' class on the parent .item div
+              this.parentElement.classList.toggle('active');
+            });
+          });
 
 
 //normalizacija slova
@@ -1288,6 +1293,7 @@ function createCard(cardInfo, index) {
   <ul>
   ${cardInfo.contact ? `<li>Kontakt: <span>${cardInfo.contact}</span></li>` : ''}
   ${cardInfo.email ? `<li>Email: <span>${cardInfo.email}</span></li>` : ''}
+
       <p>${cardInfo.description}</p>
   </ul>
   ${cardInfo.personalPageLink ? `<div class="main-button-info" style="width: 90%; margin: 0 auto;"><a href="${cardInfo.personalPageLink}" style="display: block; text-align: center; color: white;">Detaljnije</a></div>` : ''}
@@ -1296,8 +1302,11 @@ function createCard(cardInfo, index) {
       ${cardInfo.instaLink ? `<a style="color: white;" href="${cardInfo.instaLink}" target="_blank"><i class="fa-brands fa-instagram"></i></a>` : ''}
       ${cardInfo.websiteLink ? `<a style="color: white;" href="${cardInfo.websiteLink}" target="_blank"><i class="fa-solid fa-globe"></i></a>` : ''}
       ${cardInfo.kpLink ? `<a style="background-color: white;border:1px solid gray;display: block; text-align: center;" href="${cardInfo.kpLink}" target="_blank"><img src="assets/images/kp-logo.png" alt="" style="width: 50px; "></a>` : ''}
+
   </div>
 </div>
+
+
   `;
 
 
@@ -1317,6 +1326,14 @@ function loadAllCards() {
 
 // Load all cards when the page loads
 loadAllCards();
+
+
+
+
+
+
+
+
 
 
   });

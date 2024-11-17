@@ -1957,11 +1957,6 @@ position: relative;
 .featured .left-image img {
   padding-left: 55px;
 }
-
-.loader{
-  display: none;
-}
-
 }
 @media (max-width: 767px){
   .contact-img{
