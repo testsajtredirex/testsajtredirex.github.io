@@ -346,7 +346,7 @@ margin-top:3em ;
   font-family: 'Poppins';
 }
 .bottom{
-  height: 33em;
+  height: 34em;
 }
 .bottom>h1{
   display: block;
@@ -1959,7 +1959,7 @@ position: relative;
 }
 
 .loader{
-  display: none;
+  display: none;q
 }
 
 }
