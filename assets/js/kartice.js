@@ -68,6 +68,7 @@ modalImgSrc: "assets/images/featured2.png",  // Image for the modal
 fbLink: "https://www.facebook.com/elektricar012/",
 instaLink: null,  // Add Instagram link if available
 websiteLink: null,
+personalPageLink: "https://testsajtredirex.github.io/Flajer.html",
           },
           {
 city: "Čačak",
