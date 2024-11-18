@@ -320,7 +320,12 @@ Header Style
   ANIMATED HEADLINE               
 -----------------------------------------*/
 @media (max-width: 768px) {
-
+.header_text{
+  height: 80vh;
+  text-align: center;
+  margin: 1em;
+  margin-top: 9em;
+}
 .container1 {
   display: block;
   height:100vh; /* Full height for mobile view */
@@ -385,7 +390,7 @@ margin-top:3em ;
 }
 @media (min-width: 768px) {
 .header_text{
-  display: none;
+  text-align: center;margin-top: 5em;height: 35em;
 }
   .container1 {
     display: none;
