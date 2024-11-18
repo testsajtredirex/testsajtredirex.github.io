@@ -384,7 +384,9 @@ margin-top:3em ;
 }
 }
 @media (min-width: 768px) {
-
+.header_text{
+  display: none;
+}
   .container1 {
     display: none;
     flex-direction: column;
