@@ -326,6 +326,16 @@ Header Style
   margin: 1em;
   margin-top: 9em;
 }
+
+.header_text h1{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: 2em;
+  width: 100%;
+}
+
+
+
+
 .container1 {
   display: block;
   height:100vh; /* Full height for mobile view */
