@@ -69,7 +69,7 @@ kuhinja" - Sve za Kuhinju
       fbLink: "https://www.facebook.com/elektricar012/",
       instaLink: null,  // Add Instagram link if available
       websiteLink: null,
-      personalPageLink: "https://testsajtredirex.github.io/Flajer.html",
+      personalPageLink: "https://testsajtredirex.github.io/stranice/elektricar_pozarevac/index.html",
                 },
                 {
       city: "Čačak",
