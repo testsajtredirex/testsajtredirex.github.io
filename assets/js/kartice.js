@@ -1074,8 +1074,8 @@ occupation: "online-prodaja prodavnica",
 contact: "+386 2 808 75 38",
 email: "", // Email is not provided in the Facebook information
 description: "❤️Za narudžbinu ostavite u inbox; ⭐️ IME I PREZIME ⭐️ ULICU I BROJ ⭐️MESTO I POSTANSKI BROJ ⭐️ BROJ TELEFONA 🚀Dostava brzom postom ✅Poštarina 400 ✅Dostava na kućnu adresu u roku od 1 do 3 dana",
-imgSrc: "assets/images/slikekartica/kartica.jpg", // Default image, as no specific image is mentioned
-modalImgSrc: "assets/images/slikekartica/kartica.jpg", // Default image
+imgSrc: "assets/images/slikekartica/kartica79.jpg", // Default image, as no specific image is mentioned
+modalImgSrc: "assets/images/slikekartica/kartica79.jpg", // Default image
 instaLink: "", // No Instagram link provided
 fbLink: "https://www.facebook.com/zvezdasupershop", // Based on the title; adapt the URL if more accurate
 websiteLink: "" // No website link provided
@@ -1141,6 +1141,29 @@ propertiesBox.appendChild(fragment); // Append all cards at once to the DOM
 
 // Load all cards when the page loads
 loadAllCards();
+const lazyImages = document.querySelectorAll('.lazy-load');
 
+const loadImage = (image) => {
+  const src = image.getAttribute('data-src');
+  if (src) {
+    image.src = src;
+    image.classList.remove('lazy-load');
+  }
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      loadImage(entry.target);
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+lazyImages.forEach(image => {
+  observer.observe(image);
+});
 
 });

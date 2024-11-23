@@ -24,6 +24,28 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/modal.css">
   <style>
+#backToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  color: rgb(23, 23, 24);
+  border: 2px solid rgb(23, 23, 24);
+  background-color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#backToTopBtn:hover {
+  background-color:#fd7e14;
+  color: white;
+  border: 1px solid white;
+}
+
+
+
+
     /* Loading Screen */
     #loading-screen {
         position: fixed;
@@ -318,6 +340,8 @@
     <img class="modal-content" id="modalImage">
 </div>  
 
+<button id="backToTopBtn" onclick="scrollToTop()">Nazad na Vrh</button>
+
   <footer style="margin-top: 4em;" class="footer-section">
     <div class="container">
       <div class="footer-cta pt-5 pb-5">
@@ -457,5 +481,20 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
   <script src="vendor/filter.js"></script>
+<script>
+  // Prikazivanje dugmeta kada korisnik skroluje 100px niz stranicu
+window.onscroll = function() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    document.getElementById("backToTopBtn").style.display = "block";
+  } else {
+    document.getElementById("backToTopBtn").style.display = "none";
+  }
+};
 
+// Funkcija za skrolovanje na vrh
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+</script>
 </html>
