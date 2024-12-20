@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit a Business</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Submit Your Business</h1>
+    <form id="business_form" action="submit_form.php" method="POST" enctype="multipart/form-data">
+      City: <input type="text" name="city" required><br>
+      Title: <input type="text" name="title" required><br>
+      Occupation: <input type="text" name="occupation" required><br>
+      Contact: <input type="text" name="contact" required><br>
+      Email: <input type="email" name="email"><br>
+      Description: <textarea name="description" required></textarea><br>
+      Image Source: <input type="text" name="imgSrc" required><br>
+      Modal Image Source: <input type="text" name="modalImgSrc"><br>
+      Facebook Link: <input type="url" name="fbLink"><br>
+      Instagram Link: <input type="url" name="instaLink"><br>
+      Website Link: <input type="url" name="websiteLink"><br>
+      Personal Page Link: <input type="url" name="personalPageLink"><br>
+      <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -113,7 +113,7 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="index.html" class="active">Glavna Stranica</a></li>
-                      <li><a href="properties.html">Pretraži</a></li>
+                      <li><a href="properties.php">Pretraži</a></li>
                       <li><a href="contact.html">Kontaktirajte Nas</a></li>
                       <li><a href="joining.html"><i class="fa fa-phone"></i>Pridružite nam se</a></li>
                   </ul>   
@@ -590,6 +590,33 @@
       </div>
     </div>
   </div>
+
+
+  <form action="submit_form.php" method="POST">
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required><br>
+  
+    <label for="title">Title/Name:</label>
+    <input type="text" id="title" name="title" required><br>
+  
+    <label for="occupation">Occupation:</label>
+    <input type="text" id="occupation" name="occupation" required><br>
+  
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact"><br>
+  
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br>
+  
+    <label for="description">Description:</label>
+    <textarea id="description" name="description"></textarea><br>
+  
+    <input type="submit" value="Submit">
+  </form>
+  
+  
+
+
 
   <footer class="footer-section">
     <div class="container">
